@@ -74,6 +74,12 @@ plugins:
         - name: smile-nlp-kt
           import_url: https://github.com/londogard/smile-nlp-kt
           imports: [README.md]
+        - name: kotlingrad
+          import_url: https://github.com/breandan/kotlingrad
+          imports: [README.md, src/main/resources/*]
+        - name: kaliningraph
+          import_url: https://github.com/breandan/galoisenne
+          imports: [README.md, latex/figures/*, src/jvmMain/resources/*, "*.png"]
 nav:
   - Home: index.md
   - Data Wrangling:
@@ -89,10 +95,13 @@ nav:
     - text-gen-kt: text-gen-kt/README.md
     - smile-nlp-kt: smile-nlp-kt/README.md
   - Math:
+    - "Kotlin∇": kotlingrad/README.md
     - kmath: kmath/README.md
     - multik: multik/README.md
   - Plots:
+    - Kaliningraph: kaliningraph/README.md
     - Kandy: kandy/README.md
+    - "Kotlin∇": kotlingrad/README.md
     - kravis: kravis/README.md
     - "Lets-Plot Kotlin API": lets-plot/README.md
     - "plotly.kt": plotly-kt/README.md
