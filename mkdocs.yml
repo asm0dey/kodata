@@ -1,0 +1,8 @@
+site_name: My Docs
+theme:
+  name: material
+  features:
+    - navidation.instant
+    - search.suggest
+plugins:
+  - search
