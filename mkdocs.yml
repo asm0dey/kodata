@@ -23,15 +23,81 @@ plugins:
         - name: kalasim
           import_url: https://github.com/holgerbrandl/kalasim
           imports: [README.md]
-        - name: df
+        - name: dataframe
           import_url: https://github.com/Kotlin/dataframe
+          imports: [README.md]
+        - name: kravis
+          import_url: https://github.com/holgerbrandl/kravis
+          imports: [README.md, .README_images/*]
+        - name: kmath
+          import_url: https://github.com/SciProgCentre/kmath
+          imports: [README.md]
+        - name: dataforge-core
+          import_url: https://github.com/SciProgCentre/dataforge-core
+          imports: [README.md]
+        - name: plotly-kt
+          import_url: https://github.com/SciProgCentre/plotly.kt
+          imports: [README.md, docs/*]
+        - name: visionforge
+          import_url: https://github.com/SciProgCentre/visionforge
+          imports: [README.md, docs/*]
+        - name: controls-kt
+          import_url: https://github.com/SciProgCentre/controls-kt
+          imports: [README.md, docs/pictures/*]
+        - name: tables-kt
+          import_url: https://github.com/SciProgCentre/tables-kt
+          imports: [README.md]
+        - name: snark
+          import_url: https://github.com/SciProgCentre/snark?branch=main
+          imports: [README.md]
+        - name: kotlindl
+          import_url: https://github.com/Kotlin/kotlindl
+          imports: [README.md]
+        - name: kotlin-spark
+          import_url: https://github.com/Kotlin/kotlin-spark-api?branch=main
+          imports: [README.md]
+        - name: kotlin-jupyter
+          import_url: https://github.com/Kotlin/kotlin-jupyter
+          imports: [docs/*]
+        - name: multik
+          import_url: https://github.com/Kotlin/multik
+          imports: [README.md]
+        - name: londogard-nlp-toolkit
+          import_url: https://github.com/londogard/londogard-nlp-toolkit?branch=main
+          imports: [README.md]
+        - name: text-gen-kt
+          import_url: https://github.com/londogard/text-gen-kt
+          imports: [README.md]
+        - name: summarize-kt
+          import_url: https://github.com/londogard/summarize-kt
+          imports: [README.md]
+        - name: smile-nlp-kt
+          import_url: https://github.com/londogard/smile-nlp-kt
           imports: [README.md]
 nav:
   - Home: index.md
   - Data Wrangling:
-    - Kotlin DataFrame: df/README.md
+    - dataforge-core: dataforge-core/README.md
+    - Controls.kt: controls-kt/README.md
+    - "Kotlin for Apache® Spark™": kotlin-spark/README.md 
+    - Kotlin DataFrame: dataframe/README.md
+    - Tables.kt: tables-kt/README.md
+  - ML:
+    - kotlindl: kotlindl/README.md
+    - londogard-nlp-toolkit: londogard-nlp-toolkit/README.md
+    - summarize-kt: summarize-kt/README.md
+    - text-gen-kt: text-gen-kt/README.md
+    - smile-nlp-kt: smile-nlp-kt/README.md
+  - Math:
+    - kmath: kmath/README.md
+    - multik: multik/README.md
   - Plots:
     - Kandy: kandy/README.md
+    - kravis: kravis/README.md
     - "Lets-Plot Kotlin API": lets-plot/README.md
+    - "plotly.kt": plotly-kt/README.md
+    - "DataForge Visualization Platform": visionforge/README.md
   - Other:
     - kalasim: kalasim/README.md
+    - Kotlin Kernel for IPython/Jupyter: kotlin-jupyter/docs/README.md
+    - snark: snark/README.md
