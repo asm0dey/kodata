@@ -2,7 +2,21 @@ site_name: My Docs
 theme:
   name: material
   features:
-    - navidation.instant
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.path
+    - navigation.tabs
+    - navigation.tracking
     - search.suggest
 plugins:
   - search
+  - multirepo:
+      cleanup: false
+      nav_repos:
+        - name: Kandy
+          import_url: "https://github.com/Kotlin/kandy?branch=main"
+          imports: [README.md,kandy/*,docs/*,examples/images/*]
+nav:
+  - Plots:
+    - Kandy: kandy/README.md
