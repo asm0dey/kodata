@@ -17,6 +17,21 @@ plugins:
         - name: Kandy
           import_url: "https://github.com/Kotlin/kandy?branch=main"
           imports: [README.md,kandy/*,docs/*,examples/images/*]
+        - name: lets-plot
+          import_url: https://github.com/JetBrains/lets-plot-kotlin
+          imports: [README.md]
+        - name: kalasim
+          import_url: https://github.com/holgerbrandl/kalasim
+          imports: [README.md]
+        - name: df
+          import_url: https://github.com/Kotlin/dataframe
+          imports: [README.md]
 nav:
+  - Home: index.md
+  - Data Wrangling:
+    - Kotlin DataFrame: df/README.md
   - Plots:
     - Kandy: kandy/README.md
+    - "Lets-Plot Kotlin API": lets-plot/README.md
+  - Other:
+    - kalasim: kalasim/README.md
