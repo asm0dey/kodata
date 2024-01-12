@@ -1,0 +1,1487 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../kotlingrad/">
+      
+      
+        <link rel="next" href="../multik/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>kmath - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="kmath - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/kmath/README.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="kmath - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/kmath/README.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kmath" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              kmath
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kotlindl/" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kaliningraph/" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlindl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#publications-and-talks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publications and talks
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kaliningraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kandy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kravis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plotly-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visionforge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#publications-and-talks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Publications and talks
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p><a href="https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub"><img alt="JetBrains Research" src="https://jb.gg/badges/research.svg" /></a>
+<a href="https://zenodo.org/badge/latestdoi/129486382"><img alt="DOI" src="https://zenodo.org/badge/129486382.svg" /></a>
+<img alt="Gradle build" src="https://github.com/SciProgCentre/kmath/workflows/Gradle%20build/badge.svg" />
+<a href="https://search.maven.org/search?q=g:%22space.kscience%22"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/space.kscience/kmath-core.svg?label=Maven%20Central" /></a>
+<a href="https://maven.pkg.jetbrains.space/spc/p/sci/maven/space/kscience/"><img alt="Space" src="https://img.shields.io/badge/dynamic/xml?color=orange&amp;label=Space&amp;query=//metadata/versioning/latest&amp;url=https%3A%2F%2Fmaven.pkg.jetbrains.space%2Fmipt-npm%2Fp%2Fsci%2Fmaven%2Fspace%2Fkscience%2Fkmath-core%2Fmaven-metadata.xml" /></a></p>
+<h1 id="kmath">KMath</h1>
+<p>Could be pronounced as <code>key-math</code>. The <strong>K</strong>otlin <strong>Math</strong>ematics library was initially intended as a Kotlin-based
+analog to Python's NumPy library. Later we found that kotlin is much more flexible language and allows superior
+architecture designs. In contrast to <code>numpy</code> and <code>scipy</code> it is modular and has a lightweight core. The <code>numpy</code>-like
+experience could be achieved with <a href="/kmath-for-real">kmath-for-real</a> extension module.</p>
+<p><a href="https://SciProgCentre.github.io/kmath/">Documentation site (<strong>WIP</strong>)</a></p>
+<h2 id="publications-and-talks">Publications and talks</h2>
+<ul>
+<li><a href="https://proandroiddev.com/an-introduction-context-oriented-programming-in-kotlin-2e79d316b0a2">A conceptual article about context-oriented design</a></li>
+<li><a href="https://proandroiddev.com/diving-deeper-into-context-oriented-programming-in-kotlin-3ecb4ec38814">Another article about context-oriented design</a></li>
+<li><a href="https://aip.scitation.org/doi/abs/10.1063/1.5130103">ACAT 2019 conference paper</a></li>
+</ul>
+<h1 id="goal">Goal</h1>
+<ul>
+<li>Provide a flexible and powerful API to work with mathematics abstractions in Kotlin-multiplatform (JVM, JS and Native)
+  .</li>
+<li>Provide basic multiplatform implementations for those abstractions (without significant performance optimization).</li>
+<li>Provide bindings and wrappers with those abstractions for popular optimized platform libraries.</li>
+</ul>
+<h2 id="non-goals">Non-goals</h2>
+<ul>
+<li>Be like NumPy. It was the idea at the beginning, but we decided that we can do better in API.</li>
+<li>Provide the best performance out of the box. We have specialized libraries for that. Need only API wrappers for them.</li>
+<li>Cover all cases as immediately and in one bundle. We will modularize everything and add new features gradually.</li>
+<li>Provide specialized behavior in the core. API is made generic on purpose, so one needs to specialize for types, like
+  for <code>Double</code> in the core. For that we will have specialization modules like <code>kmath-for-real</code>, which will give better
+  experience for those, who want to work with specific types.</li>
+</ul>
+<h2 id="features-and-stability">Features and stability</h2>
+<p>KMath is a modular library. Different modules provide different features with different API stability guarantees. All
+core modules are released with the same version, but with different API change policy. The features are described in
+module definitions below. The module stability could have the following levels:</p>
+<ul>
+<li><strong>PROTOTYPE</strong>. On this level there are no compatibility guarantees. All methods and classes form those modules could
+  break any moment. You can still use it, but be sure to fix the specific version.</li>
+<li><strong>EXPERIMENTAL</strong>. The general API is decided, but some changes could be made. Volatile API is marked
+  with <code>@UnstableKMathAPI</code> or other stability warning annotations.</li>
+<li><strong>DEVELOPMENT</strong>. API breaking generally follows semantic versioning ideology. There could be changes in minor
+  versions, but not in patch versions. API is protected
+  with <a href="https://github.com/Kotlin/binary-compatibility-validator">binary-compatibility-validator</a> tool.</li>
+<li><strong>STABLE</strong>. The API stabilized. Breaking changes are allowed only in major releases.</li>
+</ul>
+<h2 id="modules">Modules</h2>
+<h3 id="benchmarks"><a href="benchmarks">benchmarks</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+</blockquote>
+<h3 id="examples"><a href="examples">examples</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+</blockquote>
+<h3 id="kmath-ast"><a href="kmath-ast">kmath-ast</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+<p><strong>Features:</strong>
+- <a href="kmath-ast/src/commonMain/kotlin/space/kscience/kmath/ast/parser.kt">expression-language</a> : Expression language and its parser
+- <a href="kmath-ast/src/jvmMain/kotlin/space/kscience/kmath/asm/asm.kt">mst-jvm-codegen</a> : Dynamic MST to JVM bytecode compiler
+- <a href="kmath-ast/src/jsMain/kotlin/space/kscience/kmath/estree/estree.kt">mst-js-codegen</a> : Dynamic MST to JS compiler
+- <a href="kmath-ast/src/commonMain/kotlin/space/kscience/kmath/ast/rendering/MathRenderer.kt">rendering</a> : Extendable MST rendering</p>
+</blockquote>
+<h3 id="kmath-commons"><a href="kmath-commons">kmath-commons</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+</blockquote>
+<h3 id="kmath-complex"><a href="kmath-complex">kmath-complex</a></h3>
+<blockquote>
+<p>Complex numbers and quaternions.</p>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+<p><strong>Features:</strong>
+- <a href="kmath-complex/src/commonMain/kotlin/space/kscience/kmath/complex/Complex.kt">complex</a> : Complex numbers operations
+- <a href="kmath-complex/src/commonMain/kotlin/space/kscience/kmath/complex/Quaternion.kt">quaternion</a> : Quaternions and their composition</p>
+</blockquote>
+<h3 id="kmath-core"><a href="kmath-core">kmath-core</a></h3>
+<blockquote>
+<p>Core classes, algebra definitions, basic linear algebra</p>
+<p><strong>Maturity</strong>: DEVELOPMENT</p>
+<p><strong>Features:</strong>
+- <a href="kmath-core/src/commonMain/kotlin/space/kscience/kmath/operations/Algebra.kt">algebras</a> : Algebraic structures like rings, spaces and fields.
+- <a href="kmath-core/src/commonMain/kotlin/space/kscience/kmath/structures/StructureND.kt">nd</a> : Many-dimensional structures and operations on them.
+- <a href="kmath-core/src/commonMain/kotlin/space/kscience/kmath/operations/Algebra.kt">linear</a> : Basic linear algebra operations (sums, products, etc.), backed by the <code>Space</code> API. Advanced linear algebra operations like matrix inversion and LU decomposition.
+- <a href="kmath-core/src/commonMain/kotlin/space/kscience/kmath/structures/Buffers.kt">buffers</a> : One-dimensional structure
+- <a href="kmath-core/src/commonMain/kotlin/space/kscience/kmath/expressions">expressions</a> : By writing a single mathematical expression once, users will be able to apply different types of 
+objects to the expression by providing a context. Expressions can be used for a wide variety of purposes from high 
+performance calculations to code generation.
+- <a href="kmath-core/src/commonMain/kotlin/space/kscience/kmath/domains">domains</a> : Domains
+- <a href="kmath-core/src/commonMain/kotlin/space/kscience/kmath/expressions/SimpleAutoDiff.kt">autodiff</a> : Automatic differentiation</p>
+</blockquote>
+<h3 id="kmath-coroutines"><a href="kmath-coroutines">kmath-coroutines</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+</blockquote>
+<h3 id="kmath-dimensions"><a href="kmath-dimensions">kmath-dimensions</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+</blockquote>
+<h3 id="kmath-ejml"><a href="kmath-ejml">kmath-ejml</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+<p><strong>Features:</strong>
+- <a href="kmath-ejml/src/main/kotlin/space/kscience/kmath/ejml/EjmlVector.kt">ejml-vector</a> : Point implementations.
+- <a href="kmath-ejml/src/main/kotlin/space/kscience/kmath/ejml/EjmlMatrix.kt">ejml-matrix</a> : Matrix implementation.
+- <a href="kmath-ejml/src/main/kotlin/space/kscience/kmath/ejml/EjmlLinearSpace.kt">ejml-linear-space</a> : LinearSpace implementations.</p>
+</blockquote>
+<h3 id="kmath-for-real"><a href="kmath-for-real">kmath-for-real</a></h3>
+<blockquote>
+<p>Extension module that should be used to achieve numpy-like behavior.
+All operations are specialized to work with <code>Double</code> numbers without declaring algebraic contexts.
+One can still use generic algebras though.</p>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+<p><strong>Features:</strong>
+- <a href="kmath-for-real/src/commonMain/kotlin/space/kscience/kmath/real/DoubleVector.kt">DoubleVector</a> : Numpy-like operations for Buffers/Points
+- <a href="kmath-for-real/src/commonMain/kotlin/space/kscience/kmath/real/DoubleMatrix.kt">DoubleMatrix</a> : Numpy-like operations for 2d real structures
+- <a href="kmath-for-real/src/commonMain/kotlin/space/kscience/kmath/structures/grids.kt">grids</a> : Uniform grid generators</p>
+</blockquote>
+<h3 id="kmath-functions"><a href="kmath-functions">kmath-functions</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+<p><strong>Features:</strong>
+- <a href="kmath-functions/src/commonMain/kotlin/space/kscience/kmath/functions/Piecewise.kt">piecewise</a> : Piecewise functions.
+- <a href="kmath-functions/src/commonMain/kotlin/space/kscience/kmath/functions/Polynomial.kt">polynomials</a> : Polynomial functions.
+- <a href="kmath-functions/src/commonMain/kotlin/space/kscience/kmath/interpolation/LinearInterpolator.kt">linear interpolation</a> : Linear XY interpolator.
+- <a href="kmath-functions/src/commonMain/kotlin/space/kscience/kmath/interpolation/SplineInterpolator.kt">spline interpolation</a> : Cubic spline XY interpolator.
+- <a href="kmath-functions/#">integration</a> : Univariate and multivariate quadratures</p>
+</blockquote>
+<h3 id="kmath-geometry"><a href="kmath-geometry">kmath-geometry</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+</blockquote>
+<h3 id="kmath-histograms"><a href="kmath-histograms">kmath-histograms</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+</blockquote>
+<h3 id="kmath-jafama"><a href="kmath-jafama">kmath-jafama</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+<p><strong>Features:</strong>
+- <a href="kmath-jafama/src/main/kotlin/space/kscience/kmath/jafama/">jafama-double</a> : Double ExtendedField implementations based on Jafama</p>
+</blockquote>
+<h3 id="kmath-jupyter"><a href="kmath-jupyter">kmath-jupyter</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+</blockquote>
+<h3 id="kmath-kotlingrad"><a href="kmath-kotlingrad">kmath-kotlingrad</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+<p><strong>Features:</strong>
+- <a href="kmath-kotlingrad/src/main/kotlin/space/kscience/kmath/kotlingrad/KotlingradExpression.kt">differentiable-mst-expression</a> : MST based DifferentiableExpression.
+- <a href="kmath-kotlingrad/src/main/kotlin/space/kscience/kmath/kotlingrad/scalarsAdapters.kt">scalars-adapters</a> : Conversions between Kotlin∇'s SFun and MST</p>
+</blockquote>
+<h3 id="kmath-memory"><a href="kmath-memory">kmath-memory</a></h3>
+<blockquote>
+<p>An API and basic implementation for arranging objects in a continuous memory block.</p>
+<p><strong>Maturity</strong>: DEVELOPMENT</p>
+</blockquote>
+<h3 id="kmath-multik"><a href="kmath-multik">kmath-multik</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+</blockquote>
+<h3 id="kmath-nd4j"><a href="kmath-nd4j">kmath-nd4j</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+<p><strong>Features:</strong>
+- <a href="kmath-nd4j/#">nd4jarraystructure</a> : NDStructure wrapper for INDArray
+- <a href="kmath-nd4j/#">nd4jarrayrings</a> : Rings over Nd4jArrayStructure of Int and Long
+- <a href="kmath-nd4j/#">nd4jarrayfields</a> : Fields over Nd4jArrayStructure of Float and Double</p>
+</blockquote>
+<h3 id="kmath-optimization"><a href="kmath-optimization">kmath-optimization</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+</blockquote>
+<h3 id="kmath-stat"><a href="kmath-stat">kmath-stat</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+</blockquote>
+<h3 id="kmath-symja"><a href="kmath-symja">kmath-symja</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+</blockquote>
+<h3 id="kmath-tensorflow"><a href="kmath-tensorflow">kmath-tensorflow</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+</blockquote>
+<h3 id="kmath-tensors"><a href="kmath-tensors">kmath-tensors</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: PROTOTYPE</p>
+<p><strong>Features:</strong>
+- <a href="kmath-tensors/src/commonMain/kotlin/space/kscience/kmath/tensors/api/TensorAlgebra.kt">tensor algebra</a> : Basic linear algebra operations on tensors (plus, dot, etc.)
+- <a href="kmath-tensors/src/commonMain/kotlin/space/kscience/kmath/tensors/core/BroadcastDoubleTensorAlgebra.kt">tensor algebra with broadcasting</a> : Basic linear algebra operations implemented with broadcasting.
+- <a href="kmath-tensors/src/commonMain/kotlin/space/kscience/kmath/tensors/api/LinearOpsTensorAlgebra.kt">linear algebra operations</a> : Advanced linear algebra operations like LU decomposition, SVD, etc.</p>
+</blockquote>
+<h3 id="kmath-viktor"><a href="kmath-viktor">kmath-viktor</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: DEVELOPMENT</p>
+</blockquote>
+<h3 id="test-utils"><a href="test-utils">test-utils</a></h3>
+<blockquote>
+<p><strong>Maturity</strong>: EXPERIMENTAL</p>
+</blockquote>
+<h2 id="multi-platform-support">Multi-platform support</h2>
+<p>KMath is developed as a multi-platform library, which means that most of the interfaces are declared in the
+<a href="/kmath-core/src/commonMain">common source sets</a> and implemented there wherever it is possible. In some cases, features
+are delegated to platform-specific implementations even if they could be provided in the common module for performance
+reasons. Currently, the Kotlin/JVM is the primary platform, however Kotlin/Native and Kotlin/JS contributions and
+feedback are also welcome.</p>
+<h2 id="performance">Performance</h2>
+<p>Calculation performance is one of major goals of KMath in the future, but in some cases it is impossible to achieve both
+performance and flexibility.</p>
+<p>We expect to focus on creating convenient universal API first and then work on increasing performance for specific
+cases. We expect the worst KMath benchmarks will perform better than native Python, but worse than optimized
+native/SciPy (mostly due to boxing operations on primitive numbers). The best performance of optimized parts could be better than SciPy.</p>
+<h2 id="requirements">Requirements</h2>
+<p>KMath currently relies on JDK 11 for compilation and execution of Kotlin-JVM part. We recommend to use GraalVM-CE 11 for
+execution to get better performance.</p>
+<h3 id="repositories">Repositories</h3>
+<p>Release and development artifacts are accessible from mipt-npm <a href="https://www.jetbrains.com/space/">Space</a>
+repository <code>https://maven.pkg.jetbrains.space/mipt-npm/p/sci/maven</code> (see documentation of
+<a href="https://kotlinlang.org/docs/reference/multiplatform.html">Kotlin Multiplatform</a> for more details). The repository could
+be reached through <a href="https://repo.kotlin.link">repo.kotlin.link</a> proxy:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">maven</span><span class="p">(</span><span class="s">&quot;https://repo.kotlin.link&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="n">api</span><span class="p">(</span><span class="s">&quot;space.kscience:kmath-core:</span><span class="si">$</span><span class="n">version</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="c1">// api(&quot;space.kscience:kmath-core-jvm:$version&quot;) for jvm-specific version</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Gradle <code>6.0+</code> is required for multiplatform artifacts.</p>
+<h2 id="contributing">Contributing</h2>
+<p>The project requires a lot of additional work. The most important thing we need is a feedback about what features are
+required the most. Feel free to create feature requests. We are also welcome to code contributions, especially in issues
+marked with <a href="https://github.com/SciProgCentre/kmath/labels/waiting%20for%20a%20hero">waiting for a hero</a> label.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

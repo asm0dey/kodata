@@ -1,0 +1,1738 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Tutorial - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Tutorial - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/visionforge/docs/tutorials/tutorial-solids.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Tutorial - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/visionforge/docs/tutorials/tutorial-solids.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tutorial" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../kotlindl/" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../kaliningraph/" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlin-spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlindl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kmath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../multik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kaliningraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kandy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kravis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../plotly-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#the-main-goal-of-this-tutorial-is-to-show-the-main-capabilities-of-the-visualization-instrument" class="md-nav__link">
+    <span class="md-ellipsis">
+      The main goal of this tutorial is to show the main capabilities of the visualization instrument.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solids-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Solids properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-solids" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Solids
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic Solids">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-polyline" class="md-nav__link">
+    <span class="md-ellipsis">
+      1) PolyLine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-box" class="md-nav__link">
+    <span class="md-ellipsis">
+      2) Box
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sphere" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Sphere
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-hexagon" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Hexagon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cone" class="md-nav__link">
+    <span class="md-ellipsis">
+      3) Cone
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-cone-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      4) Cone Surface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-cylinder" class="md-nav__link">
+    <span class="md-ellipsis">
+      5) Cylinder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-tube" class="md-nav__link">
+    <span class="md-ellipsis">
+      6) Tube
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-extruded" class="md-nav__link">
+    <span class="md-ellipsis">
+      7) Extruded
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="tutorial">Tutorial</h1>
+<h4 id="the-main-goal-of-this-tutorial-is-to-show-the-main-capabilities-of-the-visualization-instrument">The main goal of this tutorial is to show the main capabilities of the visualization instrument.</h4>
+<p>The simple visualization can be made with function <code>main</code>. (this part will be supplemented)
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">kotlinx.html.div</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">space.kscience.dataforge.context.Context</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="k">import</span><span class="w"> </span><span class="nn">space.kscience.visionforge.html.ResourceLocation</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="k">import</span><span class="w"> </span><span class="nn">space.kscience.visionforge.solid.*</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">import</span><span class="w"> </span><span class="nn">java.nio.file.Paths</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Context</span><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">        </span><span class="n">plugin</span><span class="p">(</span><span class="n">Solids</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="n">context</span><span class="p">.</span><span class="na">makeVisionFile</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="n">Paths</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;nameFile.html&quot;</span><span class="p">),</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="n">resourceLocation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ResourceLocation</span><span class="p">.</span><span class="na">EMBED</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="p">){</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="n">div</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">           </span><span class="c1">//first vision</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">            </span><span class="n">vision</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">                </span><span class="n">solid</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">                    </span><span class="c1">//solids which you want to visualize</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">           </span><span class="c1">//second vision</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">           </span><span class="n">vision</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">              </span><span class="n">solid</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">                 </span><span class="c1">//solids which you want to visualize</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">              </span><span class="p">}</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">           </span><span class="p">}</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="solids-properties">Solids properties</h2>
+<p><strong>We will analyze which basic properties solids have using <code>box</code> solid.</strong></p>
+<p><em>Basic properties:</em>
+1. <code>opacity</code> &mdash; It is set in <code>float</code>. It takes on values from 0 to 1, which represent percents of solid opacity. It's initial value is 1.
+2. <code>color</code> &mdash; It can be specified as <code>Int</code>, <code>String</code>, or as three <code>Ubytes</code>, which represent color in <code>rgb</code>. Elementally, the solid will have <code>green</code> color.
+3. <code>rotation</code> &mdash; it's the point, which sets rotations along axes. Initially, the value is <code>Point3D(0, 0, 0)</code>. Changing <code>x</code> coordinate of the point, you make pivot around <code>x axis</code>. The same for other coordinates: changing <code>y</code> &mdash; pivot around <code>y axis</code>, changing <code>z</code> &mdash; pivot around <code>z axis</code>.
+4. position, which is given by values <code>x</code>, <code>y</code>, <code>z</code>. Initial values are <code>x = 0</code>, <code>y = 0</code>, <code>z = 0</code>. The coordinate system is Cartesian. It's elemental position is this &mdash; vertical <code>y</code> axis and horizontal <code>Oxz</code> plane.</p>
+<p>Let's see how properties are set in solids.
+The <code>small box</code> will have elemental values of properties. If you don't set properties, it will have the same <code>position</code>, <code>color</code>, <code>rotation</code>, and <code>opacity</code> values.</p>
+<p><strong><em>You can see that <code>box</code> take four values. Later, we will discuss what they do in more detail. Now, it does not really matter.</em></strong>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">box</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;small box&quot;</span><span class="p">){</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">   </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">   </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">   </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">   </span><span class="n">opacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1">//100% opacity</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">   </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">//as string</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">   </span><span class="n">rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src="../../images/small-box.png" /></p>
+<p>The <code>big box</code> will have properties with custom values. 
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">box</span><span class="p">(</span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;big box&quot;</span><span class="p">){</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">   </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">   </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">   </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">60</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">   </span><span class="n">opacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="c1">//50% opacity</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">   </span><span class="n">color</span><span class="p">(</span><span class="m">0</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="m">179</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="m">179</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="c1">//color in rgb</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">   </span><span class="n">rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src="../../images/big-rotated-box.png" />
+If we compare these boxes, we will see all differences. </p>
+<p>Here is the function <code>main</code> with both boxes.
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Context</span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="n">plugin</span><span class="p">(</span><span class="n">Solids</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="n">context</span><span class="p">.</span><span class="na">makeVisionFile</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="n">Paths</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="s">&quot;customFile.html&quot;</span><span class="p">),</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">        </span><span class="n">resourceLocation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ResourceLocation</span><span class="p">.</span><span class="na">EMBED</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="p">){</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="n">div</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">            </span><span class="n">vision</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">                </span><span class="n">solid</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">                   </span><span class="n">box</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;small box&quot;</span><span class="p">){</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">                      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">                      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">                      </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">                      </span><span class="n">opacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="c1">//100% opacity</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">                      </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">//as string</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">                      </span><span class="n">rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">                   </span><span class="p">}</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">                   </span><span class="n">box</span><span class="p">(</span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;big box&quot;</span><span class="p">){</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">                      </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">                      </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">                      </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">60</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">                      </span><span class="n">opacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="w"> </span><span class="c1">//50% opacity</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">                      </span><span class="n">color</span><span class="p">(</span><span class="m">0</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="m">179</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="m">179</span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="c1">//rgb</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">                      </span><span class="n">rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">                   </span><span class="p">}</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">                </span><span class="p">}</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src="../../images/two-boxes-1.png" />
+<img alt="" src="../../images/two-boxes-2.png" /></p>
+<p><strong><em>There is plenty of other properties, especially those, which you can create by yourself. Here we mention just a small part.</em></strong></p>
+<h2 id="basic-solids">Basic Solids</h2>
+<p>Now, let's see which solids can be visualized:</p>
+<h3 id="1-polyline">1) PolyLine</h3>
+<p>It's scarcely a solid, but it can be visualized, so we mention it.
+<code>polyline</code> build lines, obviously. Let's take a look at it's work.</p>
+<p><code>polyline</code> requires two values &mdash; <code>points</code>, and <code>name</code>:
+* <code>points</code> is a <code>vararg</code> with <code>Point3D</code> type. It takes pairs of points, which you want to connect.
+* <code>name</code> is an identifier of <em>any solid</em>; but in this case, it is an identifier of <code>polyline</code>.
+It's type is <code>String</code>. <strong>This value can be required by any solid;
+you can set it, you can not to set it, but without you won't be able to control solid, since it won't be inherited.</strong></p>
+<p>This is an example of polyline with other solid <code>box</code>:
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span>
+<span class="normal"><a href="#__codelineno-4-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">box</span><span class="p">(</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;box&quot;</span><span class="p">){</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">   </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">10</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">   </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">10</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">   </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">-</span><span class="m">10</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">   </span><span class="n">opacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.4</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="p">}</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="n">polyline</span><span class="p">(</span><span class="n">Point3D</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">),</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">),</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">),</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">),</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;polyline&quot;</span><span class="p">){</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">   </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p><img alt="" src="../../images/polyline-points.png" />
+<img alt="" src="../../images/polyline-points-2.png" /></p>
+<h3 id="2-box">2) Box</h3>
+<p>First thing which has to be mentioned is that <code>box</code> takes four values: <code>box(x, y, z, name)</code>
+* <code>x</code> &mdash; x-axis length of the <code>box</code>
+* <code>y</code> &mdash; y-axis length of the <code>box</code>
+* <code>z</code> &mdash; z-axis length of the <code>box</code></p>
+<p>These values have <code>Float</code> type. </p>
+<p><em><code>x</code>, <code>y</code>, and <code>z</code> are necessary values, which cannot be ignored. You have to set them.</em></p>
+<ul>
+<li><code>name</code> &mdash; <code>box</code>'es identifier. You've already met it. </li>
+</ul>
+<p>Let's create just usual <code>box</code> with equal ribs.</p>
+<p><div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="w">   </span><span class="n">box</span><span class="p">(</span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;box&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">        </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;pink&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">   </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+   <img alt="" src="../../images/box.png" /></p>
+<p>Now, let's make <code>box</code> with bigger <code>y</code> value.
+   <div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">box</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;high box&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">     </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+As you can see, only the rib of <code>y-axis</code> differs from other ribs.</p>
+<p><img alt="" src="../../images/high-box.png" /></p>
+<p>For a final trial, let's create a <code>box</code> with a bigger <code>x</code> value.</p>
+<p><div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">box</span><span class="p">(</span><span class="m">65</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;wide box&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">     </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">     </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">     </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;black&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+Predictably, only the <code>x-axis</code> rib is bigger than other ribs. </p>
+<p><img alt="" src="../../images/wide-box.png" /></p>
+<h3 id="3-sphere">3) Sphere</h3>
+<p>It takes in two values: <code>radius</code>, and <code>name</code>. 
+We bring you to mind that <code>name</code> is a general value for all solids, so do not wonder, since all solids need their own identifier.</p>
+<p>As for <code>radius</code>, it has <code>Float</code> type, and, as you can guess, it sets the radius of the sphere which will be created.
+   <div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">sphere</span><span class="p">(</span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sphere&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">     </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">     </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">     </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">     </span><span class="n">opacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.9</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">     </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;blue&quot;</span><span class="p">)</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+   <img alt="" src="../../images/sphere.png" /></p>
+<h3 id="4-hexagon">4) Hexagon</h3>
+<p>It is solid which has six edges. It is set by eight values: <code>node1</code>,..., <code>node8</code>. They all have <code>Point3D</code> type, so they are just points, vertices.</p>
+<p><em>Six edges are these:</em> 
+1) Edge with vertices <code>node1</code>, <code>node4</code>, <code>node3</code>, <code>node2</code>
+2) Edge with vertices <code>node1</code>, <code>node2</code>, <code>node6</code>, <code>node5</code>
+3) Edge with vertices <code>node2</code>, <code>node3</code>, <code>node7</code>, <code>node6</code>
+4) Edge with vertices <code>node4</code>, <code>node8</code>, <code>node7</code>, <code>node3</code>
+5) Edge with vertices <code>node1</code>, <code>node5</code>, <code>node8</code>, <code>node4</code>
+6) Edge with vertices <code>node8</code>, <code>node5</code>, <code>node6</code>, <code>node7</code></p>
+<p><img alt="" src="../../images/scheme.png" /></p>
+<p>As the hexagon takes in specific points, we understand that this solid cannot be moved, it is fixed in space, and it can't make pivots.</p>
+<p>Let's make classic parallelepiped.
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="w">   </span><span class="n">hexagon</span><span class="p">(</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">        </span><span class="n">Point3D</span><span class="p">(</span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">),</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">        </span><span class="n">Point3D</span><span class="p">(</span><span class="m">35</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">),</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">        </span><span class="n">Point3D</span><span class="p">(</span><span class="m">35</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">),</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">        </span><span class="n">Point3D</span><span class="p">(</span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">15</span><span class="p">),</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">        </span><span class="n">Point3D</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">18</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">),</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="n">Point3D</span><span class="p">(</span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">18</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">),</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="n">Point3D</span><span class="p">(</span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">18</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">),</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">        </span><span class="n">Point3D</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">18</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">),</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">        </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;classic hexagon&quot;</span><span class="p">){</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;green&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="w">   </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+   <img alt="" src="../../images/classic-hexagon.png" /></p>
+<p>Now, let's make a custom hexagon.</p>
+<p><code>kotlin
+hexagon(
+    Point3D(5, 30, 5),
+    Point3D(24, 30, 8),
+    Point3D(20, 30, -10),
+    Point3D(5, 30, -7),
+    Point3D(8, 16, 0),
+    Point3D(12, 16, 0),
+    Point3D(10, 16, -5),
+    Point3D(6.5, 12, -3),
+    name = "custom_hexagon"
+) {
+    color("brown")
+}</code>
+   <img alt="" src="../../images/custom-hexagon.png" /></p>
+<h3 id="3-cone">3) Cone</h3>
+<p>It takes in six values: <code>bottomRadius</code>, <code>height</code>, <code>upperRadius</code>, <code>startAngle</code>, <code>angle</code>, and <code>name</code>. </p>
+<p>Obviously, <code>bottomRadius</code> is responsible for the radius of a bottom base, and <code>height</code> sets the height of a cone along the <code>z-axis</code>.</p>
+<p>As it takes such values as <code>upperRadius</code>, <code>startAngle</code>, <code>angle</code>, <code>cone</code> can build not only usual cones, but also cone segments. Initially, <code>upperRadius</code> will have <code>0.0</code> value, <code>startAngle</code> &mdash; <code>0f</code>, <code>angle</code> &mdash; <code>PI2</code>, so if you don't set them, you'll get just a simple cone. </p>
+<p>Setting <code>upperRadius</code>, you make a frustum cone, since it sets a radius of the upper base of a cone. Set <code>startAngle</code>, and <code>angle</code> let to cut off segments by planes perpendicular to the base. <code>startAngle</code> &mdash; an angle, starting with which segment will be left, <code>angle</code> &mdash; an angle of cone, which will be set from <code>startAngle</code>. </p>
+<p>Let's build a classic cone:
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span>
+<span class="normal"><a href="#__codelineno-10-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="w">   </span><span class="n">cone</span><span class="p">(</span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cone&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">         </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;beige&quot;</span><span class="p">)</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">   </span><span class="err">```</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">   </span><span class="o">![]</span><span class="p">(..</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">cone</span><span class="o">-</span><span class="m">1.</span><span class="n">png</span><span class="p">)</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">   </span><span class="o">![]</span><span class="p">(..</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">cone</span><span class="o">-</span><span class="m">2.</span><span class="n">png</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="n">First</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">all</span><span class="p">,</span><span class="w"> </span><span class="n">we</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="k">try</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">frustum</span><span class="w"> </span><span class="n">cone</span><span class="p">:</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="err">```</span><span class="n">kotlin</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="n">cone</span><span class="p">(</span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cone&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">   </span><span class="n">color</span><span class="p">(</span><span class="m">0</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">)</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src="../../images/frustum-cone.png" /></p>
+<p>Now, we need to make a try to build a cone segment:</p>
+<p><div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">cone</span><span class="p">(</span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">80</span><span class="p">,</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cone&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">   </span><span class="n">color</span><span class="p">(</span><span class="m">0</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="m">200</span><span class="n">u</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src="../../images/cone-segment-1.png" />
+<img alt="" src="../../images/cone-segment-2.png" /></p>
+<p>Finally, the segment of frustum cone is left for a try:
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">cone</span><span class="p">(</span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">PI</span><span class="o">*</span><span class="m">3</span><span class="o">/</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="o">/</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cone&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">   </span><span class="n">color</span><span class="p">(</span><span class="m">190</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="n">u</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src="../../images/frustum-cone-segment.png" /></p>
+<h3 id="4-cone-surface">4) Cone Surface</h3>
+<p>This solid is set by seven values:<code>bottomOuterRadius</code>, <code>bottomInnerRadius</code>, <code>height</code>, <code>topOuterRadius</code>, <code>topInnerRadius</code>, <code>startAngle</code>, and <code>angle</code>.</p>
+<p>In addition to <code>height</code>, <code>startAngle</code>, and <code>angle</code>, which work as they work in <code>cone</code>, there are some new values.
+<code>bottomOuterRadius</code>, and <code>bottomInnerRadius</code> set properties of the bottom circle, <code>topOuterRadius</code>, <code>topInnerRadius</code> &mdash; of the upper circle. They have no initial value, so that means they have to be set.</p>
+<p>Generally, <code>cone</code>, and <code>coneSurface</code> buildings work in the same way, it's possible to make <code>coneSurface</code>'s fragments as in <code>cone</code></p>
+<p>Let's build usual cone surface with almost all properties set:
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="w">   </span><span class="n">coneSurface</span><span class="p">(</span><span class="m">60</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cone surface&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">        </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">        </span><span class="n">rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">9</span><span class="p">)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">   </span><span class="err">```</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="o">![]</span><span class="p">(..</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">cone</span><span class="o">-</span><span class="n">surface</span><span class="o">-</span><span class="m">1.</span><span class="n">png</span><span class="p">)</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="o">![]</span><span class="p">(..</span><span class="o">/</span><span class="n">images</span><span class="o">/</span><span class="n">cone</span><span class="o">-</span><span class="n">surface</span><span class="o">-</span><span class="m">2.</span><span class="n">png</span><span class="p">)</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="n">Now</span><span class="p">,</span><span class="w"> </span><span class="n">let</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">cone</span><span class="w"> </span><span class="n">surface</span><span class="w"> </span><span class="n">and</span><span class="w"> </span><span class="k">set</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="nb">it</span><span class="err">&#39;</span><span class="n">s</span><span class="w"> </span><span class="n">properties</span><span class="p">:</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="err">```</span><span class="n">kotlin</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="n">coneSurface</span><span class="p">(</span><span class="m">30</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">8</span><span class="p">,</span><span class="m">0f</span><span class="p">,</span><span class="w"> </span><span class="n">pi</span><span class="o">*</span><span class="m">3</span><span class="o">/</span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;cone surface&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">   </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;fuchsia&quot;</span><span class="p">)</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">   </span><span class="n">rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="m">9</span><span class="p">)</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src="../../images/cone-surface-fragment.png" />
+<img alt="" src="../../images/cone-surface-fragment-2.png" /></p>
+<h3 id="5-cylinder">5) Cylinder</h3>
+<p>This solid is set by <code>radius</code>, and <code>height</code>. As you can see by accepting values, there's no option of building fragments of cylinders.</p>
+<p>Here's a demonstration of a cylinder:</p>
+<p><div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">cylinder</span><span class="p">(</span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">100</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;cylinder&quot;</span><span class="p">){</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">   </span><span class="n">rotation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Point3D</span><span class="p">(</span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">   </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;indigo&quot;</span><span class="p">)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src="../../images/cylinder-1.png" />
+<img alt="" src="../../images/cylinder-2.png" /></p>
+<h3 id="6-tube">6) Tube</h3>
+<p><code>tube</code> takes in <code>radius</code>, <code>height</code>, <code>innerRadius</code>, <code>startAngle</code>, <code>angle</code>, and <code>name</code>. <em>All values are familiar from <code>cone</code>, and <code>coneSurface</code> solids.</em></p>
+<p>Here is an example of classic tube:
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">tube</span><span class="p">(</span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;usual tube&quot;</span><span class="p">){</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">   </span><span class="n">opacity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.4</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="p">}</span><span class="w">                    </span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src="../../images/tube.png" /></p>
+<p>This is an example of tube fragment:</p>
+<p><div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">tube</span><span class="p">(</span><span class="m">50</span><span class="p">,</span><span class="w"> </span><span class="m">40</span><span class="p">,</span><span class="w"> </span><span class="m">20</span><span class="p">,</span><span class="w"> </span><span class="m">0f</span><span class="p">,</span><span class="w"> </span><span class="n">PI</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;fragmented tube&quot;</span><span class="p">){</span><span class="w">    </span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">   </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;white&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src="../../images/tube-fragment.png" /></p>
+<h3 id="7-extruded">7) Extruded</h3>
+<p><code>extruded</code> is set by two values: <code>shape</code>, and <code>layer</code>. 
+* <code>shape</code> is a value of <code>List&lt;Point2D&gt;</code> type. It's just a list of all points of the solid. <em><code>shape</code> has to consist of not less than two points!</em>
+* <code>layer</code> is <code>MutableList</code> types variable. (here is a sentence with a description of the work of this function). <em>The amount of <code>layer</code>-s has to be more than one</em></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../../../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

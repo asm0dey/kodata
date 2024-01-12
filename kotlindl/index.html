@@ -1,0 +1,2113 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../tables-kt/">
+      
+      
+        <link rel="next" href="../londogard-nlp-toolkit/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>kotlindl - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="kotlindl - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/kotlindl/README.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="kotlindl - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/kotlindl/README.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kotlindl-high-level-deep-learning-api-in-kotlin" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              kotlindl
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kaliningraph/" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-configure-kotlindl-in-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to configure KotlinDL in your project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to configure KotlinDL in your project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-with-kotlindl-in-jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with KotlinDL in Jupyter Notebook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-kotlindl-in-android-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with KotlinDL in Android projects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kotlindl-onnx-runtime-android-and-jdk-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      KotlinDL, ONNX Runtime, Android, and JDK versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-and-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples and tutorials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-kotlindl-on-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running KotlinDL on GPU
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fat-jar-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fat Jar issue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-issuessupport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting issues/Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-of-conduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code of Conduct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kmath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kaliningraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kandy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kravis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plotly-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visionforge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#library-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Library Structure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-configure-kotlindl-in-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to configure KotlinDL in your project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to configure KotlinDL in your project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#working-with-kotlindl-in-jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with KotlinDL in Jupyter Notebook
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#working-with-kotlindl-in-android-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Working with KotlinDL in Android projects
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kotlindl-onnx-runtime-android-and-jdk-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      KotlinDL, ONNX Runtime, Android, and JDK versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples-and-tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples and tutorials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-kotlindl-on-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running KotlinDL on GPU
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logging
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fat-jar-issue" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fat Jar issue
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#limitations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limitations
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-issuessupport" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting issues/Support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-of-conduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code of Conduct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="kotlindl-high-level-deep-learning-api-in-kotlin">KotlinDL: High-level Deep Learning API in Kotlin <a href="https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub"><img alt="official JetBrains project" src="http://jb.gg/badges/incubator.svg" /></a></h1>
+<p><a href="http://kotlinlang.org"><img alt="Kotlin" src="https://img.shields.io/badge/kotlin-1.8.21-blue.svg?logo=kotlin" /></a>
+<a href="https://kotlinlang.slack.com/messages/kotlindl/"><img alt="Slack channel" src="https://img.shields.io/badge/chat-slack-green.svg?logo=slack" /></a></p>
+<p>KotlinDL is a high-level Deep Learning API written in Kotlin and inspired by <a href="https://keras.io">Keras</a>. 
+Under the hood, it uses TensorFlow Java API and ONNX Runtime API for Java. KotlinDL offers simple APIs for training deep learning models from scratch, 
+importing existing Keras and ONNX models for inference, and leveraging transfer learning for tailoring existing pre-trained models to your tasks. </p>
+<p>This project aims to make Deep Learning easier for JVM and Android developers and simplify deploying deep learning models in production environments.</p>
+<p>Here's an example of what a classic convolutional neural network LeNet would look like in KotlinDL:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span>
+<span class="normal"><a href="#__codelineno-0-36">36</a></span>
+<span class="normal"><a href="#__codelineno-0-37">37</a></span>
+<span class="normal"><a href="#__codelineno-0-38">38</a></span>
+<span class="normal"><a href="#__codelineno-0-39">39</a></span>
+<span class="normal"><a href="#__codelineno-0-40">40</a></span>
+<span class="normal"><a href="#__codelineno-0-41">41</a></span>
+<span class="normal"><a href="#__codelineno-0-42">42</a></span>
+<span class="normal"><a href="#__codelineno-0-43">43</a></span>
+<span class="normal"><a href="#__codelineno-0-44">44</a></span>
+<span class="normal"><a href="#__codelineno-0-45">45</a></span>
+<span class="normal"><a href="#__codelineno-0-46">46</a></span>
+<span class="normal"><a href="#__codelineno-0-47">47</a></span>
+<span class="normal"><a href="#__codelineno-0-48">48</a></span>
+<span class="normal"><a href="#__codelineno-0-49">49</a></span>
+<span class="normal"><a href="#__codelineno-0-50">50</a></span>
+<span class="normal"><a href="#__codelineno-0-51">51</a></span>
+<span class="normal"><a href="#__codelineno-0-52">52</a></span>
+<span class="normal"><a href="#__codelineno-0-53">53</a></span>
+<span class="normal"><a href="#__codelineno-0-54">54</a></span>
+<span class="normal"><a href="#__codelineno-0-55">55</a></span>
+<span class="normal"><a href="#__codelineno-0-56">56</a></span>
+<span class="normal"><a href="#__codelineno-0-57">57</a></span>
+<span class="normal"><a href="#__codelineno-0-58">58</a></span>
+<span class="normal"><a href="#__codelineno-0-59">59</a></span>
+<span class="normal"><a href="#__codelineno-0-60">60</a></span>
+<span class="normal"><a href="#__codelineno-0-61">61</a></span>
+<span class="normal"><a href="#__codelineno-0-62">62</a></span>
+<span class="normal"><a href="#__codelineno-0-63">63</a></span>
+<span class="normal"><a href="#__codelineno-0-64">64</a></span>
+<span class="normal"><a href="#__codelineno-0-65">65</a></span>
+<span class="normal"><a href="#__codelineno-0-66">66</a></span>
+<span class="normal"><a href="#__codelineno-0-67">67</a></span>
+<span class="normal"><a href="#__codelineno-0-68">68</a></span>
+<span class="normal"><a href="#__codelineno-0-69">69</a></span>
+<span class="normal"><a href="#__codelineno-0-70">70</a></span>
+<span class="normal"><a href="#__codelineno-0-71">71</a></span>
+<span class="normal"><a href="#__codelineno-0-72">72</a></span>
+<span class="normal"><a href="#__codelineno-0-73">73</a></span>
+<span class="normal"><a href="#__codelineno-0-74">74</a></span>
+<span class="normal"><a href="#__codelineno-0-75">75</a></span>
+<span class="normal"><a href="#__codelineno-0-76">76</a></span>
+<span class="normal"><a href="#__codelineno-0-77">77</a></span>
+<span class="normal"><a href="#__codelineno-0-78">78</a></span>
+<span class="normal"><a href="#__codelineno-0-79">79</a></span>
+<span class="normal"><a href="#__codelineno-0-80">80</a></span>
+<span class="normal"><a href="#__codelineno-0-81">81</a></span>
+<span class="normal"><a href="#__codelineno-0-82">82</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kd">private</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">EPOCHS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kd">private</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">TRAINING_BATCH_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kd">private</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">NUM_CHANNELS</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1L</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kd">private</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">IMAGE_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">28L</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kd">private</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">SEED</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">12L</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="kd">private</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">TEST_BATCH_SIZE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1000</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="kd">private</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">lenet5Classic</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sequential</span><span class="p">.</span><span class="na">of</span><span class="p">(</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="n">Input</span><span class="p">(</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">        </span><span class="n">IMAGE_SIZE</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="n">IMAGE_SIZE</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="n">NUM_CHANNELS</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="n">Conv2D</span><span class="p">(</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="n">filters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">6</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="n">kernelSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">),</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">        </span><span class="n">strides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">        </span><span class="n">activation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Activations</span><span class="p">.</span><span class="na">Tanh</span><span class="p">,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="n">kernelInitializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GlorotNormal</span><span class="p">(</span><span class="n">SEED</span><span class="p">),</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">        </span><span class="n">biasInitializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Zeros</span><span class="p">(),</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="n">padding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConvPadding</span><span class="p">.</span><span class="na">SAME</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">    </span><span class="n">AvgPool2D</span><span class="p">(</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="n">poolSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">        </span><span class="n">strides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">        </span><span class="n">padding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConvPadding</span><span class="p">.</span><span class="na">VALID</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">    </span><span class="n">Conv2D</span><span class="p">(</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">        </span><span class="n">filters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">16</span><span class="p">,</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="w">        </span><span class="n">kernelSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">5</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">),</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">        </span><span class="n">strides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="w">        </span><span class="n">activation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Activations</span><span class="p">.</span><span class="na">Tanh</span><span class="p">,</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="w">        </span><span class="n">kernelInitializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GlorotNormal</span><span class="p">(</span><span class="n">SEED</span><span class="p">),</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="w">        </span><span class="n">biasInitializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Zeros</span><span class="p">(),</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="w">        </span><span class="n">padding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConvPadding</span><span class="p">.</span><span class="na">SAME</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37"></a><span class="w">    </span><span class="n">AvgPool2D</span><span class="p">(</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38"></a><span class="w">        </span><span class="n">poolSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39"></a><span class="w">        </span><span class="n">strides</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">),</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40"></a><span class="w">        </span><span class="n">padding</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConvPadding</span><span class="p">.</span><span class="na">VALID</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42"></a><span class="w">    </span><span class="n">Flatten</span><span class="p">(),</span><span class="w"> </span><span class="c1">// 3136</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43"></a><span class="w">    </span><span class="n">Dense</span><span class="p">(</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44"></a><span class="w">        </span><span class="n">outputSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">120</span><span class="p">,</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45"></a><span class="w">        </span><span class="n">activation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Activations</span><span class="p">.</span><span class="na">Tanh</span><span class="p">,</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46"></a><span class="w">        </span><span class="n">kernelInitializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GlorotNormal</span><span class="p">(</span><span class="n">SEED</span><span class="p">),</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47"></a><span class="w">        </span><span class="n">biasInitializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Constant</span><span class="p">(</span><span class="m">0.1f</span><span class="p">)</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49"></a><span class="w">    </span><span class="n">Dense</span><span class="p">(</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50"></a><span class="w">        </span><span class="n">outputSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">84</span><span class="p">,</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51"></a><span class="w">        </span><span class="n">activation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Activations</span><span class="p">.</span><span class="na">Tanh</span><span class="p">,</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52"></a><span class="w">        </span><span class="n">kernelInitializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GlorotNormal</span><span class="p">(</span><span class="n">SEED</span><span class="p">),</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53"></a><span class="w">        </span><span class="n">biasInitializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Constant</span><span class="p">(</span><span class="m">0.1f</span><span class="p">)</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54"></a><span class="w">    </span><span class="p">),</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55"></a><span class="w">    </span><span class="n">Dense</span><span class="p">(</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56"></a><span class="w">        </span><span class="n">outputSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="p">,</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57"></a><span class="w">        </span><span class="n">activation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Activations</span><span class="p">.</span><span class="na">Linear</span><span class="p">,</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58"></a><span class="w">        </span><span class="n">kernelInitializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">GlorotNormal</span><span class="p">(</span><span class="n">SEED</span><span class="p">),</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59"></a><span class="w">        </span><span class="n">biasInitializer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Constant</span><span class="p">(</span><span class="m">0.1f</span><span class="p">)</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61"></a><span class="p">)</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62"></a>
+<a id="__codelineno-0-63" name="__codelineno-0-63"></a>
+<a id="__codelineno-0-64" name="__codelineno-0-64"></a><span class="kd">fun</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="p">(</span><span class="nv">train</span><span class="p">,</span><span class="w"> </span><span class="nv">test</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mnist</span><span class="p">()</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66"></a>
+<a id="__codelineno-0-67" name="__codelineno-0-67"></a><span class="w">    </span><span class="n">lenet5Classic</span><span class="p">.</span><span class="na">use</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68"></a><span class="w">        </span><span class="nb">it</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69"></a><span class="w">            </span><span class="n">optimizer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Adam</span><span class="p">(</span><span class="n">clipGradient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ClipGradientByValue</span><span class="p">(</span><span class="m">0.1f</span><span class="p">)),</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70"></a><span class="w">            </span><span class="n">loss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Losses</span><span class="p">.</span><span class="na">SOFT_MAX_CROSS_ENTROPY_WITH_LOGITS</span><span class="p">,</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71"></a><span class="w">            </span><span class="n">metric</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Metrics</span><span class="p">.</span><span class="na">ACCURACY</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72"></a><span class="w">        </span><span class="p">)</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73"></a>
+<a id="__codelineno-0-74" name="__codelineno-0-74"></a><span class="w">        </span><span class="nb">it</span><span class="p">.</span><span class="na">logSummary</span><span class="p">()</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75"></a>
+<a id="__codelineno-0-76" name="__codelineno-0-76"></a><span class="w">        </span><span class="nb">it</span><span class="p">.</span><span class="na">fit</span><span class="p">(</span><span class="n">dataset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">train</span><span class="p">,</span><span class="w"> </span><span class="n">epochs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">EPOCHS</span><span class="p">,</span><span class="w"> </span><span class="n">batchSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TRAINING_BATCH_SIZE</span><span class="p">)</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77"></a>
+<a id="__codelineno-0-78" name="__codelineno-0-78"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">accuracy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">evaluate</span><span class="p">(</span><span class="n">dataset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">test</span><span class="p">,</span><span class="w"> </span><span class="n">batchSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">TEST_BATCH_SIZE</span><span class="p">).</span><span class="na">metrics</span><span class="o">[</span><span class="n">Metrics</span><span class="p">.</span><span class="na">ACCURACY</span><span class="o">]</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79"></a>
+<a id="__codelineno-0-80" name="__codelineno-0-80"></a><span class="w">        </span><span class="n">println</span><span class="p">(</span><span class="s">&quot;Accuracy: </span><span class="si">$</span><span class="n">accuracy</span><span class="s">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#library-structure">Library Structure</a></li>
+<li><a href="#how-to-configure-kotlindl-in-your-project">How to configure KotlinDL in your project</a></li>
+<li><a href="#working-with-kotlindl-in-android-projects">Working with KotlinDL in Android projects</a></li>
+<li><a href="#working-with-kotlindl-in-jupyter-notebook">Working with KotlinDL in Jupyter Notebook</a></li>
+<li><a href="#kotlindl-onnx-runtime-android-and-jdk-versions">KotlinDL, ONNX Runtime, Android, and JDK versions</a></li>
+<li><a href="#documentation">Documentation</a></li>
+<li><a href="#examples-and-tutorials">Examples and tutorials</a></li>
+<li><a href="#running-kotlindl-on-gpu">Running KotlinDL on GPU</a></li>
+<li><a href="#logging">Logging</a></li>
+<li><a href="#fat-jar-issue">Fat Jar issue</a></li>
+<li><a href="#limitations">Limitations</a></li>
+<li><a href="#contributing">Contributing</a></li>
+<li><a href="#reporting-issuessupport">Reporting issues/Support</a></li>
+<li><a href="#code-of-conduct">Code of Conduct</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id="library-structure">Library Structure</h2>
+<p>KotlinDL consists of several modules:
+* <code>kotlin-deeplearning-api</code> api interfaces and classes
+* <code>kotlin-deeplearning-impl</code> implementation classes and utilities
+* <code>kotlin-deeplearning-onnx</code> inference with ONNX Runtime
+* <code>kotlin-deeplearning-tensorflow</code> learning and inference with TensorFlow
+* <code>kotlin-deeplearning-visualization</code> visualization utilities
+* <code>kotlin-deeplearning-dataset</code> dataset classes</p>
+<p>Modules <code>kotlin-deeplearning-tensorflow</code> and <code>kotlin-deeplearning-dataset</code> are only available for desktop JVM, while other artifacts could also be used on Android.</p>
+<h2 id="how-to-configure-kotlindl-in-your-project">How to configure KotlinDL in your project</h2>
+<p>To use KotlinDL in your project, ensure that <code>mavenCentral</code> is added to the repositories list:
+<div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="n">mavenCentral</span><span class="o">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+Then add the necessary dependencies to your <code>build.gradle</code> file. </p>
+<p>To start with creating simple neural networks or downloading pre-trained models, just add the following dependency:
+<div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// build.gradle</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow:[KOTLIN-DL-VERSION]&#39;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// build.gradle.kts</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow:[KOTLIN-DL-VERSION]&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p>Use <code>kotlin-deeplearning-onnx</code> module for inference with ONNX Runtime:
+<div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// build.gradle</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.jetbrains.kotlinx:kotlin-deeplearning-onnx:[KOTLIN-DL-VERSION]&#39;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">// build.gradle.kts</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">  </span><span class="n">implementation</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:kotlin-deeplearning-onnx:[KOTLIN-DL-VERSION]&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p>To use the full power of KotlinDL in your project for JVM, add the following dependencies to your <code>build.gradle</code> file:
+<div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="c1">// build.gradle</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow:[KOTLIN-DL-VERSION]&#39;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.jetbrains.kotlinx:kotlin-deeplearning-onnx:[KOTLIN-DL-VERSION]&#39;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.jetbrains.kotlinx:kotlin-deeplearning-visualization:[KOTLIN-DL-VERSION]&#39;</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1">// build.gradle.kts</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">  </span><span class="n">implementation</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow:[KOTLIN-DL-VERSION]&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">  </span><span class="n">implementation</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:kotlin-deeplearning-onnx:[KOTLIN-DL-VERSION]&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">  </span><span class="n">implementation</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:kotlin-deeplearning-visualization:[KOTLIN-DL-VERSION]&quot;</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p>The latest stable KotlinDL version is <code>0.5.2</code>, latest unstable version is <code>0.6.0-alpha-1</code>.</p>
+<p>For more details, as well as for <code>pom.xml</code> and <code>build.gradle.kts</code> examples, please refer to
+the <a href="docs/quick_start_guide.md">Quick Start Guide</a>.</p>
+<h3 id="working-with-kotlindl-in-jupyter-notebook">Working with KotlinDL in Jupyter Notebook</h3>
+<p>You can work with KotlinDL interactively in Jupyter Notebook with the Kotlin kernel. To do so, add the required dependencies in your notebook: </p>
+<p><div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="nd">@file</span><span class="p">:</span><span class="n">DependsOn</span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:kotlin-deeplearning-tensorflow:[KOTLIN-DL-VERSION]&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+For more details on installing Jupyter Notebook and adding the Kotlin kernel, check out the <a href="docs/quick_start_guide.md">Quick Start Guide</a>.</p>
+<h3 id="working-with-kotlindl-in-android-projects">Working with KotlinDL in Android projects</h3>
+<p>KotlinDL supports an inference of ONNX models on the Android platform.
+To use KotlinDL in your Android project, add the following dependency to your build.gradle file:
+<div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">// build.gradle</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.jetbrains.kotlinx:kotlin-deeplearning-onnx:[KOTLIN-DL-VERSION]&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="c1">// build.gradle.kts</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="n">implementation</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:kotlin-deeplearning-onnx:[KOTLIN-DL-VERSION]&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+For more details, please refer to the <a href="docs/quick_start_guide.md#working-with-kotlin-dl-in-android-studio">Quick Start Guide</a>.</p>
+<h2 id="kotlindl-onnx-runtime-android-and-jdk-versions">KotlinDL, ONNX Runtime, Android, and JDK versions</h2>
+<p>This table shows the mapping between KotlinDL, TensorFlow, ONNX Runtime, Compile SDK for Android and minimum supported Java versions.</p>
+<table>
+<thead>
+<tr>
+<th>KotlinDL Version</th>
+<th>Minimum Java Version</th>
+<th>ONNX Runtime Version</th>
+<th>TensorFlow Version</th>
+<th>Android: Compile SDK Version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.1.*</td>
+<td>8</td>
+<td></td>
+<td>1.15</td>
+<td></td>
+</tr>
+<tr>
+<td>0.2.0</td>
+<td>8</td>
+<td></td>
+<td>1.15</td>
+<td></td>
+</tr>
+<tr>
+<td>0.3.0</td>
+<td>8</td>
+<td>1.8.1</td>
+<td>1.15</td>
+<td></td>
+</tr>
+<tr>
+<td>0.4.0</td>
+<td>8</td>
+<td>1.11.0</td>
+<td>1.15</td>
+<td></td>
+</tr>
+<tr>
+<td>0.5.0-0.5.1</td>
+<td>11</td>
+<td>1.12.1</td>
+<td>1.15</td>
+<td>31</td>
+</tr>
+<tr>
+<td>0.5.2</td>
+<td>11</td>
+<td>1.14.0</td>
+<td>1.15</td>
+<td>31</td>
+</tr>
+<tr>
+<td>0.6.*</td>
+<td>11</td>
+<td>1.16.0</td>
+<td>1.15</td>
+<td>31</td>
+</tr>
+</tbody>
+</table>
+<h2 id="documentation">Documentation</h2>
+<ul>
+<li>Presentations and videos:</li>
+<li><a href="https://www.youtube.com/watch?v=jCFZc97_XQU">Deep Learning with KotlinDL</a> (Zinoviev Alexey at Huawei Developer Group HDG UK 2021, <a href="https://www.youtube.com/redirect?event=video_description&amp;redir_token=QUFFLUhqa1RPX3h0a2FrZ2pUby1kSURzYWVpM0tHNFRrUXxBQ3Jtc0tucjZMRE1JbWNuN1BrbGFMc0FOeERPVEtMR0FDLUo4bi1lcC1BcmFkMkd0WFJOS3ZVMFQ3YlctUXFHU1lVdjVZMHUzYmlETjRCZ3lLclBpZGNWcXJXcmdVLTQ5Ujd2N0hNUHlMZXRTZE1wYktHSUZuSQ&amp;q=https%3A%2F%2Fspeakerdeck.com%2Fzaleslaw%2Fdeep-learning-with-kotlindl">slides</a>)</li>
+<li><a href="https://www.youtube.com/watch?v=ruUz8uMZUVw">Introduction to Deep Learning with KotlinDL</a> (Zinoviev Alexey at Kotlin Budapest User Group 2021, <a href="https://speakerdeck.com/zaleslaw/deep-learning-introduction-with-kotlindl">slides</a>)</li>
+<li><a href="CHANGELOG.md">Change log for KotlinDL</a></li>
+<li><a href="https://kotlin.github.io/kotlindl/">Full KotlinDL API reference</a></li>
+</ul>
+<h2 id="examples-and-tutorials">Examples and tutorials</h2>
+<p>You do not need prior experience with Deep Learning to use KotlinDL.</p>
+<p>We are working on including extensive documentation to help you get started. 
+At this point, please feel free to check out the following tutorials we have prepared:
+- <a href="docs/quick_start_guide.md">Quick Start Guide</a> 
+- <a href="docs/create_your_first_nn.md">Creating your first neural network</a>
+- <a href="docs/importing_keras_model.md">Importing a Keras model</a> 
+- <a href="docs/transfer_learning.md">Transfer learning</a>
+- <a href="docs/transfer_learning_functional.md">Transfer learning with Functional API</a>
+- <a href="docs/inference_onnx_model.md#desktop-jvm">Running inference with ONNX models on JVM</a>
+- <a href="docs/inference_onnx_model.md#android">Running inference with ONNX models on Android</a></p>
+<p>For more inspiration, take a look at the <a href="examples">code examples</a> in this repository and <a href="https://github.com/Kotlin/kotlindl-app-sample">Sample Android App</a>.</p>
+<h2 id="running-kotlindl-on-gpu">Running KotlinDL on GPU</h2>
+<p>To enable the training and inference on a GPU, please read this <a href="https://www.tensorflow.org/install/gpu">TensorFlow GPU Support page</a>
+and install the CUDA framework to allow calculations on a GPU device.</p>
+<p>Note that only NVIDIA devices are supported.</p>
+<p>You will also need to add the following dependencies in your project if you wish to leverage a GPU: 
+<div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="c1">// build.gradle</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.tensorflow:libtensorflow:1.15.0&#39;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.tensorflow:libtensorflow_jni_gpu:1.15.0&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1">// build.gradle.kts</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">implementation</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;org.tensorflow:libtensorflow:1.15.0&quot;</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="n">implementation</span><span class="w"> </span><span class="p">(</span><span class="s">&quot;org.tensorflow:libtensorflow_jni_gpu:1.15.0&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>On Windows, the following distributions are required:
+- CUDA cuda_10.0.130_411.31_win10
+- <a href="https://developer.nvidia.com/compute/machine-learning/cudnn/secure/7.6.3.30/Production/10.0_20190822/cudnn-10.0-windows10-x64-v7.6.3.30.zip">cudnn-7.6.3</a>
+- <a href="https://www.microsoft.com/en-us/download/details.aspx?id=48145">C++ redistributable parts</a> </p>
+<p>For inference of ONNX models on a CUDA device, you will also need to add the following dependencies to your project:
+<div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1">// build.gradle</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">api</span><span class="w"> </span><span class="s1">&#39;com.microsoft.onnxruntime:onnxruntime_gpu:1.16.0&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="c1">// build.gradle.kts</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="n">api</span><span class="p">(</span><span class="s">&quot;com.microsoft.onnxruntime:onnxruntime_gpu:1.16.0&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>To find more info about ONNXRuntime and CUDA version compatibility, please refer to the <a href="https://onnxruntime.ai/docs/execution-providers/CUDA-ExecutionProvider.html">ONNXRuntime CUDA Execution Provider page</a>.</p>
+<h2 id="logging">Logging</h2>
+<p>By default, the API module uses the <a href="https://github.com/MicroUtils/kotlin-logging">kotlin-logging</a> library to organize the logging process separately from the specific logger implementation.</p>
+<p>You could use any widely known JVM logging library with a <a href="http://www.slf4j.org/">Simple Logging Facade for Java (SLF4J)</a> implementation such as Logback or Log4j/Log4j2.</p>
+<p>You will also need to add the following dependencies and configuration file <code>log4j2.xml</code> to the <code>src/resource</code> folder in your project if you wish to use log4j2:</p>
+<p><div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="c1">// build.gradle</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.apache.logging.log4j:log4j-api:2.17.2&#39;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.apache.logging.log4j:log4j-core:2.17.2&#39;</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.apache.logging.log4j:log4j-slf4j-impl:2.17.2&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="c1">// build.gradle.kts</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.apache.logging.log4j:log4j-api:2.17.2&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.apache.logging.log4j:log4j-core:2.17.2&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.apache.logging.log4j:log4j-slf4j-impl:2.17.2&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-17-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-17-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-17-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-17-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-17-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-17-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-17-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-17-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-17-10">10</a></span>
+<span class="normal"><a href="#__codelineno-17-11">11</a></span>
+<span class="normal"><a href="#__codelineno-17-12">12</a></span>
+<span class="normal"><a href="#__codelineno-17-13">13</a></span>
+<span class="normal"><a href="#__codelineno-17-14">14</a></span>
+<span class="normal"><a href="#__codelineno-17-15">15</a></span>
+<span class="normal"><a href="#__codelineno-17-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nt">&lt;Configuration</span><span class="w"> </span><span class="na">status=</span><span class="s">&quot;WARN&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="nt">&lt;Appenders&gt;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">        </span><span class="nt">&lt;Console</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;STDOUT&quot;</span><span class="w"> </span><span class="na">target=</span><span class="s">&quot;SYSTEM_OUT&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">            </span><span class="nt">&lt;PatternLayout</span><span class="w"> </span><span class="na">pattern=</span><span class="s">&quot;%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">        </span><span class="nt">&lt;/Console&gt;</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">    </span><span class="nt">&lt;/Appenders&gt;</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">    </span><span class="nt">&lt;Loggers&gt;</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="w">        </span><span class="nt">&lt;Root</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;debug&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10"></a><span class="w">            </span><span class="nt">&lt;AppenderRef</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;STDOUT&quot;</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;DEBUG&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11"></a><span class="w">        </span><span class="nt">&lt;/Root&gt;</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12"></a><span class="w">        </span><span class="nt">&lt;Logger</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;io.jhdf&quot;</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;off&quot;</span><span class="w"> </span><span class="na">additivity=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13"></a><span class="w">            </span><span class="nt">&lt;appender-ref</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;STDOUT&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14"></a><span class="w">        </span><span class="nt">&lt;/Logger&gt;</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15"></a><span class="w">    </span><span class="nt">&lt;/Loggers&gt;</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16"></a><span class="nt">&lt;/Configuration&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>If you wish to use Logback, include the following dependency and configuration file <code>logback.xml</code> to <code>src/resource</code> folder in your project</p>
+<p><div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="c1">// build.gradle</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;ch.qos.logback:logback-classic:1.4.5&#39;</span>
+</code></pre></div></td></tr></table></div>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span>
+<span class="normal"><a href="#__codelineno-19-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="c1">// build.gradle.kts</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;ch.qos.logback:logback-classic:1.4.5&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p><div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-20-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-20-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-20-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-20-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-20-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-20-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-20-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-20-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-20-10">10</a></span>
+<span class="normal"><a href="#__codelineno-20-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="nt">&lt;configuration&gt;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">    </span><span class="nt">&lt;appender</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;STDOUT&quot;</span><span class="w"> </span><span class="na">class=</span><span class="s">&quot;ch.qos.logback.core.ConsoleAppender&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">        </span><span class="nt">&lt;encoder&gt;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">            </span><span class="nt">&lt;pattern&gt;</span>%d{HH:mm:ss.SSS}<span class="w"> </span>[%thread]<span class="w"> </span>%-5level<span class="w"> </span>%logger{36}<span class="w"> </span>-<span class="w"> </span>%msg%n<span class="nt">&lt;/pattern&gt;</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">        </span><span class="nt">&lt;/encoder&gt;</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">    </span><span class="nt">&lt;/appender&gt;</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">    </span><span class="nt">&lt;root</span><span class="w"> </span><span class="na">level=</span><span class="s">&quot;info&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="w">        </span><span class="nt">&lt;appender-ref</span><span class="w"> </span><span class="na">ref=</span><span class="s">&quot;STDOUT&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10"></a><span class="w">    </span><span class="nt">&lt;/root&gt;</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11"></a><span class="nt">&lt;/configuration&gt;</span>
+</code></pre></div></td></tr></table></div>
+These configuration files can be found in the <code>examples</code> module.</p>
+<h2 id="fat-jar-issue">Fat Jar issue</h2>
+<p>There is a known Stack Overflow <a href="https://stackoverflow.com/questions/47477069/issue-running-tensorflow-with-java/52003343">question</a> 
+and TensorFlow <a href="https://github.com/tensorflow/tensorflow/issues/30488">issue</a> with Fat Jar creation and execution on Amazon EC2 instances.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a>java.lang.UnsatisfiedLinkError: /tmp/tensorflow_native_libraries-1562914806051-0/libtensorflow_jni.so: libtensorflow_framework.so.1: cannot open shared object file: No such file or directory
+</code></pre></div></td></tr></table></div>
+<p>Despite the fact that the <a href="https://github.com/tensorflow/tensorflow/issues/30488">bug</a> describing this problem was closed in the release of TensorFlow 1.14, 
+it was not fully fixed and required an additional line in the build script.</p>
+<p>One simple <a href="https://github.com/tensorflow/tensorflow/issues/30635#issuecomment-615513958">solution</a> is to add a TensorFlow version specification to the Jar's Manifest. 
+Below is an example of a Gradle build task for Fat Jar creation.</p>
+<div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-22-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-22-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-22-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-22-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-22-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-22-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="c1">// build.gradle</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="n">task</span><span class="w"> </span><span class="nf">fatJar</span><span class="o">(</span><span class="nl">type:</span><span class="w"> </span><span class="n">Jar</span><span class="o">)</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="n">manifest</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">        </span><span class="n">attributes</span><span class="w"> </span><span class="s1">&#39;Implementation-Version&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;1.15&#39;</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">    </span><span class="o">}</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">    </span><span class="n">classifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;all&#39;</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">    </span><span class="n">from</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">configurations</span><span class="o">.</span><span class="na">runtimeClasspath</span><span class="o">.</span><span class="na">collect</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">it</span><span class="o">.</span><span class="na">isDirectory</span><span class="o">()</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">zipTree</span><span class="o">(</span><span class="n">it</span><span class="o">)</span><span class="w"> </span><span class="o">}</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">    </span><span class="n">with</span><span class="w"> </span><span class="n">jar</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span>
+<span class="normal"><a href="#__codelineno-23-12">12</a></span>
+<span class="normal"><a href="#__codelineno-23-13">13</a></span>
+<span class="normal"><a href="#__codelineno-23-14">14</a></span>
+<span class="normal"><a href="#__codelineno-23-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="c1">// build.gradle.kts</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="n">plugins</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">    </span><span class="n">kotlin</span><span class="p">(</span><span class="s">&quot;jvm&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s">&quot;1.5.31&quot;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">    </span><span class="n">id</span><span class="p">(</span><span class="s">&quot;com.github.johnrengelman.shadow&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="s">&quot;7.0.0&quot;</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="p">}</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="n">tasks</span><span class="p">{</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">    </span><span class="n">shadowJar</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">        </span><span class="n">manifest</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">            </span><span class="n">attributes</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="s">&quot;Main-Class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;MainKt&quot;</span><span class="p">))</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="w">            </span><span class="n">attributes</span><span class="p">(</span><span class="n">Pair</span><span class="p">(</span><span class="s">&quot;Implementation-Version&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;1.15&quot;</span><span class="p">))</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="limitations">Limitations</h2>
+<p>Currently, only a limited set of deep learning architectures are supported. Here's the list of available layers:</p>
+<ul>
+<li>Core layers:</li>
+<li><code>Input</code>, <code>Dense</code>, <code>Flatten</code>, <code>Reshape</code>, <code>Dropout</code>, <code>BatchNorm</code>.</li>
+<li>Convolutional layers:</li>
+<li><code>Conv1D</code>, <code>Conv2D</code>, <code>Conv3D</code>;</li>
+<li><code>Conv1DTranspose</code>, <code>Conv2DTranspose</code>, <code>Conv3DTranspose</code>;</li>
+<li><code>DepthwiseConv2D</code>;</li>
+<li><code>SeparableConv2D</code>.</li>
+<li>Pooling layers:</li>
+<li><code>MaxPool1D</code>, <code>MaxPool2D</code>, <code>MaxPooling3D</code>;</li>
+<li><code>AvgPool1D</code>, <code>AvgPool2D</code>, <code>AvgPool3D</code>;</li>
+<li><code>GlobalMaxPool1D</code>, <code>GlobalMaxPool2D</code>, <code>GlobalMaxPool3D</code>;</li>
+<li><code>GlobalAvgPool1D</code>, <code>GlobalAvgPool2D</code>, <code>GlobalAvgPool3D</code>.</li>
+<li>Merge layers:</li>
+<li><code>Add</code>, <code>Subtract</code>, <code>Multiply</code>;</li>
+<li><code>Average</code>, <code>Maximum</code>, <code>Minimum</code>;</li>
+<li><code>Dot</code>;</li>
+<li><code>Concatenate</code>.</li>
+<li>Activation layers:</li>
+<li><code>ELU</code>, <code>LeakyReLU</code>, <code>PReLU</code>, <code>ReLU</code>, <code>Softmax</code>, <code>ThresholdedReLU</code>;</li>
+<li><code>ActivationLayer</code>.</li>
+<li>Cropping layers:</li>
+<li><code>Cropping1D</code>, <code>Cropping2D</code>, <code>Cropping3D</code>.</li>
+<li>Upsampling layers:</li>
+<li><code>UpSampling1D</code>, <code>UpSampling2D</code>, <code>UpSampling3D</code>.</li>
+<li>Zero padding layers:</li>
+<li><code>ZeroPadding1D</code>, <code>ZeroPadding2D</code>, <code>ZeroPadding3D</code>.</li>
+<li>Other layers:</li>
+<li><code>Permute</code>, <code>RepeatVector</code>.</li>
+</ul>
+<p>TensorFlow 1.15 Java API is currently used for layer implementation, but this project will be switching to TensorFlow 2.+ in the nearest future. 
+This, however, does not affect the high-level API. Inference with TensorFlow models is currently supported only on desktops. </p>
+<h2 id="contributing">Contributing</h2>
+<p>Read the <a href="https://github.com/Kotlin/kotlindl/blob/master/CONTRIBUTING.md">Contributing Guidelines</a>.</p>
+<h2 id="reporting-issuessupport">Reporting issues/Support</h2>
+<p>Please use <a href="https://github.com/Kotlin/kotlindl/issues">GitHub issues</a> for filing feature requests and bug reports. 
+You are also welcome to join the <a href="https://kotlinlang.slack.com/messages/kotlindl/">#kotlindl channel</a> in Kotlin Slack.</p>
+<h2 id="code-of-conduct">Code of Conduct</h2>
+<p>This project and the corresponding community are governed by the <a href="https://confluence.jetbrains.com/display/ALL/JetBrains+Open+Source+and+Community+Code+of+Conduct">JetBrains Open Source and Community Code of Conduct</a>. Please make sure you read it. </p>
+<h2 id="license">License</h2>
+<p>KotlinDL is licensed under the <a href="LICENSE">Apache 2.0 License</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2053 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../kmath/">
+      
+      
+        <link rel="next" href="../kaliningraph/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>multik - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="multik - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/multik/README.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="multik - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/multik/README.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#multik" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              multik
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kotlindl/" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kaliningraph/" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlindl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kmath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-in-your-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using in your projects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using in your projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Notebook
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support platforms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quickstart
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quickstart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arithmetic operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-mathematics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array mathematics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregate functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-of-iterable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations of Iterable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexingslicingiterating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexing/Slicing/Iterating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inplace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kaliningraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kandy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kravis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plotly-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visionforge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-in-your-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using in your projects
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using in your projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter Notebook
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#support-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Support platforms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quickstart" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quickstart
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quickstart">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array properties
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arithmetic-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arithmetic operations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#array-mathematics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Array mathematics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aggregate-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aggregate functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copying-arrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      Copying arrays
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operations-of-iterable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Operations of Iterable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexingslicingiterating" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexing/Slicing/Iterating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inplace" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inplace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building" class="md-nav__link">
+    <span class="md-ellipsis">
+      Building
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contributing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contributing
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<p><a href="https://kotlinlang.org/docs/components-stability.html"><img alt="Kotlin Alpha" src="https://kotl.in/badges/alpha.svg" /></a>
+<a href="https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub"><img alt="JetBrains incubator project" src="https://jb.gg/badges/incubator.svg" /></a>
+<a href="https://mvnrepository.com/artifact/org.jetbrains.kotlinx/multik-core"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/org.jetbrains.kotlinx/multik-core" /></a>
+<a href="https://www.apache.org/licenses/LICENSE-2.0"><img alt="GitHub license" src="https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat" /></a></p>
+<h1 id="multik">Multik</h1>
+<p>Multidimensional array library for Kotlin.</p>
+<h2 id="modules">Modules</h2>
+<ul>
+<li><code>multik-core</code> &mdash; contains ndarrays, methods called on them and [math], [stat] and [linalg] interfaces.</li>
+<li><code>multik-default</code> &mdash; implementation including <code>multik-kotlin</code> and <code>multik-openblas</code> for performance.</li>
+<li><code>multik-kotlin</code> &mdash; implementation of [math], [stat] and [linalg] interfaces on JVM.</li>
+<li><code>multik-openblas</code> &mdash; implementation of [math], [stat] and [linalg] interfaces in native code using OpenBLAS.</li>
+</ul>
+<h2 id="using-in-your-projects">Using in your projects</h2>
+<h3 id="gradle">Gradle</h3>
+<p>In your Gradle build script:
+1. Add the Maven Central Repository.
+2. Add the <code>org.jetbrains.kotlinx:multik-core:$multik_version</code> api dependency.
+3. Add an implementation dependency: <code>org.jetbrains.kotlinx:multik-default:$multik_version</code>,
+<code>org.jetbrains.kotlinx:multik-kotlin:$multik_version</code> or <code>org.jetbrains.kotlinx:multik-openblas:$multik_version</code>.</p>
+<p><code>build.gradle</code>:
+<div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">mavenCentral</span><span class="o">()</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="o">}</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s2">&quot;org.jetbrains.kotlinx:multik-core:0.2.2&quot;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s2">&quot;org.jetbrains.kotlinx:multik-default:0.2.2&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="o">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p><code>build.gradle.kts</code>:
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">repositories</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="n">mavenCentral</span><span class="p">()</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="p">}</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:multik-core:0.2.2&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:multik-default:0.2.2&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p>For a multiplatform project, set the dependency in a common block:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span>
+<span class="normal"><a href="#__codelineno-2-7">7</a></span>
+<span class="normal"><a href="#__codelineno-2-8">8</a></span>
+<span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="n">kotlin</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">    </span><span class="n">sourceSets</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">commonMain</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">getting</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">            </span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">                </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:multik-core:0.2.2&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>or in a platform-specific block:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span>
+<span class="normal"><a href="#__codelineno-3-5">5</a></span>
+<span class="normal"><a href="#__codelineno-3-6">6</a></span>
+<span class="normal"><a href="#__codelineno-3-7">7</a></span>
+<span class="normal"><a href="#__codelineno-3-8">8</a></span>
+<span class="normal"><a href="#__codelineno-3-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">kotlin</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="w">    </span><span class="n">sourceSets</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">jvmName</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">getting</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">            </span><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">                </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;org.jetbrains.kotlinx:multik-core-jvm:0.2.2&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="jupyter-notebook">Jupyter Notebook</h3>
+<p>Install <a href="https://github.com/Kotlin/kotlin-jupyter">Kotlin kernel</a> for
+<a href="https://jupyter.org/">Jupyter</a>
+or just visit to <a href="https://datalore.jetbrains.com/">Datalore</a>.</p>
+<p>Import stable <code>multik</code> version into notebook:
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>%use multik
+</code></pre></div></td></tr></table></div></p>
+<h2 id="support-platforms">Support platforms</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Platforms</th>
+<th style="text-align: center;"><code>multik-core</code></th>
+<th style="text-align: center;"><code>multik-kotlin</code></th>
+<th style="text-align: center;"><code>multik-openblas</code></th>
+<th style="text-align: center;"><code>multik-default</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>JS</strong></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>linuxX64</strong></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>mingwX64</strong></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>macosX64</strong></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>macosArm64</strong></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>iosArm64</strong></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>iosX64</strong></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>iosSimulatorArm64</strong></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>JVM</strong></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;"><img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">linuxX64 - <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /><br/>mingwX64 - <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /><br/>macosX64 - <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /><br/>macosArm64 - <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /><br/>androidArm64 - <img alt="✅" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/2705.svg" title=":white_check_mark:" /></td>
+<td style="text-align: center;">androidArm32 - <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /><br/>androidX86 - <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /><br/>androidX64 - <img alt="❌" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@15.0.3/assets/svg/274c.svg" title=":x:" /></td>
+</tr>
+</tbody>
+</table>
+<p>For Kotlin/JS, we use the new <a href="https://kotlinlang.org/docs/js-ir-compiler.html">IR</a>.
+We also use the <a href="https://blog.jetbrains.com/kotlin/2021/08/try-the-new-kotlin-native-memory-manager-development-preview/">new memory model</a>
+in Kotlin/Native. Keep this in mind when using Multik in your multiplatform projects.</p>
+<p><strong>Note</strong>:
+* on ubuntu 18.04 and older <code>multik-openblas</code> doesn't work due to older versions of <em><strong>glibc</strong></em>.
+* <code>multik-openblas</code> for desktop targets (<em>linuxX64</em>, <em>mingwX64</em>, <em>macosX64</em>, <em>macosArm64</em>) is experimental and unstable.
+We will improve stability and perfomance as <em>Kotlin/Native</em> evolves.
+* JVM target <code>multik-openblas</code> for Android only supports <strong>arm64-v8a</strong> processors.</p>
+<h2 id="quickstart">Quickstart</h2>
+<p>Visit <a href="https://kotlin.github.io/multik">Multik documentation</a> for a detailed feature overview.</p>
+<h4 id="creating-arrays">Creating arrays</h4>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span>
+<span class="normal"><a href="#__codelineno-5-22">22</a></span>
+<span class="normal"><a href="#__codelineno-5-23">23</a></span>
+<span class="normal"><a href="#__codelineno-5-24">24</a></span>
+<span class="normal"><a href="#__codelineno-5-25">25</a></span>
+<span class="normal"><a href="#__codelineno-5-26">26</a></span>
+<span class="normal"><a href="#__codelineno-5-27">27</a></span>
+<span class="normal"><a href="#__codelineno-5-28">28</a></span>
+<span class="normal"><a href="#__codelineno-5-29">29</a></span>
+<span class="normal"><a href="#__codelineno-5-30">30</a></span>
+<span class="normal"><a href="#__codelineno-5-31">31</a></span>
+<span class="normal"><a href="#__codelineno-5-32">32</a></span>
+<span class="normal"><a href="#__codelineno-5-33">33</a></span>
+<span class="normal"><a href="#__codelineno-5-34">34</a></span>
+<span class="normal"><a href="#__codelineno-5-35">35</a></span>
+<span class="normal"><a href="#__codelineno-5-36">36</a></span>
+<span class="normal"><a href="#__codelineno-5-37">37</a></span>
+<span class="normal"><a href="#__codelineno-5-38">38</a></span>
+<span class="normal"><a href="#__codelineno-5-39">39</a></span>
+<span class="normal"><a href="#__codelineno-5-40">40</a></span>
+<span class="normal"><a href="#__codelineno-5-41">41</a></span>
+<span class="normal"><a href="#__codelineno-5-42">42</a></span>
+<span class="normal"><a href="#__codelineno-5-43">43</a></span>
+<span class="normal"><a href="#__codelineno-5-44">44</a></span>
+<span class="normal"><a href="#__codelineno-5-45">45</a></span>
+<span class="normal"><a href="#__codelineno-5-46">46</a></span>
+<span class="normal"><a href="#__codelineno-5-47">47</a></span>
+<span class="normal"><a href="#__codelineno-5-48">48</a></span>
+<span class="normal"><a href="#__codelineno-5-49">49</a></span>
+<span class="normal"><a href="#__codelineno-5-50">50</a></span>
+<span class="normal"><a href="#__codelineno-5-51">51</a></span>
+<span class="normal"><a href="#__codelineno-5-52">52</a></span>
+<span class="normal"><a href="#__codelineno-5-53">53</a></span>
+<span class="normal"><a href="#__codelineno-5-54">54</a></span>
+<span class="normal"><a href="#__codelineno-5-55">55</a></span>
+<span class="normal"><a href="#__codelineno-5-56">56</a></span>
+<span class="normal"><a href="#__codelineno-5-57">57</a></span>
+<span class="normal"><a href="#__codelineno-5-58">58</a></span>
+<span class="normal"><a href="#__codelineno-5-59">59</a></span>
+<span class="normal"><a href="#__codelineno-5-60">60</a></span>
+<span class="normal"><a href="#__codelineno-5-61">61</a></span>
+<span class="normal"><a href="#__codelineno-5-62">62</a></span>
+<span class="normal"><a href="#__codelineno-5-63">63</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk</span><span class="p">.</span><span class="na">ndarray</span><span class="p">(</span><span class="n">mk</span><span class="o">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="o">]</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="cm">/* [1, 2, 3] */</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="kd">val</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk</span><span class="p">.</span><span class="na">ndarray</span><span class="p">(</span><span class="n">mk</span><span class="o">[</span><span class="n">mk</span><span class="o">[</span><span class="m">1.5</span><span class="p">,</span><span class="w"> </span><span class="m">2.1</span><span class="p">,</span><span class="w"> </span><span class="m">3.0</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">mk</span><span class="o">[</span><span class="m">4.0</span><span class="p">,</span><span class="w"> </span><span class="m">5.0</span><span class="p">,</span><span class="w"> </span><span class="m">6.0</span><span class="o">]]</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="cm">/*</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="cm">[[1.5, 2.1, 3.0],</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="cm">[4.0, 5.0, 6.0]]</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="cm">*/</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="kd">val</span><span class="w"> </span><span class="nv">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk</span><span class="p">.</span><span class="na">ndarray</span><span class="p">(</span><span class="n">mk</span><span class="o">[</span><span class="n">mk</span><span class="o">[</span><span class="n">mk</span><span class="o">[</span><span class="m">1.5f</span><span class="p">,</span><span class="w"> </span><span class="m">2f</span><span class="p">,</span><span class="w"> </span><span class="m">3f</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">mk</span><span class="o">[</span><span class="m">4f</span><span class="p">,</span><span class="w"> </span><span class="m">5f</span><span class="p">,</span><span class="w"> </span><span class="m">6f</span><span class="o">]]</span><span class="p">,</span><span class="w"> </span><span class="n">mk</span><span class="o">[</span><span class="n">mk</span><span class="o">[</span><span class="m">3f</span><span class="p">,</span><span class="w"> </span><span class="m">2f</span><span class="p">,</span><span class="w"> </span><span class="m">1f</span><span class="o">]</span><span class="p">,</span><span class="w"> </span><span class="n">mk</span><span class="o">[</span><span class="m">4f</span><span class="p">,</span><span class="w"> </span><span class="m">5f</span><span class="p">,</span><span class="w"> </span><span class="m">6f</span><span class="o">]]]</span><span class="p">)</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="cm">/*</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="cm">[[[1.5, 2.0, 3.0],</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="cm">[4.0, 5.0, 6.0]],</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="cm">[[3.0, 2.0, 1.0],</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="cm">[4.0, 5.0, 6.0]]]</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="cm">*/</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="n">mk</span><span class="p">.</span><span class="na">zeros</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">)</span><span class="w"> </span><span class="c1">// create an array of zeros</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="cm">/*</span>
+<a id="__codelineno-5-22" name="__codelineno-5-22"></a><span class="cm">[[0.0, 0.0, 0.0, 0.0],</span>
+<a id="__codelineno-5-23" name="__codelineno-5-23"></a><span class="cm">[0.0, 0.0, 0.0, 0.0],</span>
+<a id="__codelineno-5-24" name="__codelineno-5-24"></a><span class="cm">[0.0, 0.0, 0.0, 0.0]]</span>
+<a id="__codelineno-5-25" name="__codelineno-5-25"></a><span class="cm">*/</span>
+<a id="__codelineno-5-26" name="__codelineno-5-26"></a><span class="n">mk</span><span class="p">.</span><span class="na">ndarray</span><span class="o">&lt;</span><span class="kt">Float</span><span class="p">,</span><span class="w"> </span><span class="n">D2</span><span class="o">&gt;</span><span class="p">(</span><span class="n">setOf</span><span class="p">(</span><span class="m">30f</span><span class="p">,</span><span class="w"> </span><span class="m">2f</span><span class="p">,</span><span class="w"> </span><span class="m">13f</span><span class="p">,</span><span class="w"> </span><span class="m">12f</span><span class="p">),</span><span class="w"> </span><span class="n">intArrayOf</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">))</span><span class="w"> </span><span class="c1">// create an array from a collection</span>
+<a id="__codelineno-5-27" name="__codelineno-5-27"></a><span class="cm">/*</span>
+<a id="__codelineno-5-28" name="__codelineno-5-28"></a><span class="cm">[[30.0, 2.0],</span>
+<a id="__codelineno-5-29" name="__codelineno-5-29"></a><span class="cm">[13.0, 12.0]]</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30"></a><span class="cm">*/</span>
+<a id="__codelineno-5-31" name="__codelineno-5-31"></a><span class="kd">val</span><span class="w"> </span><span class="nv">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk</span><span class="p">.</span><span class="na">ndarray</span><span class="p">(</span><span class="n">doubleArrayOf</span><span class="p">(</span><span class="m">1.0</span><span class="p">,</span><span class="w"> </span><span class="m">1.3</span><span class="p">,</span><span class="w"> </span><span class="m">3.0</span><span class="p">,</span><span class="w"> </span><span class="m">4.0</span><span class="p">,</span><span class="w"> </span><span class="m">9.5</span><span class="p">,</span><span class="w"> </span><span class="m">5.0</span><span class="p">),</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// create an array of shape(2, 3) from a primitive array</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32"></a><span class="cm">/*</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33"></a><span class="cm">[[1.0, 1.3, 3.0],</span>
+<a id="__codelineno-5-34" name="__codelineno-5-34"></a><span class="cm">[4.0, 9.5, 5.0]]</span>
+<a id="__codelineno-5-35" name="__codelineno-5-35"></a><span class="cm">*/</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36"></a><span class="n">mk</span><span class="p">.</span><span class="na">d3array</span><span class="p">(</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// create an array of 3 dimension</span>
+<a id="__codelineno-5-37" name="__codelineno-5-37"></a><span class="cm">/*</span>
+<a id="__codelineno-5-38" name="__codelineno-5-38"></a><span class="cm">[[[0, 1, 4],</span>
+<a id="__codelineno-5-39" name="__codelineno-5-39"></a><span class="cm">[9, 16, 25]],</span>
+<a id="__codelineno-5-40" name="__codelineno-5-40"></a>
+<a id="__codelineno-5-41" name="__codelineno-5-41"></a><span class="cm">[[36, 49, 64],</span>
+<a id="__codelineno-5-42" name="__codelineno-5-42"></a><span class="cm">[81, 100, 121]]]</span>
+<a id="__codelineno-5-43" name="__codelineno-5-43"></a><span class="cm">*/</span>
+<a id="__codelineno-5-44" name="__codelineno-5-44"></a>
+<a id="__codelineno-5-45" name="__codelineno-5-45"></a><span class="n">mk</span><span class="p">.</span><span class="na">d2arrayIndices</span><span class="p">(</span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">ComplexFloat</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-5-46" name="__codelineno-5-46"></a><span class="cm">/*</span>
+<a id="__codelineno-5-47" name="__codelineno-5-47"></a><span class="cm">[[0.0+(0.0)i, 0.0+(1.0)i, 0.0+(2.0)i],</span>
+<a id="__codelineno-5-48" name="__codelineno-5-48"></a><span class="cm">[1.0+(0.0)i, 1.0+(1.0)i, 1.0+(2.0)i],</span>
+<a id="__codelineno-5-49" name="__codelineno-5-49"></a><span class="cm">[2.0+(0.0)i, 2.0+(1.0)i, 2.0+(2.0)i]]</span>
+<a id="__codelineno-5-50" name="__codelineno-5-50"></a><span class="cm"> */</span>
+<a id="__codelineno-5-51" name="__codelineno-5-51"></a>
+<a id="__codelineno-5-52" name="__codelineno-5-52"></a><span class="n">mk</span><span class="p">.</span><span class="na">arange</span><span class="o">&lt;</span><span class="kt">Long</span><span class="o">&gt;</span><span class="p">(</span><span class="m">10</span><span class="p">,</span><span class="w"> </span><span class="m">25</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span><span class="w"> </span><span class="c1">// creare an array with elements in the interval [10, 25) with step 5</span>
+<a id="__codelineno-5-53" name="__codelineno-5-53"></a><span class="cm">/* [10, 15, 20] */</span>
+<a id="__codelineno-5-54" name="__codelineno-5-54"></a>
+<a id="__codelineno-5-55" name="__codelineno-5-55"></a><span class="n">mk</span><span class="p">.</span><span class="na">linspace</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">)</span><span class="w"> </span><span class="c1">// create an array of 9 elements in the interval [0, 2]</span>
+<a id="__codelineno-5-56" name="__codelineno-5-56"></a><span class="cm">/* [0.0, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0] */</span>
+<a id="__codelineno-5-57" name="__codelineno-5-57"></a>
+<a id="__codelineno-5-58" name="__codelineno-5-58"></a><span class="kd">val</span><span class="w"> </span><span class="nv">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk</span><span class="p">.</span><span class="na">identity</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span><span class="p">(</span><span class="m">3</span><span class="p">)</span><span class="w"> </span><span class="c1">// create an identity array of shape (3, 3)</span>
+<a id="__codelineno-5-59" name="__codelineno-5-59"></a><span class="cm">/*</span>
+<a id="__codelineno-5-60" name="__codelineno-5-60"></a><span class="cm">[[1.0, 0.0, 0.0],</span>
+<a id="__codelineno-5-61" name="__codelineno-5-61"></a><span class="cm">[0.0, 1.0, 0.0],</span>
+<a id="__codelineno-5-62" name="__codelineno-5-62"></a><span class="cm">[0.0, 0.0, 1.0]]</span>
+<a id="__codelineno-5-63" name="__codelineno-5-63"></a><span class="cm">*/</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="array-properties">Array properties</h4>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">a</span><span class="p">.</span><span class="na">shape</span><span class="w"> </span><span class="c1">// Array dimensions</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="n">a</span><span class="p">.</span><span class="na">size</span><span class="w"> </span><span class="c1">// Size of array</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">a</span><span class="p">.</span><span class="na">dim</span><span class="w"> </span><span class="c1">// object Dimension</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="n">a</span><span class="p">.</span><span class="na">dim</span><span class="p">.</span><span class="na">d</span><span class="w"> </span><span class="c1">// number of array dimensions</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">a</span><span class="p">.</span><span class="na">dtype</span><span class="w"> </span><span class="c1">// Data type of array elements</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="arithmetic-operations">Arithmetic operations</h4>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="c1">// subtraction</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="cm">/*</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="cm">[[0.5, 0.8, 0.0],</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="cm">[0.0, -4.5, 1.0]]</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="cm">*/</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="n">d</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="c1">// addition</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="cm">/*</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="cm">[[1.5, 2.1, 3.0],</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="cm">[4.0, 5.0, 6.0]]</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="cm">*/</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="n">b</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="c1">// division</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="cm">/*</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="cm">[[1.5, 1.6153846153846154, 1.0],</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="cm">[1.0, 0.5263157894736842, 1.2]]</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="cm">*/</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="n">f</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="c1">// multiplication</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="cm">/*</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="cm">[[0.5, 1.04, 0.0],</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="cm">[0.0, -42.75, 5.0]]</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="cm">*/</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="array-mathematics">Array mathematics</h4>
+<p>See documentation for other methods of
+<a href="https://kotlin.github.io/multik/multik-core/org.jetbrains.kotlinx.multik.api.math/index.html">mathematics</a>,
+<a href="https://kotlin.github.io/multik/multik-core/org.jetbrains.kotlinx.multik.api.linalg/index.html">linear algebra</a>,
+<a href="https://kotlin.github.io/multik/multik-core/org.jetbrains.kotlinx.multik.api.stat/index.html">statistics</a>.</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">a</span><span class="p">.</span><span class="na">sin</span><span class="p">()</span><span class="w"> </span><span class="c1">// element-wise sin, equivalent to mk.math.sin(a)</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="n">a</span><span class="p">.</span><span class="na">cos</span><span class="p">()</span><span class="w"> </span><span class="c1">// element-wise cos, equivalent to mk.math.cos(a)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="n">b</span><span class="p">.</span><span class="na">log</span><span class="p">()</span><span class="w"> </span><span class="c1">// element-wise natural logarithm, equivalent to mk.math.log(b)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="n">b</span><span class="p">.</span><span class="na">exp</span><span class="p">()</span><span class="w"> </span><span class="c1">// element-wise exp, equivalent to mk.math.exp(b)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="n">d</span><span class="w"> </span><span class="n">dot</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="c1">// dot product, equivalent to mk.linalg.dot(d, e)</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="aggregate-functions">Aggregate functions</h4>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">mk</span><span class="p">.</span><span class="na">math</span><span class="p">.</span><span class="na">sum</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="c1">// array-wise sum</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">mk</span><span class="p">.</span><span class="na">math</span><span class="p">.</span><span class="na">min</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="c1">// array-wise minimum elements</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="n">mk</span><span class="p">.</span><span class="na">math</span><span class="p">.</span><span class="na">maxD3</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="m">0</span><span class="p">)</span><span class="w"> </span><span class="c1">// maximum value of an array along axis 0</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">mk</span><span class="p">.</span><span class="na">math</span><span class="p">.</span><span class="na">cumSum</span><span class="p">(</span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">axis</span><span class="o">=</span><span class="m">1</span><span class="p">)</span><span class="w"> </span><span class="c1">// cumulative sum of the elements</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="n">mk</span><span class="p">.</span><span class="na">stat</span><span class="p">.</span><span class="na">mean</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="c1">// mean</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">mk</span><span class="p">.</span><span class="na">stat</span><span class="p">.</span><span class="na">median</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="c1">// meadian</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="copying-arrays">Copying arrays</h4>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">copy</span><span class="p">()</span><span class="w"> </span><span class="c1">// create a copy of the array and its data</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">h</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">deepCopy</span><span class="p">()</span><span class="w"> </span><span class="c1">// create a copy of the array and copy the meaningful data</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="operations-of-iterable">Operations of Iterable</h4>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">c</span><span class="p">.</span><span class="na">filter</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="m">3</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// select all elements less than 3</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="n">b</span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">(</span><span class="nb">it</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nb">it</span><span class="p">).</span><span class="na">toInt</span><span class="p">()</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// return squares</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="n">c</span><span class="p">.</span><span class="na">groupNDArrayBy</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// group elements by condition</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="n">c</span><span class="p">.</span><span class="na">sorted</span><span class="p">()</span><span class="w"> </span><span class="c1">// sort elements</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="indexingslicingiterating">Indexing/Slicing/Iterating</h4>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">a</span><span class="o">[</span><span class="m">2</span><span class="o">]</span><span class="w"> </span><span class="c1">// select the element at the 2 index</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">b</span><span class="o">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="o">]</span><span class="w"> </span><span class="c1">// select the element at row 1 column 2</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="n">b</span><span class="o">[</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="c1">// select row 1 </span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="n">b</span><span class="o">[</span><span class="m">0.</span><span class="p">.</span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="c1">// select elements at rows 0 and 1 in column 1</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="n">b</span><span class="o">[</span><span class="m">0.</span><span class="p">.</span><span class="m">1.</span><span class="p">.</span><span class="m">1</span><span class="o">]</span><span class="w"> </span><span class="c1">// select all elements at row 0</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">el</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;</span><span class="si">$</span><span class="n">el</span><span class="s">, &quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// 1.5, 2.1, 3.0, 4.0, 5.0, 6.0, </span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="p">}</span>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="c1">// for n-dimensional</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a><span class="kd">val</span><span class="w"> </span><span class="nv">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">.</span><span class="na">asDNArray</span><span class="p">()</span>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">index</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="na">multiIndices</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">    </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;</span><span class="si">${</span><span class="n">q</span><span class="o">[</span><span class="n">index</span><span class="o">]</span><span class="si">}</span><span class="s">, &quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// 1.5, 2.1, 3.0, 4.0, 5.0, 6.0, </span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h4 id="inplace">Inplace</h4>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk</span><span class="p">.</span><span class="na">linspace</span><span class="o">&lt;</span><span class="kt">Float</span><span class="o">&gt;</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="cm">/*</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="cm">a = [0.0, 0.1111111111111111, 0.2222222222222222, 0.3333333333333333, 0.4444444444444444, 0.5555555555555556, </span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="cm">0.6666666666666666, 0.7777777777777777, 0.8888888888888888, 1.0]</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="cm">*/</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="kd">val</span><span class="w"> </span><span class="nv">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mk</span><span class="p">.</span><span class="na">linspace</span><span class="o">&lt;</span><span class="kt">Float</span><span class="o">&gt;</span><span class="p">(</span><span class="m">8</span><span class="p">,</span><span class="w"> </span><span class="m">9</span><span class="p">,</span><span class="w"> </span><span class="m">10</span><span class="p">)</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="cm">/*</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="cm">b = [8.0, 8.11111111111111, 8.222222222222221, 8.333333333333334, 8.444444444444445, 8.555555555555555,</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="cm">8.666666666666666, 8.777777777777779, 8.88888888888889, 9.0]</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="cm">*/</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="n">a</span><span class="p">.</span><span class="na">inplace</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="n">math</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">        </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">         </span><span class="n">abs</span><span class="p">()</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="p">}</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="c1">// a = [64.0, 64.88888, 65.77778, 66.66666, 67.55556, 68.44444, 69.333336, 70.22222, 71.111115, 72.0]</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="building">Building</h2>
+<p>To build the entire project, you need to set up an environment for building <code>multik-openblas</code>:
+* JDK 1.8 or higher
+* <em>JAVA_HOME</em> environment - to search for jni files
+* Compilers <em>gcc</em>, <em>g++</em>, <em>gfortran</em> version 8 or higher.
+It is important that they are of the same version.</p>
+<p>Run <code>./gradlew assemble</code> to build all modules.
+If you don't need to build <code>multik-openblas</code>,
+just disable the <code>cmake_build</code> task and build the module you need.</p>
+<h2 id="contributing">Contributing</h2>
+<p>There is an opportunity to contribute to the project:
+1. Implement <a href="multik-core/src/main/kotlin/org/jetbrains/kotlinx/multik/api/math/Math.kt">math</a>,
+<a href="multik-core/src/main/kotlin/org/jetbrains/kotlinx/multik/api/linalg/LinAlg.kt">linalg</a>,
+<a href="multik-core/src/main/kotlin/org/jetbrains/kotlinx/multik/api/Statistics.kt">stat</a> interfaces.
+2. Create your own engine successor from <a href="multik-core/src/main/kotlin/org/jetbrains/kotlinx/multik/api/Engine.kt">Engine</a>, for example - <a href="multik-kotlin/src/main/kotlin/org/jetbrains/kotlinx/multik/jvm/JvmEngine.kt">JvmEngine</a>.
+3. Use <a href="https://github.com/devcrocod/multik/blob/972b18cfd2952abd811fabf34461d238e55c5587/multik-core/src/main/kotlin/org/jetbrains/multik/api/Multik.kt#L23">mk.addEngine</a> and <a href="https://github.com/devcrocod/multik/blob/972b18cfd2952abd811fabf34461d238e55c5587/multik-core/src/main/kotlin/org/jetbrains/multik/api/Multik.kt#L27">mk.setEngine</a>
+to use your implementation.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1901 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../kotlingrad/">
+      
+      
+        <link rel="next" href="../lets-plot/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>kravis - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="kravis - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/kravis/README.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="kravis - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/kravis/README.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kravis-a-kotlin-grammar-for-data-visualization" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              kravis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kotlindl/" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../kaliningraph/" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlindl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kmath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kaliningraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kandy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-grammar-of-graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Grammar of Graphics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-data-input-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Data Input Formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Data Input Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Devices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-local-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) Local R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dockerized-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2) Dockerized R.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-rserve" class="md-nav__link">
+    <span class="md-ellipsis">
+      (3) Rserve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-immutability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plot Immutability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Coverage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Coverage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-missing-api-elements-from-ggplot2" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use missing API elements from ggplot2?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run-tests-on-your-local-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to run tests on your local machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledgements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plotly-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visionforge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#first-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      First Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-grammar-of-graphics" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Grammar of Graphics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Module Architecture
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-data-input-formats" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported Data Input Formats
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Supported Data Input Formats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iterators" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iterators
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tables
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-devices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output Devices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rendering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rendering
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Rendering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-local-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      (1) Local R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-dockerized-r" class="md-nav__link">
+    <span class="md-ellipsis">
+      (2) Dockerized R.
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-rserve" class="md-nav__link">
+    <span class="md-ellipsis">
+      (3) Rserve
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plot-immutability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plot Immutability
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Coverage
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Coverage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use-missing-api-elements-from-ggplot2" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to use missing API elements from ggplot2?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-run-tests-on-your-local-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to run tests on your local machine
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#acknowledgements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Acknowledgements
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="kravis-a-kotlin-grammar-for-data-visualization"><code>kravis</code> - A {k}otlin {gra}mmar for data {vis}ualization</h1>
+<p><a href="https://mvnrepository.com/artifact/com.github.holgerbrandl/kravis"> <img alt="Download" src="https://img.shields.io/badge/Maven%20Central-0.8.5-orange" /> </a></p>
+<p>Visualizing tabular and relational data is the core of data-science. <code>kravis</code> implements a grammar to create a wide range of plots using a standardized set of verbs.</p>
+<p>The grammar implemented by <code>kravis</code> is inspired from <a href="http://ggplot2.org/"><code>ggplot2</code></a>. In fact, all it provides is a more typesafe wrapper around it.  Internally, <code>ggplot2</code> is used as rendering engine. The API of <code>kravis</code> is highly similar to allow even reusing their excellent <a href="https://www.rstudio.com/resources/cheatsheets/#ggplot2">cheatsheet</a>.</p>
+<p>R is required to use <code>ggplot</code>. However, <code>kravis</code> works with various integration backend ranging such as docker or remote webservices.</p>
+<ul>
+<li><a href="#kravis---a-kotlin-grammar-for-data-visualization"><code>kravis</code> - A {k}otlin {gra}mmar for data {vis}ualization</a></li>
+<li><a href="#jupyter">Jupyter</a></li>
+<li><a href="#setup">Setup</a></li>
+<li><a href="#first-example">First Example</a></li>
+<li><a href="#the-grammar-of-graphics">The Grammar of Graphics</a></li>
+<li><a href="#module-architecture">Module Architecture</a></li>
+<li><a href="#supported-data-input-formats">Supported Data Input Formats</a><ul>
+<li><a href="#iterators">Iterators</a></li>
+<li><a href="#tables">Tables</a></li>
+</ul>
+</li>
+<li><a href="#output-devices">Output Devices</a></li>
+<li><a href="#rendering">Rendering</a><ul>
+<li><a href="#1-local-r">(1) Local R</a></li>
+<li><a href="#2-dockerized-r">(2) Dockerized R.</a></li>
+<li><a href="#3-rserve">(3) Rserve</a></li>
+</ul>
+</li>
+<li><a href="#plot-immutability">Plot Immutability</a></li>
+<li><a href="#api-coverage">API Coverage</a><ul>
+<li><a href="#how-to-use-missing-api-elements-from-ggplot2">How to use missing API elements from ggplot2?</a></li>
+</ul>
+</li>
+<li><a href="#references">References</a></li>
+<li><a href="#acknowledgements">Acknowledgements</a></li>
+</ul>
+<hr />
+<p><strong>This is an experimental API and is subject to breaking changes until a first major release</strong></p>
+<hr />
+<h2 id="jupyter">Jupyter</h2>
+<p>An easy way to get started with <code>kravis</code> is with jupyter, you simply need to install the <a href="https://github.com/Kotlin/kotlin-jupyter">kotlin-jupyter</a> kernel.</p>
+<p>See <a href="https://github.com/holgerbrandl/kalasim/blob/master/simulations/notebooks/kravis_test.ipynb">here</a> for a notebook example.</p>
+<h2 id="setup">Setup</h2>
+<p>Add the following artifact to your <code>gradle.build</code></p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>compile &quot;com.github.holgerbrandl:kravis:0.8.5&quot;
+</code></pre></div></td></tr></table></div>
+<p>You can also use <a href="https://jitpack.io/#holgerbrandl/kravis/-SNAPSHOT">JitPack with Maven or Gradle</a> to build the latest snapshot as a dependency in your project.</p>
+<div class="language-groovy highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">repositories</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="n">maven</span><span class="w"> </span><span class="o">{</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="s1">&#39;https://jitpack.io&#39;</span><span class="w"> </span><span class="o">}</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="o">}</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">        </span><span class="n">compile</span><span class="w"> </span><span class="s1">&#39;com.github.holgerbrandl:kravis:-SNAPSHOT&#39;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="o">}</span>
+</code></pre></div></td></tr></table></div>
+<p>To build and install it into your local maven cache, simply clone the repo and run
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>./gradlew<span class="w"> </span>install
+</code></pre></div></td></tr></table></div></p>
+<h2 id="first-example">First Example</h2>
+<p>Let's start by analyzing mamalian <a href="https://ggplot2.tidyverse.org/reference/msleep.html">sleep patterns</a>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">kravis.*</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">org.jetbrains.kotlinx.dataframe.datasets.sleepData</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">sleepData</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="s">&quot;rem_proportion&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;sleep_rem&quot;</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="s">&quot;sleep_total&quot;</span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="c1">// Analyze correlation</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="p">.</span><span class="na">plot</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;sleep_total&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;rem_proportion&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;vore&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;brainwt&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">        </span><span class="p">.</span><span class="na">geomPoint</span><span class="p">(</span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.7</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="p">.</span><span class="na">guides</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LegendType</span><span class="p">.</span><span class="na">none</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">        </span><span class="p">.</span><span class="na">title</span><span class="p">(</span><span class="s">&quot;Correlation between dream and total sleep time&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p><img alt="" src=".README_images/sleep_correlation.png" /></p>
+<p>Find more examples in our gallery <strong>{comding soon}</strong>.</p>
+<h2 id="the-grammar-of-graphics">The Grammar of Graphics</h2>
+<p><code>ggplot2</code> and thus <code>kravis</code> implement a <strong>grammar for graphics</strong> to build plots with</p>
+<blockquote>
+<p><code>aesthetics</code> + <code>layers</code>  + <code>coordinates system</code> + <code>transformations</code> + <code>facets</code></p>
+</blockquote>
+<p>Which reads as <code>map variables from data space to visual space</code> + <code>add one or more layers</code>  + <code>configure the coordinates system</code> + <code>optionally apply statistical transformations</code> + <code>optionally add facets</code>. That's the way!</p>
+<h2 id="module-architecture">Module Architecture</h2>
+<p><img alt="" src=".README_images/module_architecture.jpg" /></p>
+<h2 id="supported-data-input-formats">Supported Data Input Formats</h2>
+<h3 id="iterators">Iterators</h3>
+<p>Every <code>Iterable&lt;T&gt;</code> is a valid data source for <code>kravis</code>, which allows to create plots using a type-save builder DSL. Essentially we first digest it into a table and use it as data source for visualization. Here's an example:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">//  deparse records using property references (which will allow to infer variable names via reflection)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">basePlot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sleepPatterns</span><span class="p">.</span><span class="na">plot</span><span class="p">(</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SleepPattern</span><span class="o">::</span><span class="n">sleep_rem</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SleepPattern</span><span class="o">::</span><span class="n">sleep_total</span><span class="p">,</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SleepPattern</span><span class="o">::</span><span class="n">vore</span><span class="p">,</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SleepPattern</span><span class="o">::</span><span class="n">brainwt</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="n">basePlot</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="p">.</span><span class="na">geomPoint</span><span class="p">()</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="p">.</span><span class="na">title</span><span class="p">(</span><span class="s">&quot;Correlation of total sleep and and rem sleep by food preference&quot;</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">    </span><span class="p">.</span><span class="na">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="" src=".README_images/scatter_example.png" /></p>
+<p>In the previous example  we have used property references. <code>kravis</code> also supports an extractor lambda function syntax, which allow for on-the-fly data transformations when deparsing an <code>Iterable&lt;T&gt;</code>. The (<a href="https://github.com/holgerbrandl/kravis/issues/14">not yet</a> solved) disadvantage is that we need to assign axis labels manually</p>
+<p><div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">sleepPatterns</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="p">.</span><span class="na">plot</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">sleep_total</span><span class="o">/</span><span class="m">60</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="p">.</span><span class="na">geomHistogram</span><span class="p">()</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="p">.</span><span class="na">xLabel</span><span class="p">(</span><span class="s">&quot;sleep[h]&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<img alt="" src=".README_images/extractor_histogram.png" /></p>
+<p>And here's another example using a custom <a href="https://kotlinlang.org/docs/reference/data-classes.html">data class</a>:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">enum</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Gender</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">male</span><span class="p">,</span><span class="w"> </span><span class="n">female</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="kd">data</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nc">Person</span><span class="p">(</span><span class="kd">val</span><span class="w"> </span><span class="nv">name</span><span class="p">:</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">gender</span><span class="p">:</span><span class="w"> </span><span class="n">Gender</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">heightCm</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kd">val</span><span class="w"> </span><span class="nv">weightKg</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="p">)</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="c1">// define some persons</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="kd">val</span><span class="w"> </span><span class="nv">persons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">    </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Max&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="p">.</span><span class="na">male</span><span class="p">,</span><span class="w"> </span><span class="m">192</span><span class="p">,</span><span class="w"> </span><span class="m">80.3</span><span class="p">),</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Anna&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="p">.</span><span class="na">female</span><span class="p">,</span><span class="w"> </span><span class="m">162</span><span class="p">,</span><span class="w"> </span><span class="m">56.3</span><span class="p">),</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">    </span><span class="n">Person</span><span class="p">(</span><span class="s">&quot;Maria&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">Gender</span><span class="p">.</span><span class="na">female</span><span class="p">,</span><span class="w"> </span><span class="m">172</span><span class="p">,</span><span class="w"> </span><span class="m">66.3</span><span class="p">)</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="p">)</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="c1">// visualize sizes by gender</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="n">persons</span><span class="p">.</span><span class="na">plot</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">name</span><span class="p">},</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">weightKg</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">gender</span><span class="p">.</span><span class="na">toString</span><span class="p">()</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="w">    </span><span class="p">.</span><span class="na">geomCol</span><span class="p">()</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">    </span><span class="p">.</span><span class="na">xLabel</span><span class="p">(</span><span class="s">&quot;height [m]&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">    </span><span class="p">.</span><span class="na">yLabel</span><span class="p">(</span><span class="s">&quot;weight [kg]&quot;</span><span class="p">)</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">    </span><span class="p">.</span><span class="na">title</span><span class="p">(</span><span class="s">&quot;Body Size Distribution&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="" src=".README_images/persons.png" /></p>
+<h3 id="tables">Tables</h3>
+<p><code>kravis</code> can handle any kind of tabular data via <a href="https://kotlin.github.io/dataframe">data-frames</a></p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">kravis.*</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="k">import</span><span class="w"> </span><span class="nn">org.jetbrains.kotlinx.dataframe.datasets.irisData</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="n">irisData</span><span class="p">.</span><span class="na">plot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="s">&quot;Species&quot;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="s">&quot;Petal.Length&quot;</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">    </span><span class="p">.</span><span class="na">geomBoxplot</span><span class="p">()</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">    </span><span class="p">.</span><span class="na">geomPoint</span><span class="p">(</span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PositionJitter</span><span class="p">(</span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">),</span><span class="w"> </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.3</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">    </span><span class="p">.</span><span class="na">title</span><span class="p">(</span><span class="s">&quot;Petal Length by Species&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="" src=".README_images/boxplot.png" /></p>
+<h2 id="output-devices">Output Devices</h2>
+<p><code>kravis</code> auto-detects the environment, and will try to guess the most reasonable output device to show your plots. The following output devices are available.</p>
+<ol>
+<li>A swing graphics device for rendering when running in interactive mode.</li>
+<li>A javaFX  graphics device for rendering when running in interactive mode.</li>
+<li>It can render directly into files</li>
+<li>will render directly into jupyter notebooks.</li>
+</ol>
+<p>By default <code>kravis</code> will render as <code>png</code> on all devices, but it also supports vector rendering using <code>svg</code> as output format.</p>
+<p>The preferred output can be configured using the <code>SessionPrefs</code> object</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">SessionPrefs</span><span class="p">.</span><span class="na">OUTPUT_DEVICE</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SwingPlottingDevice</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="rendering">Rendering</h2>
+<p>Currently <code>kravis</code> provided 3 different options to bind an R engine which is required to render plots.</p>
+<h3 id="1-local-r">(1) Local R</h3>
+<p>This is the default mode which can be configured by using</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">SessionPrefs</span><span class="p">.</span><span class="na">RENDER_BACKEND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LocalR</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="2-dockerized-r">(2) Dockerized R.</h3>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">SessionPrefs</span><span class="p">.</span><span class="na">RENDER_BACKEND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Docker</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>This will pull and use by default the container <a href="https://hub.docker.com/r/rocker/tidyverse/"><code>rocker/tidyverse:3.5.1</code></a>, but can be configured to use more custom images as needed.</p>
+<h3 id="3-rserve">(3) Rserve</h3>
+<p>An (optionally) remote backend based using <a href="https://www.rforge.net/Rserve/">Rserve</a></p>
+<p>Simply install the corresponding R package and start the daemon with</p>
+<div class="language-bash highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>R<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;install.packages(&#39;Rserve&#39;,,&#39;http://rforge.net/&#39;,type=&#39;source&#39;)&quot;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>R<span class="w"> </span>CMD<span class="w"> </span>Rserve
+</code></pre></div></td></tr></table></div>
+<p>For configuration details see https://www.rforge.net/Rserve/doc.html</p>
+<p>Alternatively, in case you don't have or want a local R installation, you can also run it dockerized locally or remotly with
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a># docker run -p &lt;public_port&gt;:&lt;private_port&gt; -d &lt;image&gt;  
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a>docker run -dp 6311:6311 holgerbrandl/kravis_rserve 
+</code></pre></div></td></tr></table></div>
+See <a href="misc/docker/kravis_core/Dockerfile">Dockerfile</a> for the spec of this image.</p>
+<p>To use the Rserve backend, configure the kravis <code>SessionPrefs</code> accordingly by pointing to the correct host and port.
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">SessionPrefs</span><span class="p">.</span><span class="na">RENDER_BACKEND</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RserveEngine</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">port</span><span class="o">=</span><span class="m">6302</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<h2 id="plot-immutability">Plot Immutability</h2>
+<p>Plots are -- similar to <a href="https://kotlin.github.io/dataframe"><code>dataframe</code></a> data-frames -- immutable.</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span>
+<span class="normal"><a href="#__codelineno-14-5">5</a></span>
+<span class="normal"><a href="#__codelineno-14-6">6</a></span>
+<span class="normal"><a href="#__codelineno-14-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">basePlot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mpgData</span><span class="p">.</span><span class="na">plot</span><span class="p">(</span><span class="s">&quot;displ&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">x</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hwy&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">y</span><span class="p">).</span><span class="na">geomPoint</span><span class="p">()</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="c1">// create one version with adjusted axis text size</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="n">basePlot</span><span class="p">.</span><span class="na">theme</span><span class="p">(</span><span class="n">axisText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ElementText</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">20.0</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RColor</span><span class="p">.</span><span class="na">red</span><span class="p">))</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="c1">// create another version with unchanged axis labels but using a log scale instead</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="n">basePlot</span><span class="p">.</span><span class="na">scaleXLog10</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="api-coverage">API Coverage</h2>
+<p>Currently we just map a subset of the <code>ggplot2</code> API.</p>
+<p><img alt="" src="docs/data-visualization-2.1_p1.jpg" />
+<img alt="" src="docs/data-visualization-2.1_p2.jpg" /></p>
+<ul>
+<li>Checks - implemented already</li>
+<li>Crosses - Planned but not yet done</li>
+</ul>
+<p>Feel welcome to submit a ticket or PR if some important usecase is missing.</p>
+<h3 id="how-to-use-missing-api-elements-from-ggplot2">How to use missing API elements from ggplot2?</h3>
+<p>Since <code>kravis</code> just mimics some parts of <code>ggplot2</code>, and because user may want to create more custom plots we do support preambles (e.g. to define new geoms) and custom layer specs.</p>
+<p>Example</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span>
+<span class="normal"><a href="#__codelineno-15-4">4</a></span>
+<span class="normal"><a href="#__codelineno-15-5">5</a></span>
+<span class="normal"><a href="#__codelineno-15-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">irisData</span><span class="p">.</span><span class="na">plot</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Species&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Sepal.Length&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">fill</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Species&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">    </span><span class="p">.</span><span class="na">addPreamble</span><span class="p">(</span><span class="s">&quot;&quot;&quot;devtools::source_url(&quot;https://git.io/fAiQN&quot;)&quot;&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="p">.</span><span class="na">addCustom</span><span class="p">(</span><span class="s">&quot;&quot;&quot;geom_flat_violin(scale = &quot;count&quot;, trim = FALSE)&quot;&quot;&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="p">.</span><span class="na">geomDotplot</span><span class="p">(</span><span class="n">binaxis</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;y&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dotsize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span><span class="p">,</span><span class="w"> </span><span class="n">stackdir</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;down&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">binwidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PositionNudge</span><span class="p">(</span><span class="o">-</span><span class="m">0.025</span><span class="p">))</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="p">.</span><span class="na">theme</span><span class="p">(</span><span class="n">legendPosition</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="p">.</span><span class="na">labs</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Species&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Sepal length (cm)&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<p><img alt="" src=".README_images/dot_violin.png" /></p>
+<h2 id="how-to-run-tests-on-your-local-machine">How to run tests on your local machine</h2>
+<p>Run the following commands.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code>cd misc/docker/kravis_test/ &amp;&amp; docker build --progress=plain -t kravis_test .
+./gradlew test
+</code></pre></div></td></tr></table></div>
+<h2 id="references">References</h2>
+<p>You don't like it? Here are some other projects which may better suit your purpose. Before you leave, consider dropping us a <a href="https://github.com/holgerbrandl/kravis/issues/ticket">ticket</a> with some comments about whats missing, badly designed or simply broken in <code>kravis</code>.</p>
+<p>GGplot Wrappers</p>
+<ul>
+<li><a href="https://github.com/JonyEpsilon/gg4clj">gg4clj</a> Another ggplot2 wrapper written in java</li>
+</ul>
+<p>Other JVM visualization libraries ordered by -- personally biased -- usefullness</p>
+<ul>
+<li><a href="https://github.com/haifengl/smile#smileplot">SmilePlot</a> provides data visualization tools such as plots and maps for researchers to understand information more easily and quickly.</li>
+<li><a href="https://github.com/timmolter/XChart">XChart</a> is a light-weight Java library for plotting data</li>
+<li><a href="https://github.com/data2viz/data2viz">data2viz</a> is a multi platform data visualization library with comprehensive DSL</li>
+<li><a href="https://github.com/hudsonb/kubed/">Kubed</a> is a Kotlin library for manipulating the JavaFX scenegraph based on data.</li>
+<li><a href="https://github.com/edvin/tornadofx/wiki/Charts">TornadoFX</a> provides some Kotlin wrappers around JavaFX</li>
+<li><a href="https://github.com/alexarchambault/plotly-scala">plotly-scala</a> which provides scala bindings for plotly.js and works within jupyter</li>
+<li><a href="https://github.com/scalanlp/breeze/tree/master/viz">breeze-viz</a> which is a
+Visualization library backed by Breeze and JFreeChart</li>
+<li><a href="https://grafana.com/">grafana</a> is an open platform for beautiful analytics and monitoring</li>
+<li><a href="http://www.jzy3d.org/">Jzy3d</a> is an open source java library that allows to easily draw 3d scientific data: surfaces, scatter plots, bar charts</li>
+</ul>
+<p>Other
+* https://github.com/bloomberg/bqplot is a plotting library for IPython/Jupyter Notebooks</p>
+<p>Vega-lite based
+* <a href="https://github.com/vegas-viz/Vegas">Vegas</a> aims to be the missing MatPlotLib for Scala + Spark
+* <a href="https://github.com/altair-viz/altair">altair</a> provides declarative statistical visualization library for Python
+* <a href="https://github.com/vega/vega-embed">vega-embed</a> allows to publish Vega visualizations as embedded web components with interactive parameters.
+* <a href="https://github.com/hrbrmstr/vegalite">hrbrmstr/vegalite</a> provides R ggplot2 "bindings" for Vega-Lite</p>
+<h2 id="acknowledgements">Acknowledgements</h2>
+<p>Thanks to vega-lite team for making this project possible.</p>
+<p>Thanks to the ggplot2 team for providing the best data vis API to date.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

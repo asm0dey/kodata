@@ -1,0 +1,2146 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../controls-kt/">
+      
+      
+        <link rel="next" href="../dataframe/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Kotlin for Apache® Spark™ - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Kotlin for Apache® Spark™ - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/kotlin-spark/README.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Kotlin for Apache® Spark™ - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/kotlin-spark/README.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kotlin-for-apache-sparktm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kotlin for Apache® Spark™
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kotlindl/" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kaliningraph/" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-versions-of-apache-spark" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported versions of Apache Spark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-configure-kotlin-for-apache-spark-in-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to configure Kotlin for Apache Spark in your project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to configure Kotlin for Apache Spark in your project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kotlin-for-apache-spark-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kotlin for Apache Spark features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kotlin for Apache Spark features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-sparksession-in-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a SparkSession in Kotlin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-dataset-in-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Dataset in Kotlin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null safety
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withspark-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      withSpark function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withcached-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      withCached function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tolist-and-toarray-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      toList and toArray methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-infixoperator-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column infix/operator functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overload-resolution-ambiguity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overload resolution ambiguity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Streaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-defined-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Defined Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-issues-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting issues / support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribution guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-of-conduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code of Conduct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlindl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kmath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kaliningraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kandy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kravis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plotly-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visionforge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#supported-versions-of-apache-spark" class="md-nav__link">
+    <span class="md-ellipsis">
+      Supported versions of Apache Spark
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deprecated-versions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deprecated versions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-configure-kotlin-for-apache-spark-in-your-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to configure Kotlin for Apache Spark in your project
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to configure Kotlin for Apache Spark in your project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#jupyter" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kotlin-for-apache-spark-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kotlin for Apache Spark features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kotlin for Apache Spark features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-sparksession-in-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a SparkSession in Kotlin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-dataset-in-kotlin" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creating a Dataset in Kotlin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#null-safety" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null safety
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withspark-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      withSpark function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#withcached-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      withCached function
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tolist-and-toarray-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      toList and toArray methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#column-infixoperator-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Column infix/operator functions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overload-resolution-ambiguity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overload resolution ambiguity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tuples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuples
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#streaming" class="md-nav__link">
+    <span class="md-ellipsis">
+      Streaming
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-defined-functions" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Defined Functions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reporting-issues-support" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reporting issues / support
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribution guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-of-conduct" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code of Conduct
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="kotlin-for-apache-sparktm">Kotlin for Apache® Spark™</h1>
+<p><a href="https://kotlinlang.org/docs/components-stability.html"><img alt="Kotlin Stable" src="https://kotl.in/badges/stable.svg" /></a>
+<a href="https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub"><img alt="JetBrains official project" src="http://jb.gg/badges/official.svg" /></a>
+<a href="https://search.maven.org/search?q=g:" title="org.jetbrains.kotlinx.spark&quot;%20AND%20a:&quot;kotlin-spark-api_3.3.2_2.13"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/org.jetbrains.kotlinx.spark/kotlin-spark-api_3.3.2_2.13.svg?label=Maven%20Central" /></a>
+<a href="https://gitter.im/JetBrains/kotlin-spark-api?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img alt="Join the chat at https://gitter.im/JetBrains/kotlin-spark-api" src="https://badges.gitter.im/JetBrains/kotlin-spark-api.svg" /></a></p>
+<p>Your next API to work with  <a href="https://spark.apache.org/">Apache Spark</a>. </p>
+<p>This project adds a missing layer of compatibility between <a href="https://kotlinlang.org/">Kotlin</a> and <a href="https://spark.apache.org/">Apache Spark</a>.
+It allows Kotlin developers to use familiar language features such as data classes, and lambda expressions as simple expressions in curly braces or method references. </p>
+<p>We have opened a Spark Project Improvement Proposal: <a href="http://issues.apache.org/jira/browse/SPARK-32530">Kotlin support for Apache Spark</a> to work with the community towards getting Kotlin support as a first-class citizen in Apache Spark. We encourage you to voice your opinions and participate in the discussion.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#supported-versions-of-apache-spark">Supported versions of Apache Spark</a></li>
+<li><a href="#releases">Releases</a></li>
+<li><a href="#how-to-configure-kotlin-for-apache-spark-in-your-project">How to configure Kotlin for Apache Spark in your project</a></li>
+<li><a href="#kotlin-for-apache-spark-features">Kotlin for Apache Spark features</a><ul>
+<li><a href="#creating-a-sparksession-in-kotlin">Creating a SparkSession in Kotlin</a></li>
+<li><a href="#creating-a-dataset-in-kotlin">Creating a Dataset in Kotlin</a></li>
+<li><a href="#null-safety">Null safety</a></li>
+<li><a href="#withspark-function">withSpark function</a></li>
+<li><a href="#withcached-function">withCached function</a></li>
+<li><a href="#tolist-and-toarray-methods">toList and toArray</a></li>
+<li><a href="#column-infixoperator-functions">Column infix/operator functions</a></li>
+<li><a href="#overload-resolution-ambiguity">Overload Resolution Ambiguity</a></li>
+<li><a href="#tuples">Tuples</a></li>
+<li><a href="#streaming">Streaming</a></li>
+<li><a href="#user-defined-functions">User Defined Functions</a></li>
+</ul>
+</li>
+<li><a href="#examples">Examples</a></li>
+<li><a href="#reporting-issues--support">Reporting issues/Support</a></li>
+<li><a href="#code-of-conduct">Code of Conduct</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id="supported-versions-of-apache-spark">Supported versions of Apache Spark</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Apache Spark</th>
+<th style="text-align: center;">Scala</th>
+<th style="text-align: center;">Kotlin for Apache Spark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">3.3.2</td>
+<td style="text-align: center;">2.13</td>
+<td style="text-align: center;">kotlin-spark-api_3.3.2_2.13:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.3.2_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.3.1</td>
+<td style="text-align: center;">2.13</td>
+<td style="text-align: center;">kotlin-spark-api_3.3.1_2.13:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.3.1_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.3.0</td>
+<td style="text-align: center;">2.13</td>
+<td style="text-align: center;">kotlin-spark-api_3.3.0_2.13:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.3.0_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.2.3</td>
+<td style="text-align: center;">2.13</td>
+<td style="text-align: center;">kotlin-spark-api_3.2.3_2.13:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.2.3_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.2.2</td>
+<td style="text-align: center;">2.13</td>
+<td style="text-align: center;">kotlin-spark-api_3.2.2_2.13:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.2.2_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.2.1</td>
+<td style="text-align: center;">2.13</td>
+<td style="text-align: center;">kotlin-spark-api_3.2.1_2.13:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.2.1_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.2.0</td>
+<td style="text-align: center;">2.13</td>
+<td style="text-align: center;">kotlin-spark-api_3.2.0_2.13:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.2.0_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.1.3</td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.1.3_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.1.2</td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.1.2_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.1.1</td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.1.1_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.1.0</td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.1.0_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.0.3</td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.0.3_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.0.2</td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.0.2_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.0.1</td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.0.1_2.12:VERSION</td>
+</tr>
+<tr>
+<td style="text-align: center;">3.0.0</td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api_3.0.0_2.12:VERSION</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deprecated-versions">Deprecated versions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Apache Spark</th>
+<th style="text-align: center;">Scala</th>
+<th style="text-align: center;">Kotlin for Apache Spark</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">2.4.1+</td>
+<td style="text-align: center;">2.12</td>
+<td style="text-align: center;">kotlin-spark-api-2.4_2.12:1.0.2</td>
+</tr>
+<tr>
+<td style="text-align: center;">2.4.1+</td>
+<td style="text-align: center;">2.11</td>
+<td style="text-align: center;">kotlin-spark-api-2.4_2.11:1.0.2</td>
+</tr>
+<tr>
+<td style="text-align: center;">## Releases</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<p>The list of Kotlin for Apache Spark releases is available <a href="https://github.com/JetBrains/kotlin-spark-api/releases/">here</a>.
+The Kotlin for Spark artifacts adhere to the following convention:
+<code>[name]_[Apache Spark version]_[Scala core version]:[Kotlin for Apache Spark API version]</code> </p>
+<p>The only exception to this is <code>scala-tuples-in-kotlin_[Scala core version]:[Kotlin for Apache Spark API version]</code>, which is 
+independent of Spark.</p>
+<p><a href="https://search.maven.org/search?q=g:" title="org.jetbrains.kotlinx.spark&quot;%20AND%20a:&quot;kotlin-spark-api_3.3.2_2.13"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/org.jetbrains.kotlinx.spark/kotlin-spark-api_3.3.2_2.13.svg?label=Maven%20Central" /></a></p>
+<h2 id="how-to-configure-kotlin-for-apache-spark-in-your-project">How to configure Kotlin for Apache Spark in your project</h2>
+<p>You can add Kotlin for Apache Spark as a dependency to your project: <code>Maven</code>, <code>Gradle</code>, <code>SBT</code>, and <code>leinengen</code> are supported.</p>
+<p>Here's an example <code>pom.xml</code>:</p>
+<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">  </span><span class="nt">&lt;groupId&gt;</span>org.jetbrains.kotlinx.spark<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>kotlin-spark-api_3.3.2_2.13<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">  </span><span class="nt">&lt;version&gt;</span>${kotlin-spark-api.version}<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="nt">&lt;/dependency&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nt">&lt;groupId&gt;</span>org.apache.spark<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>spark-sql_2.13<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nt">&lt;version&gt;</span>${spark.version}<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p>Note that you must match the version of the Kotlin for Apache Spark API to the Spark- and Scala version of your project.
+You can find a complete example with <code>pom.xml</code> and <code>build.gradle</code> in the <a href="https://github.com/JetBrains/kotlin-spark-api/wiki/Quick-Start-Guide">Quick Start Guide</a>.</p>
+<p>If you want to try a development version. You can use the versions published to <a href="https://github.com/orgs/Kotlin/packages?tab=packages&amp;q=kotlin-spark-api_3.3.0_2.13">GH Packages</a>.
+They typically have the same version as the release version, but with a <code>-SNAPSHOT</code> suffix. See the <a href="https://docs.github.com/en/packages/learn-github-packages/installing-a-package">GitHub Docs</a>
+for more information.</p>
+<p>Once you have configured the dependency, you only need to add the following import to your Kotlin file: 
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">org.jetbrains.kotlinx.spark.api.*</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="jupyter">Jupyter</h3>
+<p>The Kotlin Spark API also supports Kotlin Jupyter notebooks.
+To it, simply add</p>
+<p><div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>%use spark
+</code></pre></div></td></tr></table></div>
+to the top of your notebook. This will get the latest version of the API, together with the latest version of Spark.
+To define a certain version of Spark or the API itself, simply add it like this:
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>%use spark(spark=3.3.2, scala=2.13, v=1.2.4)
+</code></pre></div></td></tr></table></div></p>
+<p>Inside the notebook a Spark session will be initiated automatically. This can be accessed via the <code>spark</code> value.
+<code>sc: JavaSparkContext</code> can also be accessed directly. The API operates pretty similarly.</p>
+<p>There is also support for HTML rendering of Datasets and simple (Java)RDDs.
+Check out the <a href="examples/src/main/kotlin/org/jetbrains/kotlinx/spark/examples/JupyterExample.ipynb">example</a> as well.</p>
+<p>To use Spark Streaming abilities, instead use
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>%use spark-streaming
+</code></pre></div></td></tr></table></div>
+This does not start a Spark session right away, meaning you can call <code>withSparkStreaming(batchDuration) {}</code> 
+in whichever cell you want.
+Check out the <a href="examples/src/main/kotlin/org/jetbrains/kotlinx/spark/examples/streaming/JupyterStreamingExample.ipynb">example</a>.</p>
+<p>NOTE: You need <code>kotlin-jupyter-kernel</code> to be at least version 0.11.0.83 for the Kotlin Spark API to work. Also, if the 
+<code>%use spark</code> magic does not output "Spark session has been started...", and <code>%use spark-streaming</code> doesn't work at all, 
+add <code>%useLatestDescriptors</code> above it.</p>
+<p>For more information, check the <a href="https://github.com/JetBrains/kotlin-spark-api/wiki/Jupyter">wiki</a>.</p>
+<h2 id="kotlin-for-apache-spark-features">Kotlin for Apache Spark features</h2>
+<h3 id="creating-a-sparksession-in-kotlin">Creating a SparkSession in Kotlin</h3>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">spark</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SparkSession</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">        </span><span class="p">.</span><span class="na">builder</span><span class="p">()</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">        </span><span class="p">.</span><span class="na">master</span><span class="p">(</span><span class="s">&quot;local[2]&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="p">.</span><span class="na">appName</span><span class="p">(</span><span class="s">&quot;Simple Application&quot;</span><span class="p">).</span><span class="na">orCreate</span>
+</code></pre></div></td></tr></table></div>
+<p>This is not needed when running the Kotlin Spark API from a Jupyter notebook.</p>
+<h3 id="creating-a-dataset-in-kotlin">Creating a Dataset in Kotlin</h3>
+<p><div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">spark</span><span class="p">.</span><span class="na">dsOf</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;b&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+The example above produces <code>Dataset&lt;Pair&lt;String, Int&gt;&gt;</code>. While Kotlin Pairs and Triples are supported, Scala Tuples are 
+recommended for better support.</p>
+<h3 id="null-safety">Null safety</h3>
+<p>There are several aliases in API, like <code>leftJoin</code>, <code>rightJoin</code> etc. These are null-safe by design. 
+For example, <code>leftJoin</code> is aware of nullability and returns <code>Dataset&lt;Pair&lt;LEFT, RIGHT?&gt;&gt;</code>.
+Note that we are forcing <code>RIGHT</code> to be nullable for you as a developer to be able to handle this situation. 
+<code>NullPointerException</code>s are hard to debug in Spark, and we're doing our best to make them as rare as possible.</p>
+<p>In Spark, you might also come across Scala-native <code>Option&lt;*&gt;</code> or Java-compatible <code>Optional&lt;*&gt;</code> classes.
+We provide <code>getOrNull()</code> and <code>getOrElse()</code> functions for these to use Kotlin's null safety for good.</p>
+<p>Similarly, you can also create <code>Option&lt;*&gt;</code>s and <code>Optional&lt;*&gt;</code>s like <code>T?.toOptional()</code> if a Spark function requires it.</p>
+<h3 id="withspark-function">withSpark function</h3>
+<p>We provide you with useful function <code>withSpark</code>, which accepts everything that may be needed to run Spark — properties, name, master location and so on. It also accepts a block of code to execute inside Spark context.</p>
+<p>After work block ends, <code>spark.stop()</code> is called automatically.</p>
+<p>Do not use this when running the Kotlin Spark API from a Jupyter notebook.</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">withSpark</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="n">dsOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">        </span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// creates Tuple2&lt;Int, Int&gt;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">        </span><span class="p">.</span><span class="na">show</span><span class="p">()</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><code>dsOf</code> is just one more way to create <code>Dataset</code> (<code>Dataset&lt;Int&gt;</code>) from varargs.</p>
+<h3 id="withcached-function">withCached function</h3>
+<p>It can easily happen that we need to fork our computation to several paths. To compute things only once we should call <code>cache</code>
+method. However, it becomes difficult to control when we're using cached <code>Dataset</code> and when not.
+It is also easy to forget to unpersist cached data, which can break things unexpectedly or take up more memory
+than intended.</p>
+<p>To solve these problems we've added <code>withCached</code> function</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">withSpark</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="n">dsOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">3</span><span class="p">,</span><span class="w"> </span><span class="m">4</span><span class="p">,</span><span class="w"> </span><span class="m">5</span><span class="p">)</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">        </span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">tupleOf</span><span class="p">(</span><span class="nb">it</span><span class="p">,</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="p">.</span><span class="na">withCached</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">            </span><span class="n">showDS</span><span class="p">()</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">            </span><span class="n">filter</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">_1</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="p">}.</span><span class="na">showDS</span><span class="p">()</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">tupleOf</span><span class="p">(</span><span class="nb">it</span><span class="p">.</span><span class="na">_1</span><span class="p">,</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">_2</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="nb">it</span><span class="p">.</span><span class="na">_1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">_2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="p">.</span><span class="na">show</span><span class="p">()</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Here we're showing cached <code>Dataset</code> for debugging purposes then filtering it. 
+The <code>filter</code> method returns filtered <code>Dataset</code> and then the cached <code>Dataset</code> is being unpersisted, so we have more memory t
+o call the <code>map</code> method and collect the resulting <code>Dataset</code>.</p>
+<h3 id="tolist-and-toarray-methods">toList and toArray methods</h3>
+<p>For more idiomatic Kotlin code we've added <code>toList</code> and <code>toArray</code> methods in this API. You can still use the <code>collect</code> method as in Scala API, however the result should be casted to <code>Array</code>.
+  This is because <code>collect</code> returns a Scala array, which is not the same as Java/Kotlin one.</p>
+<h3 id="column-infixoperator-functions">Column infix/operator functions</h3>
+<p>Similar to the Scala API for <code>Columns</code>, many of the operator functions could be ported over.
+For example:
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span>
+<span class="normal"><a href="#__codelineno-9-5">5</a></span>
+<span class="normal"><a href="#__codelineno-9-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">dataset</span><span class="p">.</span><span class="na">select</span><span class="p">(</span><span class="w"> </span><span class="n">col</span><span class="p">(</span><span class="s">&quot;colA&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">5</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="n">dataset</span><span class="p">.</span><span class="na">select</span><span class="p">(</span><span class="w"> </span><span class="n">col</span><span class="p">(</span><span class="s">&quot;colA&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">col</span><span class="p">(</span><span class="s">&quot;colB&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="n">dataset</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="w"> </span><span class="n">col</span><span class="p">(</span><span class="s">&quot;colA&quot;</span><span class="p">)</span><span class="w"> </span><span class="err">`</span><span class="o">===</span><span class="err">`</span><span class="w"> </span><span class="m">6</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="c1">// or alternatively</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="n">dataset</span><span class="p">.</span><span class="na">where</span><span class="p">(</span><span class="w"> </span><span class="n">col</span><span class="p">(</span><span class="s">&quot;colA&quot;</span><span class="p">)</span><span class="w"> </span><span class="n">eq</span><span class="w"> </span><span class="m">6</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>To read more, check the <a href="https://github.com/JetBrains/kotlin-spark-api/wiki/Column-functions">wiki</a>.</p>
+<h3 id="overload-resolution-ambiguity">Overload resolution ambiguity</h3>
+<p>We had to implement the functions <code>reduceGroups</code> and <code>reduce</code> for Kotlin separately as <code>reduceGroupsK</code> and <code>reduceK</code> respectively, because otherwise it caused resolution ambiguity between Kotlin, Scala and Java APIs, which was quite hard to solve.</p>
+<p>We have a special example of work with this function in the <a href="https://github.com/JetBrains/kotlin-spark-api/blob/main/examples/src/main/kotlin/org/jetbrains/kotlinx/spark/examples/Group.kt">Groups example</a>.</p>
+<h3 id="tuples">Tuples</h3>
+<p>Inspired by <a href="https://github.com/Jolanrensen/ScalaTuplesInKotlin">ScalaTuplesInKotlin</a>, the API introduces a lot of helper- extension functions
+to make working with Scala Tuples a breeze in your Kotlin Spark projects. While working with data classes is encouraged,
+for pair-like Datasets / RDDs / DStreams Scala Tuples are recommended, both for the useful helper functions, as well as Spark performance.
+To enable these features
+simply add
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="k">import</span><span class="w"> </span><span class="nn">org.jetbrains.kotlinx.spark.api.tuples.*</span>
+</code></pre></div></td></tr></table></div>
+to the start of your file.</p>
+<p>Tuple creation can be done in the following manners:
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">a</span><span class="p">:</span><span class="w"> </span><span class="n">Tuple2</span><span class="o">&lt;</span><span class="kt">Int</span><span class="p">,</span><span class="w"> </span><span class="kt">Long</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tupleOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2L</span><span class="p">)</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">b</span><span class="p">:</span><span class="w"> </span><span class="n">Tuple3</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">Double</span><span class="p">,</span><span class="w"> </span><span class="kt">Int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t</span><span class="p">(</span><span class="s">&quot;test&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">1.0</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">c</span><span class="p">:</span><span class="w"> </span><span class="n">Tuple3</span><span class="o">&lt;</span><span class="kt">Float</span><span class="p">,</span><span class="w"> </span><span class="kt">String</span><span class="p">,</span><span class="w"> </span><span class="kt">Int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">5f</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="s">&quot;aaa&quot;</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="m">1</span>
+</code></pre></div></td></tr></table></div>
+To read more about tuples and all the added functions, refer to the <a href="https://github.com/JetBrains/kotlin-spark-api/wiki/Tuples">wiki</a>.</p>
+<h3 id="streaming">Streaming</h3>
+<p>A popular Spark extension is <a href="https://spark.apache.org/docs/latest/streaming-programming-guide.html">Spark Streaming</a>. 
+Of course the Kotlin Spark API also introduces a more Kotlin-esque approach to write your streaming programs.
+There are examples for use with a checkpoint, Kafka and SQL in the <a href="examples/src/main/kotlin/org/jetbrains/kotlinx/spark/examples/streaming">examples module</a>.</p>
+<p>We shall also provide a quick example below:
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-12-10">10</a></span>
+<span class="normal"><a href="#__codelineno-12-11">11</a></span>
+<span class="normal"><a href="#__codelineno-12-12">12</a></span>
+<span class="normal"><a href="#__codelineno-12-13">13</a></span>
+<span class="normal"><a href="#__codelineno-12-14">14</a></span>
+<span class="normal"><a href="#__codelineno-12-15">15</a></span>
+<span class="normal"><a href="#__codelineno-12-16">16</a></span>
+<span class="normal"><a href="#__codelineno-12-17">17</a></span>
+<span class="normal"><a href="#__codelineno-12-18">18</a></span>
+<span class="normal"><a href="#__codelineno-12-19">19</a></span>
+<span class="normal"><a href="#__codelineno-12-20">20</a></span>
+<span class="normal"><a href="#__codelineno-12-21">21</a></span>
+<span class="normal"><a href="#__codelineno-12-22">22</a></span>
+<span class="normal"><a href="#__codelineno-12-23">23</a></span>
+<span class="normal"><a href="#__codelineno-12-24">24</a></span>
+<span class="normal"><a href="#__codelineno-12-25">25</a></span>
+<span class="normal"><a href="#__codelineno-12-26">26</a></span>
+<span class="normal"><a href="#__codelineno-12-27">27</a></span>
+<span class="normal"><a href="#__codelineno-12-28">28</a></span>
+<span class="normal"><a href="#__codelineno-12-29">29</a></span>
+<span class="normal"><a href="#__codelineno-12-30">30</a></span>
+<span class="normal"><a href="#__codelineno-12-31">31</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="c1">// Automatically provides ssc: JavaStreamingContext which starts and awaits termination or timeout</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="n">withSparkStreaming</span><span class="p">(</span><span class="n">batchDuration</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Durations</span><span class="p">.</span><span class="na">seconds</span><span class="p">(</span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">10</span><span class="n">_000</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// this: KSparkStreamingSession</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="c1">// create input stream for, for instance, Netcat: `$ nc -lk 9999`</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">lines</span><span class="p">:</span><span class="w"> </span><span class="n">JavaReceiverInputDStream</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ssc</span><span class="p">.</span><span class="na">socketTextStream</span><span class="p">(</span><span class="s">&quot;localhost&quot;</span><span class="p">,</span><span class="w"> </span><span class="m">9999</span><span class="p">)</span>
+<a id="__codelineno-12-6" name="__codelineno-12-6"></a>
+<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="w">    </span><span class="c1">// split input stream on space</span>
+<a id="__codelineno-12-8" name="__codelineno-12-8"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">words</span><span class="p">:</span><span class="w"> </span><span class="n">JavaDStream</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lines</span><span class="p">.</span><span class="na">flatMap</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">split</span><span class="p">(</span><span class="s">&quot; &quot;</span><span class="p">).</span><span class="na">iterator</span><span class="p">()</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-12-9" name="__codelineno-12-9"></a>
+<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">    </span><span class="c1">// perform action on each formed RDD in the stream</span>
+<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">    </span><span class="n">words</span><span class="p">.</span><span class="na">foreachRDD</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">rdd</span><span class="p">:</span><span class="w"> </span><span class="n">JavaRDD</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">,</span><span class="w"> </span><span class="n">_</span><span class="p">:</span><span class="w"> </span><span class="n">Time</span><span class="w"> </span><span class="o">-&gt;</span>
+<a id="__codelineno-12-12" name="__codelineno-12-12"></a>
+<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">          </span><span class="c1">// to convert the JavaRDD to a Dataset, we need a spark session using the RDD context</span>
+<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">          </span><span class="n">withSpark</span><span class="p">(</span><span class="n">rdd</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// this: KSparkSession</span>
+<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">            </span><span class="kd">val</span><span class="w"> </span><span class="nv">dataframe</span><span class="p">:</span><span class="w"> </span><span class="n">Dataset</span><span class="o">&lt;</span><span class="n">TestRow</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rdd</span><span class="p">.</span><span class="na">map</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">TestRow</span><span class="p">(</span><span class="n">word</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">it</span><span class="p">)</span><span class="w"> </span><span class="p">}.</span><span class="na">toDS</span><span class="p">()</span>
+<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">            </span><span class="n">dataframe</span>
+<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">                </span><span class="p">.</span><span class="na">groupByKey</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="p">.</span><span class="na">word</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-12-18" name="__codelineno-12-18"></a><span class="w">                </span><span class="p">.</span><span class="na">count</span><span class="p">()</span>
+<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">                </span><span class="p">.</span><span class="na">show</span><span class="p">()</span>
+<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">            </span><span class="c1">// +-----+--------+</span>
+<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">            </span><span class="c1">// |  key|count(1)|</span>
+<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">            </span><span class="c1">// +-----+--------+</span>
+<a id="__codelineno-12-23" name="__codelineno-12-23"></a><span class="w">            </span><span class="c1">// |hello|       1|</span>
+<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="w">            </span><span class="c1">// |   is|       1|</span>
+<a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="w">            </span><span class="c1">// |    a|       1|</span>
+<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="w">            </span><span class="c1">// | this|       1|</span>
+<a id="__codelineno-12-27" name="__codelineno-12-27"></a><span class="w">            </span><span class="c1">// | test|       3|</span>
+<a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="w">            </span><span class="c1">// +-----+--------+</span>
+<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<p>For more information, check the <a href="https://github.com/JetBrains/kotlin-spark-api/wiki/Streaming">wiki</a>.</p>
+<h3 id="user-defined-functions">User Defined Functions</h3>
+<p>Spark has a way to call functions from SQL using so-called <a href="https://spark.apache.org/docs/latest/sql-ref-functions-udf-scalar.html">UDFs</a>.
+Using the Scala/Java API from Kotlin is not that obvious, so we decided to add special UDF support for Kotlin.
+This support grew into a typesafe, name-safe, and feature-rich solution for which we will give an example:
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span>
+<span class="normal"><a href="#__codelineno-13-19">19</a></span>
+<span class="normal"><a href="#__codelineno-13-20">20</a></span>
+<span class="normal"><a href="#__codelineno-13-21">21</a></span>
+<span class="normal"><a href="#__codelineno-13-22">22</a></span>
+<span class="normal"><a href="#__codelineno-13-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1">// example of creation/naming, and registering of a simple UDF</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">plusOne</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">udf</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="kt">Int</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="n">plusOne</span><span class="p">.</span><span class="na">register</span><span class="p">()</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="n">spark</span><span class="p">.</span><span class="na">sql</span><span class="p">(</span><span class="s">&quot;SELECT plusOne(5)&quot;</span><span class="p">).</span><span class="na">show</span><span class="p">()</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="c1">// +----------+</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="c1">// |plusOne(5)|</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="c1">// +----------+</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="c1">// |         6|</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="c1">// +----------+</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="c1">// directly registering</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="n">udf</span><span class="p">.</span><span class="na">register</span><span class="p">(</span><span class="s">&quot;plusTwo&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="kt">Double</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">2.0</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="n">spark</span><span class="p">.</span><span class="na">sql</span><span class="p">(</span><span class="s">&quot;SELECT plusTwo(2.0d)&quot;</span><span class="p">).</span><span class="na">show</span><span class="p">()</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="c1">// +------------+</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="c1">// |plusTwo(2.0)|</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="c1">// +------------+</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="c1">// |         4.0|</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="c1">// +------------+</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19"></a>
+<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="c1">// dataset select</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="kd">val</span><span class="w"> </span><span class="nv">result</span><span class="p">:</span><span class="w"> </span><span class="n">Dataset</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">myDs</span><span class="p">.</span><span class="na">select</span><span class="p">(</span>
+<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">  </span><span class="n">plusOne</span><span class="p">(</span><span class="n">col</span><span class="p">(</span><span class="n">MyType</span><span class="o">::</span><span class="n">age</span><span class="p">))</span>
+<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="p">)</span>
+</code></pre></div></td></tr></table></div></p>
+<p>We support:
+  - a notation close to Spark's
+  - smart naming (with reflection)
+  - creation from function references
+  - typed column operations
+  - UDAF support and functional creation
+  - (Unique!) simple vararg UDF support</p>
+<p>For more, check the <a href="examples/src/main/kotlin/org/jetbrains/kotlinx/spark/examples/UDFs.kt">extensive examples</a>.
+Also, check out the <a href="https://github.com/Kotlin/kotlin-spark-api/wiki/UDF">wiki</a>.</p>
+<h2 id="examples">Examples</h2>
+<p>For more, check out <a href="examples/src/main/kotlin/org/jetbrains/kotlinx/spark/examples">examples</a> module.
+To get up and running quickly, check out this <a href="https://github.com/JetBrains/kotlin-spark-api/wiki/Quick-Start-Guide">tutorial</a>. </p>
+<h2 id="reporting-issues-support">Reporting issues / support</h2>
+<p>Please use <a href="https://github.com/JetBrains/kotlin-spark-api/issues">GitHub issues</a> for filing feature requests and bug reports.
+You are also welcome to join <a href="https://kotlinlang.slack.com/archives/C015B9ZRGJF">kotlin-spark channel</a> in the Kotlin Slack.</p>
+<h2 id="contribution-guide">Contribution guide</h2>
+<p>Contributions are more than welcome! Pull requests can be created for the <a href="https://github.com/Kotlin/kotlin-spark-api/tree/main">main</a> branch
+and will be considered as soon as possible. Be sure to add the necessary tests for any new feature you add. The <a href="https://github.com/Kotlin/kotlin-spark-api/tree/main">main</a>
+branch always aims to target the latest available <a href="https://spark.apache.org/downloads.html">Apache Spark version</a>.
+Note that we use <a href="https://github.com/raydac/java-comment-preprocessor">Java Comment Preprocessor</a> to build the library
+for all different supported versions of Apache Spark and Scala. 
+The current values of these versions can be edited in <code>gradle.properties</code> and should always be the latest versions for commits.
+For testing, all versions need a pass for the request to be accepted.
+We use GitHub Actions to test and deploy the library for all versions, but locally you can also use the <code>gradlew_all_versions</code> file.</p>
+<p>Of the <a href="https://github.com/Kotlin/kotlin-spark-api/tree/main">main</a> branch, development versions of the library are published to 
+<a href="https://github.com/orgs/Kotlin/packages?tab=packages&amp;q=kotlin-spark-api">GitHub Packages</a>. This way, new features can be
+tested quickly without having to wait for a full release. </p>
+<p>For full releases, the <a href="https://github.com/Kotlin/kotlin-spark-api/tree/release">release</a> branch is updated.</p>
+<h2 id="code-of-conduct">Code of Conduct</h2>
+<p>This project and the corresponding community is governed by the <a href="https://confluence.jetbrains.com/display/ALL/JetBrains+Open+Source+and+Community+Code+of+Conduct">JetBrains Open Source and Community Code of Conduct</a>. Please make sure you read it. </p>
+<h2 id="license">License</h2>
+<p>Kotlin for Apache Spark is licensed under the <a href="LICENSE">Apache 2.0 License</a>.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

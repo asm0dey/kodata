@@ -1,0 +1,2300 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../multik/">
+      
+      
+        <link rel="next" href="../kandy/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Kaliningraph - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Kaliningraph - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/kaliningraph/README.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Kaliningraph - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/kaliningraph/README.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kaliningraph-a-type-family-of-algebraic-graphs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Kaliningraph
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kotlindl/" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlindl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kmath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maven" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maven
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter notebook
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphs-inductively" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphs, inductively
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuits-inductively" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circuits, inductively
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graphviz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphviz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computation-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computation graph
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code2vec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code2Vec
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automata-based-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automata-based RegEx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph theory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-rewriting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph rewriting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph rewriting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#termination-checking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Termination checking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algebra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circuits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propagation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-walks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random walks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software engineering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#word-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Word problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rewriting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rewriting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automata
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kandy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kravis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../plotly-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../visionforge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gradle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#maven" class="md-nav__link">
+    <span class="md-ellipsis">
+      Maven
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#jupyter-notebook" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jupyter notebook
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#graphs-inductively" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphs, inductively
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#circuits-inductively" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circuits, inductively
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualization
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Visualization">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graphviz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphviz
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#matrix-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      Matrix form
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#computation-graph" class="md-nav__link">
+    <span class="md-ellipsis">
+      Computation graph
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#translation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Translation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code2vec" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code2Vec
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#automata-based-regex" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automata-based RegEx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#research-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Research questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#knowledge-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Knowledge graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-theory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph theory
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Functional graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#graph-rewriting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graph rewriting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Graph rewriting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Unification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#termination-checking" class="md-nav__link">
+    <span class="md-ellipsis">
+      Termination checking
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algebra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Algebra
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circuits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Circuits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#propagation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Propagation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#random-walks" class="md-nav__link">
+    <span class="md-ellipsis">
+      Random walks
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software-engineering" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software engineering
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#proof-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Proof search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#code-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      Code search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#word-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Word problems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#graphs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Graphs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rewriting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rewriting
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automata" class="md-nav__link">
+    <span class="md-ellipsis">
+      Automata
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="kaliningraph-a-type-family-of-algebraic-graphs">Kaliningraph: A Type Family of Algebraic Graphs</h1>
+<p><a href="http://kotlinlang.org"><img alt="Kotlin 1.6.20" src="https://img.shields.io/badge/Kotlin-1.6.20-blue.svg?style=flat&amp;logo=kotlin" /></a>
+<a href="https://search.maven.org/search?q=g:%22ai.hypergraph%22"><img alt="Maven Central" src="https://img.shields.io/maven-central/v/ai.hypergraph/kaliningraph.svg?label=Maven%20Central" /></a>
+<a href="https://github.com/breandan/kaliningraph/actions"><img alt="CI" src="https://github.com/breandan/kaliningraph/workflows/CI/badge.svg" /></a></p>
+<p>This library implements a new computational model which we call <a href="http://breandan.net/2020/06/30/graph-computation/">graph computation</a>. In contrast with prior work, e.g., Turing's machine and Church's λ-calculus, the advantage of this model is that it can be directly translated to iterated matrix multiplication on GPUs and has many desirable algebraic properties. Furthermore, it offers a natural way to express algebraic circuits, neural networks, factor graphs, proof networks, and enjoys many connections to programming language theory, automata theory and category theory.</p>
+<p>Kaliningraph currently supports backpropagation in <a href="https://github.com/breandan/kotlingrad">Kotlin∇</a>. Efforts to lower other propagation schemes, e.g., belief propagation, uncertainty propagation, unit propagation, survey propagation and constraint propagation are ongoing. All of these schemes operate according to a principle known as message passing and are in general known to be Turing complete. This unification allows us to study many common problems in related domains using well-studied tools from arithmetic circuit complexity, to spectral and algebraic graph theory.</p>
+<h2 id="installation">Installation</h2>
+<p>Kaliningraph is hosted on <a href="https://s01.oss.sonatype.org/index.html#nexus-search;quick~kaliningraph">Maven Central</a>.</p>
+<h3 id="gradle">Gradle</h3>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">implementation</span><span class="p">(</span><span class="s">&quot;ai.hypergraph:kaliningraph:0.1.8&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="maven">Maven</h3>
+<div class="language-xml highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="nt">&lt;dependency&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="nt">&lt;groupId&gt;</span>ai.hypergraph<span class="nt">&lt;/groupId&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>kaliningraph<span class="nt">&lt;/artifactId&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="nt">&lt;version&gt;</span>0.1.8<span class="nt">&lt;/version&gt;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="nt">&lt;/dependency&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="jupyter-notebook">Jupyter notebook</h3>
+<p>To access notebook support, use the following line magic:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>@file:DependsOn(&quot;ai.hypergraph:kaliningraph:0.1.8&quot;)
+</code></pre></div></td></tr></table></div>
+<p>For more information, explore our tutorials:</p>
+<ul>
+<li><a href="notebooks/Hello%20Kaliningraph.ipynb">Hello Kaliningraph.ipynb</a></li>
+<li><a href="notebooks/Program%20Graphs.ipynb">Program Graphs.ipynb</a></li>
+</ul>
+<h2 id="graphs-inductively">Graphs, inductively</h2>
+<p>What are graphs? A <a href="src/commonMain/kotlin/ai/hypergraph/kaliningraph/types/Graph.kt">graph</a> is a (possibly empty) set of vertices.</p>
+<p>What are vertices? A vertex is a unique label with neighbors (possibly containing itself).</p>
+<p>What are neighbors? Neighbors are a graph.</p>
+<h2 id="circuits-inductively">Circuits, inductively</h2>
+<p>What is a circuit? A circuit is either:</p>
+<ul>
+<li>A Boolean logic gate (e.g., <code>and</code>, <code>or</code>, <code>not</code>)</li>
+<li>A circuit that takes two inputs and swaps them <code>(a, b) -&gt; (b, a)</code></li>
+<li>A circuit that takes one input and gives one output <code>a -&gt; b</code></li>
+<li>The serial composition of two circuits <code>(a-&gt;c, c-&gt;d) -&gt; (a-&gt;d)</code></li>
+<li>The parallel composition of two circuits <code>(a-&gt;b, c-&gt;d) -&gt; (a, b) -&gt; (c, d)</code></li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<p>Run <a href="src/jvmTest/kotlin/ai/hypergraph/kaliningraph/HelloKaliningraph.kt">the demo</a> via <code>./gradlew jvmTest --tests "ai.hypergraph.kaliningraph.HelloKaliningraph"</code> to get started.</p>
+<h2 id="usage">Usage</h2>
+<p>Kaliningraph treats string adjacency and graph adjacency as the same. To construct a graph, simply enumerate <a href="https://en.wikipedia.org/wiki/Path_(graph_theory)">walks</a>. </p>
+<p>This can be done using a raw string, in which case unique characters will form the vertex set. Whitespace delimits walks:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;abcde ace&quot;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>Vertices can also be linked via the <code>-</code> operator. The <a href="src/commonMain/kotlin/ai/hypergraph/kaliningraph/graphs/LabeledGraph.kt">graph builder DSL</a> provides a small alphabet:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p>This is equivalent to:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">abcde</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">ace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s">&quot;c&quot;</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">graph</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">abcde</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">ace</span>
+</code></pre></div></td></tr></table></div>
+<p>Equality is supported using the <a href="http://www.jmlr.org/papers/volume12/shervashidze11a/shervashidze11a.pdf#page=6">Weisfeiler-Lehman</a> test:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="n">assertEquals</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">y</span><span class="p">)</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="visualization">Visualization</h2>
+<p>Kaliningraph supports a number of graph visualizations.</p>
+<h3 id="graphviz">Graphviz</h3>
+<p>Graph visualization is made possible thanks to <a href="https://github.com/nidi3/graphviz-java#kotlin-dsl">KraphViz</a>.</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span>
+<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">de</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">dacbe</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">dce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="kd">val</span><span class="w"> </span><span class="nv">abcd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="kd">val</span><span class="w"> </span><span class="nv">cfde</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="s">&quot;a&quot;</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">dg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="p">(</span><span class="n">dacbe</span><span class="p">,</span><span class="w"> </span><span class="n">dce</span><span class="p">,</span><span class="w"> </span><span class="n">de</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Graph</span><span class="p">(</span><span class="n">abcd</span><span class="p">,</span><span class="w"> </span><span class="n">cfde</span><span class="p">)</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="n">dg</span><span class="p">.</span><span class="na">show</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<p>Running the above snippet will cause the following figure to be rendered in the browser:</p>
+<p><img alt="" src="latex/figures/visualization.svg" /></p>
+<h3 id="matrix-form">Matrix form</h3>
+<p>Graph visualization in both DOT and adjacency matrix format is supported.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">DOT Graph</th>
+<th style="text-align: left;">Matrix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><img alt="image" src="latex/figures/random_dot_graph.png" /></td>
+<td style="text-align: left;"><img alt="image_1" src="latex/figures/random_matrix.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>It is also possible to visualize the state and transition matrices and step through the graph (<code>./gradlew jsBrowserRun --continuous</code>).</p>
+<h3 id="computation-graph">Computation graph</h3>
+<p>Computational notebooks prototyping is also supported.</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a>Notebook {
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>  a = b + c
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>  f = b - h
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>}.show()
+</code></pre></div></td></tr></table></div>
+<p>The above snippet should display something like the following:</p>
+<p><img alt="" src="pdg_demo.svg" /></p>
+<h2 id="translation">Translation</h2>
+<p>Bidirectional translation to various graph formats, including <a href="https://github.com/nidi3/graphviz-java">Graphviz</a>, <a href="https://jgrapht.org/guide/UserOverview">JGraphT</a>, <a href="https://tinkerpop.apache.org/docs/current/reference/">Tinkerpop</a> and <a href="https://oss.redislabs.com/redisgraph/">RedisGraph</a> is supported:</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span>
+<span class="normal"><a href="#__codelineno-9-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">LabeledGraph</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">        </span><span class="p">.</span><span class="na">toJGraphT</span><span class="p">().</span><span class="na">toKaliningraph</span><span class="p">()</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">        </span><span class="p">.</span><span class="na">toTinkerpop</span><span class="p">().</span><span class="na">toKaliningraph</span><span class="p">()</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">        </span><span class="p">.</span><span class="na">toGraphviz</span><span class="p">().</span><span class="na">toKaliningraph</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="code2vec">Code2Vec</h2>
+<p>Code2Vec generation and visualization is supported. The following demo was generated using message passing on the adjacency matrix, for graphs of varying height. The technique to create the embeddings is described <a href="https://www.cs.mcgill.ca/~wlh/grl_book/files/GRL_Book-Chapter_5-GNNs.pdf#page=6">here</a>. We use TSNE to visualize the resulting vectors in 2D, and can clearly distinguish the clusters.</p>
+<p><img alt="" src="src/jvmMain/resources/clusters.svg" /></p>
+<h2 id="automata-based-regex">Automata-based RegEx</h2>
+<p>A regex to NFA compiler is provided. To run the demo, run <code>./gradlew RegexDemo</code>. You should see something like this:</p>
+<p><img alt="" src="regex_demo.png" /></p>
+<h2 id="research-questions">Research questions</h2>
+<ul>
+<li>What is the best way to represent a graph?</li>
+<li><a href="/src/commonMain/kotlin/ai/hypergraph/kaliningraph/types/Graph.kt">Type family</a></li>
+<li><a href="/src/commonMain/kotlin/ai/hypergraph/kaliningraph/tensor/Tensor.kt">Matrix semiring</a></li>
+<li><a href="/src/commonMain/kotlin/ai/hypergraph/kaliningraph/theory/Theory.kt">Kernel embedding</a></li>
+<li>Is it possible to statically check tensor arithmetic in the Kotlin type system?</li>
+<li><a href="/src/commonTest/kotlin/ai/hypergraph/kaliningraph/types/ChurchTest.kt">Church arithmetic</a></li>
+<li><a href="/src/commonTest/kotlin/ai/hypergraph/kaliningraph/types/BinaryTest.kt">Binary arithmetic</a></li>
+<li><a href="/src/commonTest/kotlin/ai/hypergraph/kaliningraph/types/DecimalTest.kt">Decimal arithmetic</a></li>
+<li><a href="/src/commonTest/kotlin/ai/hypergraph/kaliningraph/types/ArrayTest.kt">Multidimensional arrays</a></li>
+<li>How computationally powerful is matrix multiplication?</li>
+<li>Can we do <a href="/src/jvmTest/kotlin/ai/hypergraph/kaliningraph/smt/TestSMT.kt">SAT/SMT solving using a matrix semiring</a>?</li>
+<li>What does asymptotically optimal CFG parsing look like? (e.g., <a href="https://www.ps.uni-saarland.de/courses/seminar-ws06/papers/07_franziska_ebert.pdf">Valiant</a>)</li>
+<li>Can we simulate <a href="/src/commonMain/kotlin/ai/hypergraph/kaliningraph/automata">finite automata / regular expressions</a>?</li>
+<li>Is subgraph isomorphism feasible using random walks?</li>
+<li>Treat graph as a sequence and run string convolution</li>
+<li>Generate lazy random walk and halt after K steps</li>
+<li>Convolve permuted variants of query in parallel</li>
+<li>Need some kind of label permutation / edit distance metric</li>
+<li>How do we represent a tensor/hypergraph?</li>
+<li><a href="https://www.cs.ox.ac.uk/people/jeremy.gibbons/publications/aplicative.pdf">Naperian functor</a></li>
+<li>Sparse recursive dictionary</li>
+<li>How could we implement graph grammars/rewriting?</li>
+<li><a href="/src/jsMain/kotlin/Rewriter.kt">Rewrites</a> as string substitution on the random walk sequence</li>
+<li>Reconstruct graph from rewritten string using adjacency matrix</li>
+<li><del>Is there an algebraic definition for graph grammars?</del></li>
+<li><del>Maybe graph convolution. How to encode rewrites as a kernel?</del></li>
+<li><del>Rectangular matrix multiplication or square with upper bound?</del></li>
+<li><del>May be possible to represent using tensor contraction</del></li>
+<li>Need to look into hyperedge replacement grammars</li>
+<li>How do we identify confluent rewrite systems?</li>
+<li>What are the advantages and disadvantages of graph rewriting?</li>
+<li>Graphs as vertices and rewrites as edges in a nested graph?</li>
+<li>Reduction/canonicalization versus expansion graph grammar</li>
+<li>What happens if we represent the graph as a symbolic matrix?</li>
+<li>Could we propagate functions instead of just values?</li>
+<li>What if matrix elements were symbolic expressions? (cf. <a href="https://proceedings.neurips.cc/paper/2020/file/a6292668b36ef412fa3c4102d1311a62-Paper.pdf">KeOps</a>)</li>
+<li>Should we represent the whole matrix as a big bold symbol?</li>
+<li>Is there an efficient way to parallelize arithmetic circuits?</li>
+<li>Translate formula graph to matrix using Miller's evaluator</li>
+<li>How to distribute the work evenly across sparse matrices</li>
+<li>What are some good way to <a href="https://setosa.io/ev/markov-chains/">visualize</a> random walks?</li>
+<li>Display states, transitions and graph occupancy side-by-side</li>
+<li>Is there a connection between linear algebra and λ-calculus?</li>
+<li>λ expressions can be represented as a graph/matrix</li>
+<li>Maybe <a href="https://lmcs.episciences.org/3203/pdf">Arrighi and Dowek</a> (2017) have the answer?</li>
+<li>Look into <a href="https://www.youtube.com/channel/UCKQa6Ls95RhShE0kQsiXzVw">optimal beta reduction</a> and Lamping's <a href="https://doi.org/10.1145%2F96709.96711">optimal reduction algorithm</a></li>
+</ul>
+<h2 id="references">References</h2>
+<h3 id="knowledge-graphs">Knowledge graphs</h3>
+<ul>
+<li><a href="https://rulebasedintegration.org/vision.html">Organizing Math as a Rule-based Decision Tree</a>, Rich et al. (2018)</li>
+<li><a href="https://doi.org/10.1145/3372884.3373159">GOOL: a generic object-oriented language</a>, Carette et al. (2020)</li>
+<li><a href="https://sites.google.com/site/probonto/home">ProbOnto 2.5: Ontology and Knowledge Base of Probability Distributions</a>, Maciej et al. (2016)</li>
+<li><a href="http://us.metamath.org/">Metamath Proof Explorer</a>, Megill (2006)</li>
+<li><a href="https://writings.stephenwolfram.com/2020/09/the-empirical-metamathematics-of-euclid-and-beyond/">The Empirical Metamathematics of Euclid and Beyond</a>, Wolfram (2020)</li>
+<li><a href="http://utenti.quipo.it/base5/scuola/mate_metafor.htm">Metafore della Matematica</a>, Bo (2014)</li>
+</ul>
+<h3 id="graph-theory">Graph theory</h3>
+<ul>
+<li><a href="http://eulerarchive.maa.org/docs/originals/E053.pdf">Solutio problematis ad geometriam situs pertinentis</a>, Euler (1741)</li>
+<li><a href="http://www.kurims.kyoto-u.ac.jp/EMIS/classics/Hamilton/PRIAIcos.pdf">Account of the Icosian Calculus</a>, Hamilton (1858)</li>
+<li><a href="https://arxiv.org/pdf/1606.05790.pdf">Mathematical Foundations of the GraphBLAS</a>, Kepner et al. (2016)</li>
+<li><a href="https://epubs.siam.org/doi/book/10.1137/1.9780898719918">Graph Algorithms in the Language of Linear Algebra</a>, Kepner and Gilbert (2011)</li>
+<li><a href="https://link.springer.com/content/pdf/10.1007%2F978-0-387-75450-5.pdf">Graphs, Dioids and Semirings. New Models and Algorithms</a>, Gondran and Minoux (2008)</li>
+<li><a href="https://doi.org/10.2200/S00245ED1V01Y201001CNT003">Path Problems in Networks</a>, Baras and Theodorakopoulos (2010)</li>
+<li><a href="https://epubs.siam.org/doi/pdf/10.1137/0210049">Parallel Matrix and Graph Algorithms</a>, Dekel et al. (1981)</li>
+</ul>
+<h3 id="graph-learning">Graph learning</h3>
+<ul>
+<li><a href="https://www.cs.mcgill.ca/~wlh/grl_book/files/GRL_Book.pdf">Graph Representation Learning</a>, Hamilton (2020)</li>
+<li><a href="http://www.cs.cmu.edu/afs/cs/academic/class/15859n-s20/recordings.html">Spectral Graph Theory with Applications to ML</a>, Miller (2020)</li>
+<li><a href="https://arxiv.org/abs/1910.10593">Neural Execution of Graph Algorithms</a>, Veličković et al. (2020)</li>
+</ul>
+<h3 id="functional-graphs">Functional graphs</h3>
+<ul>
+<li><a href="http://www.cs.utexas.edu/~wcook/Drafts/2012/graphs.pdf">Functional programming with structured graphs</a>, Oliveira and Cook (2012)</li>
+<li><a href="http://research.nii.ac.jp/~hu/pub/icfp16.pdf">Think Like a Vertex, Behave Like a Function! A Functional DSL for Vertex-Centric Big Graph Processing</a>, Emoto et al. (2016)</li>
+<li><a href="http://web.engr.oregonstate.edu/~erwig/papers/InductiveGraphs_JFP01.pdf">Inductive Graphs and Functional Graph Algorithms</a>, Erwig (2001)</li>
+<li><a href="http://web.engr.oregonstate.edu/~erwig/papers/PersistentGraphs_IFL97.pdf">Fully Persistent Graphs – Which One To Choose?</a>, Erwig (1997)</li>
+<li><a href="https://www.cs.utexas.edu/~pingali/CS395T/2009fa/papers/ferrante87.pdf">The Program Dependence Graph and its Use for Optimization</a>, Ferrante et al. (1987)</li>
+</ul>
+<h3 id="graph-rewriting">Graph rewriting</h3>
+<ul>
+<li><a href="https://arxiv.org/abs/2010.12048">Factor Graph Grammars</a>, Chiang and Riley (2020)</li>
+<li><a href="https://cs.stanford.edu/people/sharmar/pubs/seam.pdf">Seam: Provably Safe Local Edits on Graphs</a>, Papadakis et al. (2017)</li>
+<li><a href="https://www.researchgate.net/profile/Jan_willem_Klop/publication/2688773_Equational_Term_Graph_Rewriting/links/53ce68260cf2b8e35d148342.pdf">Equational term graph rewriting</a>, Ariola and Klop (1997)</li>
+<li><a href="https://doi.org/10.1006/inco.1999.2824">Bisimilarity in Term Graph Rewriting</a>, Ariola et al. (2000)</li>
+<li><a href="https://doi.org/10.1016/0167-8191(89)90126-9">LEAN: An intermediate language based on graph rewriting</a>, Barendregt et al. (1988)</li>
+<li><a href="https://doi.org/10.1145/96709.96711">An Algorithm for Optimal Lambda Calculus Reduction</a>, Lamping (1990)</li>
+<li><a href="https://doi.org/10.1002/spe.4380090105">A New Implementation Technique for Applicative Languages</a>, Turner (1979)</li>
+<li><a href="https://www.emis.de/journals/EJC/ojs/index.php/eljc/article/view/v16i1r73/pdf">A Reformulation of Matrix Graph Grammars with Boolean Complexes</a>, Velasco and de Lara (2009)</li>
+<li><a href="https://arxiv.org/pdf/1404.0076.pdf">Towards a GPU-based implementation of interaction nets</a>, Jiresch (2012)</li>
+</ul>
+<h4 id="unification">Unification</h4>
+<ul>
+<li><a href="https://apps.dtic.mil/dtic/tr/fulltext/u2/a087641.pdf#page=7">A Catalogue of Canonical Term Rewriting Systems</a>, Hullot (1980)</li>
+<li><a href="https://www.cs.york.ac.uk/plasma/publications/pdf/PlumpHabel.96.pdf">Graph Unification and Matching</a>, Plump and Habel (1996)</li>
+<li><a href="https://hal.inria.fr/hal-02562152/document">Unification with Drags</a>, Jouannaud and Orejas (2020)</li>
+<li><a href="https://doi.org/10.1145/190347.190429">The identity problem for elementary functions and constants</a>, Richardson and Fitch (1994)</li>
+<li><a href="http://clonedigger.sourceforge.net/duplicate_code_detection_bulychev_minea.pdf">Duplicate code detection using anti-unification</a>, Bulychev and Minea (2008)</li>
+</ul>
+<h4 id="termination-checking">Termination checking</h4>
+<ul>
+<li><a href="https://arxiv.org/pdf/1505.01695.pdf">Proving Termination of Graph Transformation Systems using Weighted Type Graphs over Semirings</a>, Bruggink (2015)</li>
+<li><a href="https://www.imn.htwk-leipzig.de/~waldmann/talk/06/rta/rta06.pdf">Termination of string rewriting with matrix interpretations</a>, Hofbauer (2006)</li>
+<li><a href="https://doi.org/10.1007/s10817-007-9087-9">Matrix Interpretations for Proving Termination of Term Rewriting</a>, Endrullis et al. (2007)</li>
+<li><a href="https://hal.inria.fr/hal-01903086/document#page=2">Graph Path Orderings</a>, Dershowitz and Jouannaud (2019)</li>
+</ul>
+<h3 id="algebra">Algebra</h3>
+<ul>
+<li><a href="https://arxiv.org/pdf/1909.04881.pdf">Algebraic Property Graphs</a>, Shinavier and Wisnesky (2020)</li>
+<li><a href="https://github.com/snowleopard/alga-paper/releases/download/final/algebraic-graphs.pdf">Algebraic Graphs with Class (Functional Pearl)</a>, Mokhov (2017)</li>
+<li><a href="https://www.staff.ncl.ac.uk/andrey.mokhov/algebra.pdf">Algebra of Parameterised Graphs</a>, Mokov and Khomenko (2014)</li>
+<li><a href="http://stedolan.net/research/semirings.pdf">Fun with Semirings</a>, Dolan (2013)</li>
+<li><a href="https://doi.org/10.1007/BFb0025714">Introduction to Algebraic Theory of Graph Grammars</a>, Erhig (1978)</li>
+<li><a href="https://hal.inria.fr/hal-01853836/document">Drags: A Simple Algebraic Framework For Graph Rewriting</a>, Dershowitz and Jouannaud (2018)</li>
+<li><a href="https://doi.org/10.1145/174147.169807">An Algebraic Theory of Graph Reduction</a>, Arnborg (1993)</li>
+<li><a href="https://arxiv.org/pdf/quant-ph/0612199.pdf">Lineal: A linear-algebraic λ-calculus</a>, Arrighi and Dowek (2017)</li>
+<li><a href="https://en.wikipedia.org/wiki/Graph_product">Graph products</a>, Wikipedia</li>
+<li><a href="http://web.cs.elte.hu/~lovasz/bookxx/geomgraphbook/geombook2019.01.11.pdf">Graphs and Geometry</a>, Lovász (2019)</li>
+</ul>
+<h3 id="circuits">Circuits</h3>
+<ul>
+<li><a href="https://www.math.toronto.edu/dburbani/work/algreductions.pdf">Reductions between Families of Polynomials in
+  Theory and in Practice</a>, Valiant, Hyafil et al.</li>
+<li><a href="http://www.cs.cmu.edu/~glmiller/Publications/MRK86b.pdf">Efficient parallel evaluation of straight-line code and arithmetic circuits</a>, Miller (1986)</li>
+<li><a href="https://link.springer.com/content/pdf/10.1023/A:1008699807402.pdf">Algebraic Decision Diagrams and Their Applications</a>, Bahar et al. (1997)</li>
+<li><a href="https://apps.dtic.mil/dtic/tr/fulltext/u2/a350486.pdf">Arithmetic Circuit Verification Based on Word-Level Decision Diagrams</a>, Chen (1998)</li>
+<li><a href="https://doi.org/10.1109/43.969437">An Efficient Graph Representation for Arithmetic Circuit Verification</a>, Chen and Bryant (2001)</li>
+<li><a href="https://www.ijcai.org/Proceedings/15/Papers/443.pdf">A Top-Down Compiler for Sentential Decision Diagrams</a>, Oztok and Darwiche (2015)</li>
+<li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=4215928">Representations of Elementary Functions Using Edge-Valued MDDs</a>, Nagayama and Sasao (2007)</li>
+<li><a href="https://doi.org/10.1109/TC.2008.134">Complexities of Graph-Based Representations for Elementary Functions</a>, Nagayama and Sasao (2008)</li>
+<li><a href="https://doi.org/10.1109/TC.2007.1033">Numerical Function Generators Using LUT Cascades</a>, Sasao and Nagayama (2007)</li>
+</ul>
+<h3 id="propagation">Propagation</h3>
+<ul>
+<li><a href="https://arxiv.org/pdf/2002.06755.pdf">Unifying Graph Convolutional Neural Networks and Label Propagation</a>, Wang and Leskovec (2020)</li>
+<li><a href="https://doi.org/10.3389/fncom.2017.00024">Equilibrium Propagation: Bridging the Gap between Energy-Based Models and Backpropagation</a> Scellier and Bengio (2017)</li>
+<li><a href="https://arxiv.org/pdf/1301.2294.pdf">Expectation Propagation for Approximate Bayesian Inference</a>, Minka (2001)</li>
+<li><a href="https://dspace.mit.edu/bitstream/handle/1721.1/54635/603543210-MIT.pdf">Propagation Networks: A Flexible and Expressive Substrate for Computation</a>, Radul (2009)</li>
+<li><a href="http://dspace.mit.edu/bitstream/handle/1721.1/44215/MIT-CSAIL-TR-2009-002.pdf">The Art of the Propagator</a>, Radul and Sussman (2009)</li>
+<li><a href="https://bi.snu.ac.kr/~scai/Info/AI/Fusion,%20Propagation,%20and%20Structuring%20in%20Belief%20Networks.pdf">Fusion, propagation, and structuring in belief networks</a>, Pearl (1986)</li>
+</ul>
+<h3 id="random-walks">Random walks</h3>
+<ul>
+<li><a href="https://web.cs.elte.hu/~lovasz/erdos.pdf">Random Walks on Graphs: A Survey</a>, Lovász (1993)</li>
+<li><a href="https://doi.org/10.1007/3-540-70659-3_10">String Edit Distance, Random Walks and Graph Matching</a>, Kelly and Hancock (2002)</li>
+<li><a href="https://doi.org/10.1109/TPAMI.2005.138">Exact and Approximate Graph Matching Using Random Walks</a>, Gori and Maggini (2005)</li>
+<li><a href="https://doi.org/10.1007/978-3-642-15555-0_36">Reweighted random walks for graph matching</a>, Cho and Lee (2010)</li>
+<li><a href="https://arxiv.org/pdf/1605.04585.pdf">Small Subgraphs in the trace of a random walk</a>, Krivelevich and Michaeli (2018)</li>
+<li><a href="https://arxiv.org/pdf/1901.04673.pdf">Biased random walk on the trace of a biased random walk on the trace of...</a>, Crydon and Holmes (2019)</li>
+<li><a href="https://doi.org/10.1145/3341301.3359634">KnightKing: A Fast Distributed Graph Random Walk Engine</a>, Yang et al. (2019)</li>
+<li><a href="https://arxiv.org/abs/2102.08786">Graph Learning with 1D Convolutions on Random Walks</a>, Toenshoff et al. (2021)</li>
+</ul>
+<h3 id="software-engineering">Software engineering</h3>
+<ul>
+<li><a href="https://www.cs.cornell.edu/~ross/publications/shapes/shapes-pldi14-tr.pdf">Getting F-Bounded Polymorphism into Shape</a>, Tate (2014)</li>
+<li><a href="https://etd.ohiolink.edu/apexprod/rws_etd/send_file/send?accession=case1496835753068605&amp;disposition=attachment">Frequent Subgraph Analysis and its Software Engineering Applications</a>, Henderson (2017)</li>
+<li><a href="https://arxiv.org/pdf/2006.08945.pdf#chapter.6">Semantic Enrichment of Data Science Code</a>, Patterson (2020)</li>
+<li><a href="https://drops.dagstuhl.de/opus/volltexte/2019/10817/pdf/LIPIcs-ECOOP-2019-25.pdf">Finally, a Polymorphic Linear Algebra Language</a>, Shaikhha and Parreaux (2019)</li>
+<li><a href="https://dl.acm.org/doi/pdf/10.1145/3385412.3386037">Towards an API for the Real Numbers</a>, Boehm (2020)</li>
+</ul>
+<h3 id="proof-search">Proof search</h3>
+<ul>
+<li><a href="https://arxiv.org/pdf/2009.03393.pdf">Generative Language Modeling for Automated Theorem Proving</a>, Polu et al. (2020)</li>
+<li><a href="https://arxiv.org/pdf/1706.06462.pdf">Towards Proof Synthesis Guided by Neural Machine Translation for Intuitionistic Propositional Logic</a>, Sekiyama et al. (2020)</li>
+<li><a href="https://arxiv.org/pdf/1911.04873.pdf">Can Neural Networks Learn Symbolic Rewriting?</a>, Piotrowski et al. (2020)</li>
+<li><a href="https://arxiv.org/pdf/2009.01827.pdf">Tree Neural Networks in HOL4</a>, Gauthier (2020)</li>
+<li><a href="https://arxiv.org/pdf/2006.09265.pdf">Modelling High-Level Mathematical Reasoning in Mechanised Declarative Proofs</a>, Li et al. (2020)</li>
+</ul>
+<h3 id="code-search">Code search</h3>
+<ul>
+<li><a href="https://arxiv.org/pdf/1810.03551.pdf">Approximate Online Pattern Matching in Sub-linear Time</a>, Chakraborty et al. (2018)</li>
+<li><a href="https://doi.org/10.1016/j.dam.2018.05.028">Improved online algorithms for jumbled matching</a>, Ghuman et al. (2018)</li>
+<li><a href="http://www-hagi.ist.osaka-u.ac.jp/research/papers/201707_mitani_ieeetpds.pdf">Parallelizing Exact and Approximate String Matching via Inclusive Scan on a GPU</a>, Mitani et al. (2017)</li>
+<li><a href="https://doi.org/10.1007/s12559-019-09646-y">A Novel Algorithm for Online Inexact String Matching and its FPGA Implementation</a>, Cinti et al. (2019)</li>
+<li><a href="https://doi.org/10.1145/3210259.3210264">Context-Free Path Querying by Matrix Multiplication</a>, Azimov and Grigorev (2018)</li>
+<li><a href="https://dl.acm.org/doi/pdf/10.1145/3299815.3314471">Code Search on Bytecode for Mobile App Development</a>, Nguyen et al. (2019)</li>
+<li>Uses a HMM to model transitions between method calls</li>
+</ul>
+<h3 id="word-problems">Word problems</h3>
+<ul>
+<li><a href="http://www.mathnet.ru/php/archive.phtml?wshow=paper&amp;jrnid=sm&amp;paperid=2805&amp;option_lang=eng">The problem of solvability of equations in a free semigroup</a>, Makanin (1977)</li>
+<li><a href="http://www.frontiersinai.com/turingfiles/November/ganesh.pdf">Word equations with length constraints: what’s decidable?</a>, Ganesh et al. (2012)</li>
+<li><a href="https://arxiv.org/pdf/1906.11718.pdf">On Solving Word Equations Using SAT</a>, Day et al. (2019)</li>
+<li><a href="https://www.cs.utexas.edu/users/hunt/FMCAD/FMCAD18/papers/paper27.pdf">TRAU: SMT solver for string constraints</a>, Abdulla et al. (2018)</li>
+<li><a href="https://arxiv.org/pdf/2002.02376.pdf">A Survey on String Constraint Solving</a>, Amadini (2021)</li>
+</ul>
+<h3 id="software">Software</h3>
+<h4 id="graphs">Graphs</h4>
+<ul>
+<li><a href="https://github.com/getkeops/keops">KeOps</a> - Dense, sparse and symbolic tensor library</li>
+<li><a href="https://github.com/snowleopard/alga">Alga</a> - a library for algebraic construction and manipulation of graphs in Haskell</li>
+<li><a href="https://github.com/lacuna/bifurcan">Bifurcan</a> - high-quality JVM implementations of immutable data structures</li>
+<li><a href="https://github.com/nidi3/graphviz-java#kotlin-dsl">Kraphviz</a> - Graphviz with pure Java</li>
+<li><a href="https://github.com/jgralab/jgralab">JGraLab</a> - a Java graph library implementing <a href="https://github.com/jgralab/jgralab/wiki/TGraphs">TGraphs</a>: typed, attributed, ordered, and directed graphs (<a href="https://www.researchgate.net/profile/Juergen_Ebert2/publication/228566960_Using_the_TGraph_approach_for_model_fact_repositories/links/09e41509259d33a161000000/Using-the-TGraph-approach-for-model-fact-repositories.pdf">paper</a>)</li>
+<li><a href="http://graphblas.org">GraphBLAS</a> - open effort to define standard building blocks for graph algorithms in the language of linear algebra</li>
+<li><a href="https://github.com/gunrock/graphblast">GraphBLAST</a> - High-Performance Linear Algebra-based Graph Primitives on GPUs</li>
+</ul>
+<h4 id="rewriting">Rewriting</h4>
+<ul>
+<li><a href="http://www.ti.inf.uni-due.de/research/tools/grez/">Grez</a> - graph transformation termination checker (<a href="http://www.ti.inf.uni-due.de/fileadmin/public/tools/grez/grez-manual.pdf">manual</a>)</li>
+<li><a href="https://github.com/UoYCS-plasma/GP2">GP2</a> - Rule-based graph programming language</li>
+<li><a href="https://www.user.tu-berlin.de/o.runge/agg/">AGG</a> - development environment for attributed graph transformation systems supporting an algebraic approach to graph transformation (<a href="http://www.informatik.uni-bremen.de/agbkb/lehre/rbs/seminar/AGG-ShortManual.pdf">manual</a>)</li>
+<li><a href="https://github.com/de-tu-berlin-tfs/Henshin-Editor">Henshin</a> - an IDE for developing and simulating triple graph grammars (TGGs) (<a href="https://wiki.eclipse.org/Henshin">manual</a>)</li>
+<li><a href="https://github.com/sosy-lab/java-smt">JavaSMT</a> - Unified Java API for SMT solvers</li>
+</ul>
+<h4 id="automata">Automata</h4>
+<ul>
+<li><a href="https://github.com/ISCAS-PMC/roll-library">roll-library</a></li>
+<li><a href="https://github.com/cs-au-dk/dk.brics.automaton">dk.brics.automata</a></li>
+<li><a href="https://github.com/Learnlib/learnlib">LearnLib</a></li>
+</ul>
+<h1 id="special-thanks">Special thanks</h1>
+<p>The following individuals have helped inspire this project through their enthusiasm and thoughtful feedback. Please check out their work.</p>
+<ul>
+<li><a href="https://www.cs.mcgill.ca/~jguo/lab.html">Jin Guo</a></li>
+<li><a href="https://www.cs.mcgill.ca/~xsi/">Xujie Si</a></li>
+<li><a href="https://blogs.ncl.ac.uk/andreymokhov/">Andrey Mokhov</a></li>
+<li><a href="http://pub.ist.ac.at/~fmuehlbo/#about">Fabian Muehlboeck</a></li>
+<li><a href="https://www.khoury.northeastern.edu/people/benjamin-greenman/">Ben Greenman</a></li>
+<li><a href="https://dkeenan.com/">Dave Keenan</a></li>
+<li><a href="http://tromp.github.io/">John Tromp</a></li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

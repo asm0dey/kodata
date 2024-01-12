@@ -1,0 +1,2057 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Count Plot - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Count Plot - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/kandy/docs/topics/guides/Count-Plot-Guide.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Count Plot - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/kandy/docs/topics/guides/Count-Plot-Guide.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#count-plot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Count Plot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kotlindl/" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kaliningraph/" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlin-spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlindl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kmath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../multik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kaliningraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kravis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../plotly-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../visionforge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalized-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalized signature
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output statistics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statcount-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      StatCount plots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StatCount plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statcount-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      statCount transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#countplot-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      CountPlot layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#countplot-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      countPlot plot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grouped-statcount" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grouped statCount
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grouped statCount">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inside-groupby-plot-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inside groupBy{} plot context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="count-plot">Count Plot</h1>
+<p><web-summary>
+Learn to create compelling count plots with Kandy.
+This guide introduces you to the techniques for visualizing frequency distributions in datasets,
+helping you to effectively communicate data patterns and insights.
+</web-summary></p>
+<p><card-summary>
+Kandy's Count Plot guide: A straightforward approach to visually representing frequency distributions in your data.
+</card-summary></p>
+<p><link-summary>
+Discover Kandy's guide on count plots for a deeper understanding of frequency distributions in datasets,
+enhancing your data visualization skills.
+</link-summary></p>
+<!---IMPORT org.jetbrains.kotlinx.kandy.letsplot.samples.guides.CountPlot-->
+
+<p>Statistics "count" are calculated on the sample of a single categorical variable.
+It counts the number of observations in each category.
+It's weighted, it means the weighted count for each category is calculated
+(each element within a category is counted along with its weight).</p>
+<p>This notebook uses definitions from <a href="https://kotlin.github.io/dataframe/overview.html">DataFrame</a>.</p>
+<h2 id="usage">Usage</h2>
+<p>"Count" is one of the most important statistics with different usages.
+The count plot provides a graphical depiction of how categories are distributed.</p>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li>Input (mandatory):<ul>
+<li><code>x</code> — discrete sample on which the statistics are calculated</li>
+</ul>
+</li>
+<li>Weights (optional):<ul>
+<li><code>weights</code> — set of weights of the same size as the input sample.
+  <code>null</code> (by default) means all weights are equal to <code>1.0</code> and the weighted count is equal to the normal one</li>
+</ul>
+</li>
+</ul>
+<h3 id="generalized-signature">Generalized signature</h3>
+<p>The specific signature depends on the function,
+but all functions related to "count" statistic (which will be discussed further below —
+different variations of <code>statCount()</code>, <code>countPlot()</code>) have approximately the same signature with the arguments above:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>statCountArgs := 
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>   x, 
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>   weights = null
+</code></pre></div></td></tr></table></div>
+<p>The possible types of <code>x</code> and <code>weights</code> depend on where a certain function is used.
+They can be simply <code>Iterable</code> (<code>List</code>, <code>Set</code>, etc.) or a reference to a column in a <code>DataFrame</code>
+(<code>String</code>, <code>ColumnAccessor</code>) or the <code>DataColumn</code> itself.
+<code>x</code> elements are type of <code>X</code> — generic type parameter.</p>
+<h2 id="output-statistics">Output statistics</h2>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stat.x</td>
+<td>X</td>
+<td>Category</td>
+</tr>
+<tr>
+<td>Stat.count</td>
+<td>Int</td>
+<td>Number of observations in this category</td>
+</tr>
+<tr>
+<td>Stat.countWeighted</td>
+<td>Double</td>
+<td>Weighted count (sum of observations weights in this category)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="statcount-plots">StatCount plots</h2>
+<!---FUN guideCountReadAutoDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Use &quot;mpg&quot; dataset</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">mpgDF</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">DataFrame</span><span class="p">.</span><span class="na">readCSV</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/JetBrains/lets-plot-kotlin/master/docs/examples/data/mpg.csv&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">mpgDF</span><span class="p">.</span><span class="na">head</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table style="header-row">
+<tr>
+   <td><b>untitled</b></td>
+   <td><b>manufacturer</b></td>
+   <td><b>model</b></td>
+   <td><b>displ</b></td>
+   <td><b>year</b></td>
+   <td><b>cyl</b></td>
+   <td><b>trans</b></td>
+   <td><b>drv</b></td>
+   <td><b>cty</b></td>
+   <td><b>hwy</b></td>
+   <td><b>fl</b></td>
+   <td><b>class</b></td>
+</tr>
+<tr>
+   <td>1</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>18,0</td>
+   <td>1999</td>
+   <td>4</td>
+   <td>auto(l5)</td>
+   <td>f</td>
+   <td>18</td>
+   <td>29</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>2</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>18,0</td>
+   <td>1999</td>
+   <td>4</td>
+   <td>manual(m5)</td>
+   <td>f</td>
+   <td>21</td>
+   <td>29</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>3</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>2,0</td>
+   <td>2008</td>
+   <td>4</td>
+   <td>manual(m6)</td>
+   <td>f</td>
+   <td>20</td>
+   <td>31</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>4</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>2,0</td>
+   <td>2008</td>
+   <td>4</td>
+   <td>auto(av)</td>
+   <td>f</td>
+   <td>21</td>
+   <td>30</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>5</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>28,0</td>
+   <td>1999</td>
+   <td>6</td>
+   <td>auto(l5)</td>
+   <td>f</td>
+   <td>16</td>
+   <td>26</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+</table>
+
+<!---FUN guideCountTakeThreeCols-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// We need only three columns</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mpgDF</span><span class="o">[</span><span class="s">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;drv&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hwy&quot;</span><span class="o">]</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span><span class="p">.</span><span class="na">head</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<thead>
+<tr>
+<th>class</th>
+<th>drv</th>
+<th>hwy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>compact</td>
+<td>f</td>
+<td>29</td>
+</tr>
+<tr>
+<td>compact</td>
+<td>f</td>
+<td>29</td>
+</tr>
+<tr>
+<td>compact</td>
+<td>f</td>
+<td>31</td>
+</tr>
+<tr>
+<td>compact</td>
+<td>f</td>
+<td>30</td>
+</tr>
+<tr>
+<td>compact</td>
+<td>f</td>
+<td>26</td>
+</tr>
+</tbody>
+</table>
+<p>It has a signature</p>
+<table>
+<thead>
+<tr>
+<th>class</th>
+<th>drv</th>
+<th>hwy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Let's take a look at <code>StatCount</code> output DataFrame:</p>
+<!---FUN guideCountStatCount-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">df</span><span class="p">.</span><span class="na">statCount</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hwy&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<tr><td><b>Stat</b></td></tr>
+<tr><td>
+<table>
+<tr><td>x</td><td>count</td><td>countWeighted</td></tr>
+<tr><td>compact</td><td>47</td><td>1330</td></tr>
+<tr><td>midsize</td><td>41</td><td>1119</td></tr>
+<tr><td>suv</td><td>62</td><td>1124</td></tr>
+<tr><td>2seater</td><td>5</td><td>124</td></tr>
+<tr><td>minivan</td><td>11</td><td>246</td></tr>
+</table>
+</td></tr>
+</table>
+
+<p>It has the following signature:</p>
+<table>
+  <thead>
+    <tr>
+      <th alignt="left" colspan="3">Stat</th>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+      <th>x</th>
+      <th>count</th>
+      <th>countWeighted</th>
+    </tr>
+  </thead>
+</table>
+
+<p>As you can see, we got a <code>DataFrame</code> with one <code>ColumnGroup</code> called <code>Stat</code> which contains several columns with statics.
+For <code>statCount2D</code>, each row corresponds to one category.
+<code>Stat.x</code> is the column with this category.
+<code>Stat.count</code> contains the number of observations in the category.
+<code>Stat.countWeighted</code> - weighted version of <code>count</code>.
+<code>DataFrame</code> with "count" statistics is called <code>StatCountFrame</code></p>
+<h3 id="statcount-transform"><code>statCount</code> transform</h3>
+<p><code>statCount(statCountArgs) { /*new plotting context*/ }</code> modifies a plotting context - instead of original data
+(no matter was it empty or not) new <code>StatCount</code> dataset (calculated on given arguments,
+inputs and weights can be provided as <code>Iterable</code> or as dataset column reference - by name as a <code>String</code>,
+as a <code>ColumnReference</code> or as a <code>DataColumn</code>) is used inside a new context
+(original dataset and primary context are not affected -
+you can add layers using initial dataset outside the <code>statCount</code> context).
+Since the old dataset is irrelevant, we cannot use references for its columns.
+But we can refer to the new ones.
+They are all contained in the <code>Stat</code> group and can be called inside the new context:</p>
+<!---FUN guideCountStatCountPointsPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="n">statCount</span><span class="p">(</span><span class="n">df</span><span class="o">[</span><span class="s">&quot;class&quot;</span><span class="o">]</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">        </span><span class="c1">// New `StatCount` dataset here</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="n">points</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">            </span><span class="c1">// Use `Stat.*` columns for mappings</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">            </span><span class="n">y</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">count</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">            </span><span class="n">size</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">count</span><span class="p">)</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">            </span><span class="n">color</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="StatCount Points Plot" src="guideCountStatCountPointsPlot.svg" /></p>
+<h3 id="countplot-layer">CountPlot layer</h3>
+<p>CountPlot is a statistical plot used for visualizing the distribution of categorical variables.
+It's a bar plot where each bar is representing one of the categories:
+its <code>x</code> coordinate is corresponding to the category and <code>y</code> to its count.
+So basically, we can build a histogram with <code>statCount</code> as follows:</p>
+<!---FUN guideCountStatCountBarsPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">statCountAndBarsPlt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="n">statCount</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">        </span><span class="n">bars</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">            </span><span class="n">y</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">count</span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="n">layout</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;`statCount()` + `bars()` layer&quot;</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="p">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="n">statCountAndBarsPlt</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="StatCount Bar Plot" src="guideCountStatCountBarsPlot.svg" /></p>
+<p>But we can do it even faster with <code>countPlot(statCountArgs)</code> method:</p>
+<!---FUN guideCountSimplePlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">countPlt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="n">countPlot</span><span class="p">(</span><span class="n">df</span><span class="o">[</span><span class="s">&quot;class&quot;</span><span class="o">]</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">layout</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;`countPlot()` layer&quot;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">}</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">countPlt</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Count Plot" src="guideCountSimplePlot.svg" /></p>
+<p>Let's compare them:</p>
+<!---FUN guideCountBarsVsCountPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">plotGrid</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="n">statCountAndBarsPlt</span><span class="p">,</span><span class="w"> </span><span class="n">countPlt</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Compare StatCount Bar vs Count Plot" src="guideCountBarsVsCountPlot.svg" /></p>
+<p>These two plots are identical.
+Indeed, <code>countPlot</code> just uses <code>statCount</code> and <code>bars</code> and performs coordinate mappings under the hood.
+And we can customize count plot layer: <code>countPlot()</code> optionally opens a new context,
+where we can configure bars (as in the usual context opened by <code>bars { ... }</code>) —
+even change coordinate mappings from default ones.
+<code>StatCount</code> dataset of count plot is also can be accessed here.</p>
+<!---FUN guideCountStatCountFillColor-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">8</a></span>
+<span class="normal"><a href="#__codelineno-8-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="n">countPlot</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">        </span><span class="c1">// filling color depends on `count` statistic</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="n">fillColor</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">            </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">continuous</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">GREEN</span><span class="p">..</span><span class="na">Color</span><span class="p">.</span><span class="na">RED</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">        </span><span class="n">borderLine</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">BLACK</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Count Plot with Filled Color" src="guideCountStatCountFillColor.svg" /></p>
+<p>If we specify weights, <code>Stat.countWeighted</code> is mapped to <code>y</code> by default:</p>
+<!---FUN guideCountWithHLine-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span>
+<span class="normal"><a href="#__codelineno-9-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="n">countPlot</span><span class="p">(</span><span class="n">`class`</span><span class="p">,</span><span class="w"> </span><span class="n">hwy</span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="w">    </span><span class="c1">// We can add other layers as well.</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="w">    </span><span class="c1">// Let&#39;s add a horizontal mark line with constant y intercept:</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="w">    </span><span class="n">hLine</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">        </span><span class="kd">val</span><span class="w"> </span><span class="nv">criticalCount</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="w">        </span><span class="n">yIntercept</span><span class="p">.</span><span class="na">constant</span><span class="p">(</span><span class="n">criticalCount</span><span class="p">)</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">        </span><span class="n">tooltips</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">line</span><span class="p">(</span><span class="s">&quot;Critical count: </span><span class="si">${</span><span class="kt">String</span><span class="p">.</span><span class="na">format</span><span class="p">(</span><span class="s">&quot;</span><span class="o">%</span><span class="n">d</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">criticalCount</span><span class="p">)</span><span class="si">}</span><span class="s">&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">        </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">RED</span><span class="p">;</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">3.0</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="n">x</span><span class="p">.</span><span class="na">axis</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Car class&quot;</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Count Plot with Mark Line" src="guideCountWithHLine.svg" /></p>
+<h3 id="countplot-plot"><code>countPlot</code> plot</h3>
+<p><code>countPlot(statCountArgs)</code> and <code>DataFrame.countPlot(statCountArgs)</code>
+are a family of functions for fast plotting a count plot.</p>
+<!---FUN guideCountPlotWithItr-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">countPlot</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Count Plot on Iterable" src="guideCountPlotWithItr.svg" /></p>
+<!---FUN guideCountSimpleCountPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">df</span><span class="p">.</span><span class="na">countPlot</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Simple Count Plot" src="guideCountSimpleCountPlot.svg" /></p>
+<p>In case you want to provide inputs and weights using column selection DSL,
+it's a bit different from the usual one - you should assign <code>x</code>
+input and (optionally) <code>weight</code> throw invocation eponymous functions:</p>
+<!---FUN guideCountPlotWithWeight-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">df</span><span class="p">.</span><span class="na">countPlot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="n">x</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="n">weight</span><span class="p">(</span><span class="n">hwy</span><span class="p">)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Count Plot with Weight" src="guideCountPlotWithWeight.svg" /></p>
+<p>CountPlot plot can be configured with <code>.configure {}</code> extension — it opens a context that combines bars,
+<code>StatCount</code> and plot context.
+That means you can configure bars settings, mappings using <code>StatCount</code> dataset and any plot adjustments:</p>
+<!---FUN guideCountConfigurePlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">df</span><span class="p">.</span><span class="na">countPlot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="n">x</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="p">}.</span><span class="na">configure</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="c1">// Bars + StatCount + PlotContext</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">    </span><span class="c1">// can&#39;t add new layer</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="c1">// can add bars mapping, including for `Stat.*` columns</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="n">fillColor</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="c1">// can configure general plot adjustments</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Configured `countPlot` plot&quot;</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">        </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">350</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Configured Count Plot" src="guideCountConfigurePlot.svg" /></p>
+<h2 id="grouped-statcount">Grouped <code>statCount</code></h2>
+<p><code>statCount</code> can be applied for grouped data —
+statistics will be calculated on each group independently but with equal categories.
+This application returns a new <code>GroupBy</code>
+dataset with the same keys as the old one but with <code>StatCount</code> groups instead of old ones.</p>
+<!---FUN guideCountGroupDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="c1">// group our dataframe by `drv` column</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">groupedDF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="p">.</span><span class="na">groupBy</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">drv</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="n">groupedDF</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<tr><td>drv</td><td>group</td></tr>
+<tr><td>f</td><td>
+<table>
+<tr><td>class</td><td>drv</td><td>hwy</td></tr>
+<tr><td>compact</td><td>f</td><td>29</td></tr>
+<tr><td>compact</td><td>f</td><td>29</td></tr>
+<tr><td>compact</td><td>f</td><td>31</td></tr>
+<tr><td>compact</td><td>f</td><td>30</td></tr>
+<tr><td>compact</td><td>f</td><td>26</td></tr>
+</table>
+</td></tr>
+<tr><td>4</td><td>
+<table>
+<tr><td>class</td><td>drv</td><td>hwy</td></tr>
+<tr><td>compact</td><td>4</td><td>26</td></tr>
+<tr><td>compact</td><td>4</td><td>25</td></tr>
+<tr><td>compact</td><td>4</td><td>28</td></tr>
+<tr><td>compact</td><td>4</td><td>27</td></tr>
+<tr><td>compact</td><td>4</td><td>25</td></tr>
+</table>
+</td></tr>
+<tr><td>r</td><td>
+<table>
+<tr><td>class</td><td>drv</td><td>hwy</td></tr>
+<tr><td>compact</td><td>r</td><td>20</td></tr>
+<tr><td>compact</td><td>r</td><td>15</td></tr>
+<tr><td>compact</td><td>r</td><td>20</td></tr>
+<tr><td>compact</td><td>r</td><td>17</td></tr>
+<tr><td>compact</td><td>r</td><td>17</td></tr>
+</table>
+</td></tr>
+</table>
+
+<p>Now we have a <code>GroupBy</code> with a signature</p>
+<table>
+  <thead>
+    <tr>
+      <th>key: [drv]</th>
+      <th>group: DataFrame[class|drv|hwy]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"f"</td>
+      <td>"f"-Group</td>
+    </tr>
+    <tr>
+      <td>"4"</td>
+      <td>"4"-Group</td>
+    </tr>
+    <tr>
+      <td>"r"</td>
+      <td>"r"-Group</td>
+    </tr>
+  </tbody>
+</table>
+
+<!---FUN guideCountGroupedStatCount-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">statCount</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<tr><td>drv</td><td>group</td></tr>
+<tr><td>f</td><td>
+<table>
+<tr><td>Stat</td></tr>
+<tr><td>{ x: compact, count: 35, countWeighted: 35}</td></tr>
+</table>
+</td></tr>
+<tr><td>4</td><td>
+<table>
+<tr><td>Stat</td></tr>
+<tr><td>{ x: compact, count: 12, countWeighted: 12}</td></tr>
+</table>
+</td></tr>
+<tr><td>r</td><td>
+<table>
+<tr><td>Stat</td></tr>
+<tr><td>{ x: suv, count: 11, countWeighted: 11}</td></tr>
+</table>
+</td></tr>
+</table>
+
+<p>After <code>statCount</code> applying it's still a <code>GroupBy</code> but with different signature of <code>group</code> -
+all groups have the same signature as usual <code>DataFrame</code> after <code>statCount</code> applying (i.e. <code>StatCountFrame</code>):</p>
+<table>
+  <thead>
+    <tr>
+      <th>key: [drv]</th>
+      <th>group: StaCountFrame</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"f"</td>
+      <td>"f"-Group</td>
+    </tr>
+    <tr>
+      <td>"4"</td>
+      <td>"4"-Group</td>
+    </tr>
+    <tr>
+      <td>"r"</td>
+      <td>"r"-Group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As you can see, we did indeed do a <code>statCount</code> transformation within groups, the grouping keys did not change.</p>
+<p>The plotting process doesn't change much — we do everything the same.</p>
+<!---FUN guideCountGroupedStatCountBarsPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span>
+<span class="normal"><a href="#__codelineno-16-6">6</a></span>
+<span class="normal"><a href="#__codelineno-16-7">7</a></span>
+<span class="normal"><a href="#__codelineno-16-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="w">    </span><span class="n">statCount</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">        </span><span class="n">bars</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="w">            </span><span class="n">y</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">countWeighted</span><span class="p">)</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Grouped StatCount Plot" src="guideCountGroupedStatCountBarsPlot.svg" /></p>
+<p>As you can see, there are several bars in some categories because we have three groups of data.
+To distinguish them, we need to add mapping to the filling color from the key.
+This is convenient — the key is available in the context</p>
+<!---FUN guideCountGroupedStatCountBarsWithColorPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span>
+<span class="normal"><a href="#__codelineno-17-6">6</a></span>
+<span class="normal"><a href="#__codelineno-17-7">7</a></span>
+<span class="normal"><a href="#__codelineno-17-8">8</a></span>
+<span class="normal"><a href="#__codelineno-17-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="w">    </span><span class="n">statCount</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="w">        </span><span class="n">bars</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="w">            </span><span class="n">y</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">countWeighted</span><span class="p">)</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6"></a><span class="w">            </span><span class="n">fillColor</span><span class="p">(</span><span class="n">drv</span><span class="p">)</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Grouped StatCount Plot with Filled Color" src="guideCountGroupedStatCountBarsWithColorPlot.svg" /></p>
+<p>The <code>countPlot</code> layer also works.
+Moreover, if we have exactly one grouping key, a mapping from it to <code>fillColor</code> will be created by default.</p>
+<!---FUN guideCountGroupedCountPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="w">    </span><span class="n">countPlot</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">)</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Grouped Count Plot with Default Colors" src="guideCountGroupedCountPlot.svg" /></p>
+<p>We can customize it like we used to.
+From the differences - access to <code>key</code> columns, and we can customize the <code>position</code>
+of bars (within a single x-coordinate), for example — stack them:</p>
+<!---FUN guideCountConfigureGroupedCountPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="w">    </span><span class="n">countPlot</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="w">        </span><span class="n">fillColor</span><span class="p">(</span><span class="n">drv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a><span class="w">            </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">categorical</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">GREEN</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">ORANGE</span><span class="p">,</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">LIGHT_PURPLE</span><span class="p">))</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="w">        </span><span class="n">borderLine</span><span class="p">.</span><span class="na">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.0</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="w">        </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1.0</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a><span class="w">        </span><span class="c1">// adjust position of bars</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="w">        </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Position</span><span class="p">.</span><span class="na">stack</span><span class="p">()</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Stacked Count Plot" src="guideCountConfigureGroupedCountPlot.svg" /></p>
+<p>CountPlot plot for <code>GroupBy</code> (i.e. <code>GroupBy.countPlot(statCountArgs)</code> extensions) works as well:</p>
+<!---FUN guideCountSimpleGroupedCountPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">countPlot</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Simple Grouped Count Plot" src="guideCountSimpleGroupedCountPlot.svg" /></p>
+<p>... and can be configured the same way:</p>
+<!---FUN guideCountConfigureSimpleGroupedCountPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span>
+<span class="normal"><a href="#__codelineno-21-6">6</a></span>
+<span class="normal"><a href="#__codelineno-21-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">countPlot</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span><span class="w"> </span><span class="p">}.</span><span class="na">configure</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">    </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">    </span><span class="c1">// make the bars from different groups overlap with each other</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">    </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Position</span><span class="p">.</span><span class="na">identity</span><span class="p">()</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">    </span><span class="c1">// can access key column by name as `String`</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">    </span><span class="n">fillColor</span><span class="p">(</span><span class="s">&quot;drv&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">categoricalColorBrewer</span><span class="p">(</span><span class="n">BrewerPalette</span><span class="p">.</span><span class="na">Qualitative</span><span class="p">.</span><span class="na">Dark2</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Configured Grouped Count Plot" src="guideCountConfigureSimpleGroupedCountPlot.svg" /></p>
+<h3 id="inside-groupby-plot-context">Inside <code>groupBy{}</code> plot context</h3>
+<p>We can apply <code>groupBy</code> modification to the initial dataset and count plot a histogram with grouped data the same way:</p>
+<!---FUN guideCountGroupByCountPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span>
+<span class="normal"><a href="#__codelineno-22-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="n">groupBy</span><span class="p">(</span><span class="n">drv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">        </span><span class="n">countPlot</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="GroupBy in Plot" src="guideCountGroupByCountPlot.svg" /></p>
+<p><seealso style="cards">
+       <category ref="example-ktnb">
+           <a href="https://github.com/Kotlin/kandy/blob/main/examples/notebooks/lets-plot/guides/count_plot.ipynb" summary="View the notebook on our GitHub repository">GitHub Notebook</a>
+           <a href="https://datalore.jetbrains.com/report/static/KQKedA4jDrKu63O53gEN0z/iuxAAQoiG5rCczGotibJ1S" summary="Experiment with this example on Datalore">Datalore Notebook</a>
+       </category>
+</seealso></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../../../../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

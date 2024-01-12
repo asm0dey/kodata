@@ -1,0 +1,2342 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Boxplot - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Boxplot - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/kandy/docs/topics/guides/Boxplot-Guide.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Boxplot - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/kandy/docs/topics/guides/Boxplot-Guide.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#boxplot" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Boxplot
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kotlindl/" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kaliningraph/" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlin-spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlindl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kmath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../multik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kaliningraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kravis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../plotly-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../visionforge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalized-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalized signature
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output statistics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Output statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boxplot_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      "boxplot"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boxplotoutliers" class="md-nav__link">
+    <span class="md-ellipsis">
+      "boxplotOutliers"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statboxplot-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      StatBoxplot plots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StatBoxplot plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statboxplot-and-statboxplotoutliers-transforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      statBoxplot and statBoxplotOutliers transforms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boxplot-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      boxplot layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boxplot-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      boxplot plot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#grouped-staboxplot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Grouped staBoxplot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Grouped staBoxplot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#inside-groupby-plot-context" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inside groupBy{} plot context
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="boxplot">Boxplot</h1>
+<p><web-summary>
+Unlock the power of boxplot in Kandy's 'Boxplot' guide.
+This comprehensive resource provides insights into creating boxplot
+to effectively analyze and compare distributions in your data.
+</web-summary></p>
+<p><card-summary>
+Explore boxplot creation with Kandy's detailed guide.
+Learn to visualize data distributions and identify outliers for comprehensive data analysis.
+</card-summary></p>
+<p><link-summary>
+Discover how to create impactful boxplot with Kandy.
+The 'Boxplot' guide offers step-by-step instructions for visualizing data variations and outliers.
+</link-summary></p>
+<!---IMPORT org.jetbrains.kotlinx.kandy.letsplot.samples.guides.Boxplot-->
+
+<p>A boxplot, alternatively referred to as a whisker plot, serves as a statistical visualization technique, illustrating
+the distribution and summary statistics of a dataset in a graphical format.
+It consists of several components:</p>
+<ol>
+<li>Median (Q2): the line inside the box represents the median of the dataset, which is the middle value when the data is
+   sorted in ascending order.
+   It divides the data into two equal halves, with 50% of the data falling below and 50% above the median.</li>
+<li>Interquartile Range (IQR): the box itself spans the interquartile range, which is the range between the first
+   quartile (Q1) and the third quartile (Q3).
+   The first quartile (Q1) is the 25<sup>th</sup> percentile, meaning that 25% of the
+   data falls below it, while the third quartile (Q3) is the 75<sup>th</sup> percentile,
+   indicating that 75% of the data falls below it.
+   The IQR captures the middle 50% of the data.</li>
+<li>Whiskers: the whiskers extend from the top and bottom edges of the box to the minimum and maximum non-outlier data
+   points within a certain range.
+   The range is typically determined by a multiplier (often 1.5 times the IQR),
+   and it defines the outer limits for what is considered a potential outlier.</li>
+<li>Outliers (optional): individual data points that fall outside the whiskers are considered potential outliers.
+   These are data points that are significantly different from the rest of the data
+   and may warrant special attention in further analysis.
+   The auxiliary statistic "boxplotOutliers" is used to count outliers.
+   This statistic is not weighted.</li>
+</ol>
+<p>This notebook uses definitions from <a href="https://kotlin.github.io/dataframe/overview.html">DataFrame</a>.</p>
+<h2 id="usage">Usage</h2>
+<p>A boxplot is a visual representation of a dataset's distribution, showing the median, quartiles, and potential outliers.
+It's a useful tool for understanding the spread and central tendency of data, as well as identifying outliers.
+The compactness of this chart also makes it
+convenient to visually compare the characteristics of different samples with each other.</p>
+<h2 id="arguments">Arguments</h2>
+<p>Both <code>statBoxplot()</code> and <code>statBoxplotOutliers()</code>
+(as well as statistical <code>boxplot()</code> layer and plot functions) have the same arguments and signature.</p>
+<ul>
+<li>Input (mandatory):<ul>
+<li><code>x</code> - a categorical variable dividing the data into different groups (in some versions of functions it is absent,
+  i.e., all calculations will be performed for one sample without a division);</li>
+<li><code>y</code> - numeric sample on which the statistics are calculated;</li>
+</ul>
+</li>
+<li>Parameters (optional):<ul>
+<li><code>whiskerIQRRatio: Double</code> - interquartile range multiplier of whiskers lengths.</li>
+</ul>
+</li>
+</ul>
+<h3 id="generalized-signature">Generalized signature</h3>
+<p>The specific signature depends on the function,
+but all functions related to "boxplot" statistic
+(which will be discussed further below - different variations of <code>statBoxplot()</code>, <code>statBoxplotOutliers()</code> <code>boxplot()</code>)
+have approximately the same signature with the arguments above:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>statBoxplotArgs := 
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>   x, // not necessarily
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>   y, 
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>   whiskerIQRRatio: Double = 1.5
+</code></pre></div></td></tr></table></div>
+<p>The possible types <code>y</code> depend on where a certain function is used.
+It can be simply <code>Iterable</code> (<code>List</code>, <code>Set</code>, etc.) or a reference to a column in a
+<code>DataFrame</code> (<code>String</code>, <code>ColumnAccessor</code>) or the <code>DataColumn</code> itself.
+It's used only with <code>DataFrame</code> - it's a reference to a column of the same type as an <code>y</code>.
+<code>x</code> elements are type of <code>X</code> - generic type parameter.</p>
+<h2 id="output-statistics">Output statistics</h2>
+<h3 id="boxplot_1">"boxplot"</h3>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stat.x</td>
+<td>X</td>
+<td>Boxplot <code>x</code> category</td>
+</tr>
+<tr>
+<td>Stat.min</td>
+<td>Double</td>
+<td>Lower whisker end - the minimum non-outlier data point</td>
+</tr>
+<tr>
+<td>Stat.lower</td>
+<td>Double</td>
+<td>Lower box edge - the first quartile (Q1)</td>
+</tr>
+<tr>
+<td>Stat.middle</td>
+<td>Double</td>
+<td>Median / the second quartile (Q2)</td>
+</tr>
+<tr>
+<td>Stat.upper</td>
+<td>Double</td>
+<td>Upper box edge - the third quartile (Q3)</td>
+</tr>
+<tr>
+<td>Stat.max</td>
+<td>Double</td>
+<td>Upper whisker end - the maximum non-outlier data point</td>
+</tr>
+</tbody>
+</table>
+<h3 id="boxplotoutliers">"boxplotOutliers"</h3>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stat.x</td>
+<td>X</td>
+<td>Boxplot <code>x</code> category</td>
+</tr>
+<tr>
+<td>Stat.y</td>
+<td>Double</td>
+<td>Outlier value</td>
+</tr>
+</tbody>
+</table>
+<h2 id="statboxplot-plots">StatBoxplot plots</h2>
+<!---FUN guideBoxplotGenerateData-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// To generate the data, we use a standard java math library</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="c1">// https://commons.apache.org/proper/commons-math/</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="c1">// Generate sample from normal distribution</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kd">val</span><span class="w"> </span><span class="nv">rateA</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NormalDistribution</span><span class="p">(</span><span class="m">37.8</span><span class="p">,</span><span class="w"> </span><span class="m">4.3</span><span class="p">).</span><span class="na">sample</span><span class="p">(</span><span class="m">5000</span><span class="p">).</span><span class="na">toList</span><span class="p">()</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="c1">// Generate sample from uniform distribution</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="kd">val</span><span class="w"> </span><span class="nv">rateB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">UniformRealDistribution</span><span class="p">(</span><span class="m">20.0</span><span class="p">,</span><span class="w"> </span><span class="m">50.0</span><span class="p">).</span><span class="na">sample</span><span class="p">(</span><span class="m">1000</span><span class="p">).</span><span class="na">toList</span><span class="p">()</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="c1">// Combine two previous samples and filter them by lower bound for third sample</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="kd">val</span><span class="w"> </span><span class="nv">rateC</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">rateA</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rateB</span><span class="p">).</span><span class="na">filter</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="m">36.0</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<!---FUN guideBoxplotGatherDataIntoDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span>
+<span class="normal"><a href="#__codelineno-2-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// gather them into the DataFrame in a single column and with corresponding keys in column `cond`</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dataFrameOf</span><span class="p">(</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="s">&quot;rate&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">rateA</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rateB</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rateC</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="s">&quot;cond&quot;</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="n">rateA</span><span class="p">.</span><span class="na">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="n">rateB</span><span class="p">.</span><span class="na">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">List</span><span class="p">(</span><span class="n">rateC</span><span class="p">.</span><span class="na">size</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="p">)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="n">df</span><span class="p">.</span><span class="na">head</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<thead>
+<tr>
+<th>rate</th>
+<th>cond</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>38.387</td>
+<td>A</td>
+</tr>
+<tr>
+<td>33.406</td>
+<td>A</td>
+</tr>
+<tr>
+<td>33.51</td>
+<td>A</td>
+</tr>
+<tr>
+<td>36.099</td>
+<td>A</td>
+</tr>
+<tr>
+<td>38.703</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<p><code>df</code> has a signature</p>
+<table>
+<thead>
+<tr>
+<th>rate</th>
+<th>cond</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Let's take a look at <code>StatBoxplot</code> output DataFrame:</p>
+<!---FUN guideBoxplotStatBoxplot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">df</span><span class="p">.</span><span class="na">statBoxplot</span><span class="p">(</span><span class="s">&quot;cond&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rate&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<tr><td><b>Stat</b></td></tr>
+<tr><td><table>
+<tr><td>x</td><td>min</td><td>lower</td><td>middle</td><td>upper</td><td>max</td></tr>
+<tr><td>A</td><td>26.244</td><td>34.841</td><td>37.76</td><td>40.612</td><td>49.267</td></tr>
+<tr><td>B</td><td>20.001</td><td>27.273</td><td>34.671</td><td>42.025</td><td>49.997</td></tr>
+<tr><td>C</td><td>36.002</td><td>37.941</td><td>39.894</td><td>42.41</td><td>49.097</td></tr>
+</table></td></tr>
+</table>
+
+<p>It has the following signature:</p>
+<table>
+  <thead>
+    <tr>
+      <th alignt="left" colspan="6">Stat</th>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+      <th>x</th>
+      <th>min</th>
+      <th>lower</th>
+      <th>middle</th>
+      <th>upper</th>
+      <th>max</th>
+    </tr>
+  </thead>
+</table>
+
+<p>As you can see, we got a <code>DataFrame</code> with one <code>ColumnGroup</code> called <code>Stat</code> which contains several columns with statics.
+For <code>statBoxplot</code>, each row corresponds to one boxplot.
+It's the column with the <code>x</code>-coordinate category.
+<code>Stat.min</code>, <code>Stat.lower</code>, <code>Stat.upper</code> and <code>Stat.max</code> correspond boxplot statistics—box and whiskers <code>y</code>-coordinates.
+<code>Stat.middle</code> - median value, middle line <code>y</code>-coordinate.</p>
+<p><code>DataFrame</code> with "boxplot" statistics is called <code>StatBoxplotFrame</code></p>
+<p>Also, we can calculate outliers of these boxplot:</p>
+<!---FUN guideBoxplotStatBoxplotOutliers-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">df</span><span class="p">.</span><span class="na">statBoxplotOutliers</span><span class="p">(</span><span class="s">&quot;cond&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rate&quot;</span><span class="p">).</span><span class="na">head</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<tr><td><b>Stat</b></td></tr>
+<tr><td><table>
+<tr><td>x</td><td>y</td></tr>
+<tr><td>A</td><td>50.433</td></tr>
+<tr><td>A</td><td>51.032</td></tr>
+<tr><td>A</td><td>49.306</td></tr>
+<tr><td>A</td><td>23.615</td></tr>
+<tr><td>A</td><td>25.988</td></tr>
+</table></td></tr>
+</table>
+
+<p>It has the following signature:</p>
+<table>
+  <thead>
+    <tr>
+      <th alignt="left" colspan="2">Stat</th>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+  </thead>
+</table>
+
+<p>There are only two columns in <code>Stat</code> group: <code>Stat.x</code> with <code>x</code> boxplot category and <code>Stat.y</code> with <code>y</code> outlier coordinate.</p>
+<p><code>DataFrame</code> with "boxplotOutliers" statistics is called <code>StatBoxplotOutliersFrame</code></p>
+<h3 id="statboxplot-and-statboxplotoutliers-transforms"><code>statBoxplot</code> and <code>statBoxplotOutliers</code> transforms</h3>
+<p><code>statBoxplot(statBoxplotArgs) { /*new plotting context*/ }</code> modifies a plotting context - instead of original data (no
+matter was it empty or not) new <code>StatBoxplot</code> dataset (calculated on given arguments; inputs and weights can be provided
+as <code>Iterable</code> or as dataset column reference - by name as a <code>String</code>, as a <code>ColumnReference</code> or as a <code>DataColumn</code>) is
+used inside a new context (original dataset and primary context are not affected - you can add layers using initial
+dataset outside the <code>statBoxplot</code> context). Since the old dataset is irrelevant, we cannot use references for its
+columns. But we can refer to the new ones. They are all contained in the <code>Stat</code> group and can be called inside the new
+context.</p>
+<!---FUN guideBoxplotStatBoxplotErrorBarsPlotWithPoints-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span>
+<span class="normal"><a href="#__codelineno-5-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="n">statBoxplot</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span><span class="w"> </span><span class="n">rate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">        </span><span class="c1">// New &quot;StatBoxplot&quot; dataset here</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="n">errorBars</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">            </span><span class="c1">// Use `Stat.*` columns for mappings</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">            </span><span class="n">yMin</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">min</span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">            </span><span class="n">yMax</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">max</span><span class="p">)</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">            </span><span class="n">borderLine</span><span class="p">.</span><span class="na">color</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="c1">// Initial dataset here</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">    </span><span class="n">points</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">        </span><span class="n">x</span><span class="p">(</span><span class="s">&quot;cond&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">        </span><span class="n">y</span><span class="p">(</span><span class="s">&quot;rate&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">        </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">        </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.2</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">        </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;cond&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">        </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Position</span><span class="p">.</span><span class="na">jitter</span><span class="p">()</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-21" name="__codelineno-5-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="StatBoxplot with ErrorBars and Points" src="guideBoxplotStatBoxplotErrorBarsPlotWithPoints.svg" /></p>
+<p><code>statBoxplotOutliers(statBoxplotArgs) { /*new plotting context*/ }</code> works the same way with a new StatBoxplotOutliers`
+dataset.</p>
+<!---FUN guideBoxplotStatBoxplotOutlierPointsPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="n">statBoxplotOutliers</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span><span class="w"> </span><span class="n">rate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">        </span><span class="c1">// New &quot;StatBoxplotOutliers&quot; dataset here</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">        </span><span class="n">points</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">            </span><span class="n">y</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">y</span><span class="p">)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">            </span><span class="n">color</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="statBoxplotOutliers with Points" src="guideBoxplotStatBoxplotOutlierPointsPlot.svg" /></p>
+<h3 id="boxplot-layer"><code>boxplot</code> layer</h3>
+<p>To make a boxplot (statistical chart), we need boxplot statistics and <code>boxes</code> <tooltip term="geom">geom</tooltip>.
+Boxes attributes and boxplot statistics match.
+Also, we can add outliers using <code>boxplotOutliers</code> statistic and <code>points</code> layer.</p>
+<!---FUN guideBoxplotManualBoxes-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span>
+<span class="normal"><a href="#__codelineno-7-12">12</a></span>
+<span class="normal"><a href="#__codelineno-7-13">13</a></span>
+<span class="normal"><a href="#__codelineno-7-14">14</a></span>
+<span class="normal"><a href="#__codelineno-7-15">15</a></span>
+<span class="normal"><a href="#__codelineno-7-16">16</a></span>
+<span class="normal"><a href="#__codelineno-7-17">17</a></span>
+<span class="normal"><a href="#__codelineno-7-18">18</a></span>
+<span class="normal"><a href="#__codelineno-7-19">19</a></span>
+<span class="normal"><a href="#__codelineno-7-20">20</a></span>
+<span class="normal"><a href="#__codelineno-7-21">21</a></span>
+<span class="normal"><a href="#__codelineno-7-22">22</a></span>
+<span class="normal"><a href="#__codelineno-7-23">23</a></span>
+<span class="normal"><a href="#__codelineno-7-24">24</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">manualBoxplot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="w">    </span><span class="n">statBoxplot</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span><span class="w"> </span><span class="n">rate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="w">        </span><span class="n">boxes</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="w">            </span><span class="c1">// All positional aesthetics match boxplot statistics</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="w">            </span><span class="n">yMin</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">min</span><span class="p">)</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="w">            </span><span class="n">lower</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">lower</span><span class="p">)</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">            </span><span class="n">middle</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">middle</span><span class="p">)</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="w">            </span><span class="n">upper</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">upper</span><span class="p">)</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="w">            </span><span class="n">yMax</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">max</span><span class="p">)</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><span class="w">    </span><span class="n">statBoxplotOutliers</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span><span class="w"> </span><span class="n">rate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><span class="w">        </span><span class="n">points</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><span class="w">            </span><span class="n">y</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">y</span><span class="p">)</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">        </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;`statBoxplot` + `boxes` \n&quot;</span><span class="w"> </span><span class="o">+</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">                </span><span class="s">&quot;and `statBoxplotOutliers` + `points`&quot;</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="p">}</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="n">manualBoxplot</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Manual Settings for Boxes" src="guideBoxplotManualBoxes.svg" /></p>
+<p>But we can do it much faster with <code>boxplot(statBoxplotArgs)</code> method:</p>
+<!---FUN guideBoxplotDefaultMappings-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">boxplotPlot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="c1">// Statistical boxplot layer - receives &quot;statBoxplotArgs&quot; and has default mappings</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="n">boxplot</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span><span class="w"> </span><span class="n">rate</span><span class="p">)</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="n">layout</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;`boxplot()`&quot;</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="p">}</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="n">boxplotPlot</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Faster Way for Boxplot" src="guideBoxplotDefaultMappings.svg" /></p>
+<p>Let's compare them:</p>
+<!---FUN guideBoxplotManualVsDefault-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">plotGrid</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="n">manualBoxplot</span><span class="p">,</span><span class="w"> </span><span class="n">boxplotPlot</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Compare Manual and Default Boxplot" src="guideBoxplotManualVsDefault.svg" /></p>
+<p>These two plots are identical.
+Indeed, statistical <code>boxplot</code> just uses the combination of statistics and layers above
+(<code>statBoxplot</code> + <code>boxes</code> and <code>statBoxplotOutlier</code> + <code>points</code>) and performs coordinates mappings under the hood.
+And we can customize statistical boxplot layer: <code>boxplot()</code> optionally opens a new context,
+where we can configure both boxes and outliers (as in usual contexts opened by <code>boxes { ... }</code>/<code>points { ... }</code>).
+Moreover, <code>Stat.</code> columns of <code>StatBoxplot</code> dataset are available in the context of boxes,
+exactly as <code>Stat.</code> columns of <code>StatBoxplotOutliers</code> are available in the context of outliers.
+Also, we can hide outliers.</p>
+<!---FUN guideBoxplotWithColor-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-10-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-10-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-10-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-10-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-10-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-10-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-10-10">10</a></span>
+<span class="normal"><a href="#__codelineno-10-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="n">boxplot</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span><span class="w"> </span><span class="n">rate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">        </span><span class="n">boxes</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">            </span><span class="c1">// Boxes context + StatBoxplot context</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">            </span><span class="c1">// filling color depends on `x` category</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="w">            </span><span class="n">fillColor</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">        </span><span class="c1">// hide outliers</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="n">outliers</span><span class="p">.</span><span class="na">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Fill Color for Boxes" src="guideBoxplotWithColor.svg" /></p>
+<!---FUN guideBoxplotCustomizedOutliers-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span>
+<span class="normal"><a href="#__codelineno-11-14">14</a></span>
+<span class="normal"><a href="#__codelineno-11-15">15</a></span>
+<span class="normal"><a href="#__codelineno-11-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">    </span><span class="n">boxplot</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span><span class="w"> </span><span class="n">rate</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">        </span><span class="n">boxes</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">            </span><span class="n">fatten</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">            </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a><span class="w">            </span><span class="c1">// Border line color depends on `x` category</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a><span class="w">            </span><span class="n">borderLine</span><span class="p">.</span><span class="na">color</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a><span class="w">        </span><span class="n">outliers</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a><span class="w">            </span><span class="c1">// points context + StatBoxplotOutliers context</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a><span class="w">            </span><span class="c1">// color depends on `x` category</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a><span class="w">            </span><span class="n">color</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a><span class="w">            </span><span class="n">symbol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Symbol</span><span class="p">.</span><span class="na">ASTERIX</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Boxplot with Borderline and Outliers" src="guideBoxplotCustomizedOutliers.svg" /></p>
+<p>Boxplot layer by a single sample (without <code>x</code> categories) - receives only one sample (<code>Iterable</code> or column reference)</p>
+<!---FUN guideBoxplotSimpleBoxplotOnDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="n">boxplot</span><span class="p">(</span><span class="n">rateC</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Boxplot with Iterable" src="guideBoxplotSimpleBoxplotOnDf.svg" /></p>
+<h3 id="boxplot-plot"><code>boxplot</code> plot</h3>
+<p><code>boxplot(statBoxplotArgs)</code> and <code>DataFrame.boxplot(statBoxplotArgs)</code> is a family of functions for fast plotting a
+boxplot.</p>
+<!---FUN guideBoxplotSimpleBoxplot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1">1</a></span>
+<span class="normal"><a href="#__codelineno-13-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="c1">// There&#39;s an additional argument &quot;showOutliers&quot;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="n">df</span><span class="p">.</span><span class="na">boxplot</span><span class="p">(</span><span class="s">&quot;cond&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;rate&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">showOutliers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Simple Boxplot" src="guideBoxplotSimpleBoxplot.svg" /></p>
+<p>In case you want to provide inputs and weights using column selection DSL, it's a bit different from the usual one -
+you should assign <code>x</code> and <code>y</code> inputs throw invocation eponymous functions:</p>
+<!---FUN guideBoxplotSimpleBoxplotWithWhisker-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
+<span class="normal"><a href="#__codelineno-14-2">2</a></span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span>
+<span class="normal"><a href="#__codelineno-14-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="n">df</span><span class="p">.</span><span class="na">boxplot</span><span class="p">(</span><span class="n">whiskerIQRRatio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2.0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="n">x</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="n">y</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Boxplot with Selection DSL" src="guideBoxplotSimpleBoxplotWithWhisker.svg" /></p>
+<p>Boxplot plot can be configured with <code>.configure {}</code> extension -
+it opens context similar to the one that creates a statistical <code>boxplot</code> layer,
+where you can configure boxes and outliers the same way, but also can configure any plot adjustments:</p>
+<!---FUN guideBoxplotConfiguredBoxplot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-15-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-15-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-15-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-15-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-15-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-15-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-15-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-15-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-15-10">10</a></span>
+<span class="normal"><a href="#__codelineno-15-11">11</a></span>
+<span class="normal"><a href="#__codelineno-15-12">12</a></span>
+<span class="normal"><a href="#__codelineno-15-13">13</a></span>
+<span class="normal"><a href="#__codelineno-15-14">14</a></span>
+<span class="normal"><a href="#__codelineno-15-15">15</a></span>
+<span class="normal"><a href="#__codelineno-15-16">16</a></span>
+<span class="normal"><a href="#__codelineno-15-17">17</a></span>
+<span class="normal"><a href="#__codelineno-15-18">18</a></span>
+<span class="normal"><a href="#__codelineno-15-19">19</a></span>
+<span class="normal"><a href="#__codelineno-15-20">20</a></span>
+<span class="normal"><a href="#__codelineno-15-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="n">df</span><span class="p">.</span><span class="na">boxplot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="w">    </span><span class="n">x</span><span class="p">(</span><span class="n">cond</span><span class="p">)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="n">y</span><span class="p">(</span><span class="n">rate</span><span class="p">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="p">}.</span><span class="na">configure</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="w">    </span><span class="c1">// BoxplotLayer + PlotContext</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6"></a><span class="w">    </span><span class="c1">// can&#39;t add new layer but can configure `boxes` and `outliers`</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7"></a><span class="w">    </span><span class="n">boxes</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8"></a><span class="w">        </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.7</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9"></a><span class="w">        </span><span class="n">fillColor</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">middle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">continuous</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">GREEN</span><span class="p">..</span><span class="na">Color</span><span class="p">.</span><span class="na">RED</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-11" name="__codelineno-15-11"></a><span class="w">    </span><span class="n">outliers</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12"></a><span class="w">        </span><span class="n">color</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13"></a><span class="w">        </span><span class="c1">// jittered outliers</span>
+<a id="__codelineno-15-14" name="__codelineno-15-14"></a><span class="w">        </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Position</span><span class="p">.</span><span class="na">jitter</span><span class="p">(</span><span class="m">0.1</span><span class="p">,</span><span class="w"> </span><span class="m">0.0</span><span class="p">)</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-16" name="__codelineno-15-16"></a><span class="w">    </span><span class="c1">// can configure general plot adjustments</span>
+<a id="__codelineno-15-17" name="__codelineno-15-17"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-18" name="__codelineno-15-18"></a><span class="w">        </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Configured boxplot&quot;</span>
+<a id="__codelineno-15-19" name="__codelineno-15-19"></a><span class="w">        </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">350</span>
+<a id="__codelineno-15-20" name="__codelineno-15-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-21" name="__codelineno-15-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Configured Boxplot" src="guideBoxplotConfiguredBoxplot.svg" /></p>
+<h2 id="grouped-staboxplot">Grouped <code>staBoxplot</code></h2>
+<p>Sometimes you need it to group data within <code>x</code> categories.
+Can be applied for grouped data — statistics will be counted on each group independently
+(each is counted for some <code>x</code> category).
+This application returns a new <code>GroupBy</code> dataset with the same keys as the old one but with <code>StatBoxplot</code> groups instead
+of old ones.</p>
+<!---FUN guideBoxplotReadAutoDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="c1">// Use &quot;mpg&quot; dataset</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">mpgDF</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="w">    </span><span class="n">DataFrame</span><span class="p">.</span><span class="na">readCSV</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/JetBrains/lets-plot-kotlin/master/docs/examples/data/mpg.csv&quot;</span><span class="p">)</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a><span class="n">mpgDF</span><span class="p">.</span><span class="na">head</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table style="header-row">
+<tr>
+   <td><b>untitled</b></td>
+   <td><b>manufacturer</b></td>
+   <td><b>model</b></td>
+   <td><b>displ</b></td>
+   <td><b>year</b></td>
+   <td><b>cyl</b></td>
+   <td><b>trans</b></td>
+   <td><b>drv</b></td>
+   <td><b>cty</b></td>
+   <td><b>hwy</b></td>
+   <td><b>fl</b></td>
+   <td><b>class</b></td>
+</tr>
+<tr>
+   <td>1</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>18,0</td>
+   <td>1999</td>
+   <td>4</td>
+   <td>auto(l5)</td>
+   <td>f</td>
+   <td>18</td>
+   <td>29</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>2</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>18,0</td>
+   <td>1999</td>
+   <td>4</td>
+   <td>manual(m5)</td>
+   <td>f</td>
+   <td>21</td>
+   <td>29</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>3</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>2,0</td>
+   <td>2008</td>
+   <td>4</td>
+   <td>manual(m6)</td>
+   <td>f</td>
+   <td>20</td>
+   <td>31</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>4</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>2,0</td>
+   <td>2008</td>
+   <td>4</td>
+   <td>auto(av)</td>
+   <td>f</td>
+   <td>21</td>
+   <td>30</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>5</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>28,0</td>
+   <td>1999</td>
+   <td>6</td>
+   <td>auto(l5)</td>
+   <td>f</td>
+   <td>16</td>
+   <td>26</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+</table>
+
+<!---FUN guideBoxplotSelectThreeCols-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="c1">// We need only three columns</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">mpgShortDF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mpgDF</span><span class="o">[</span><span class="s">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hwy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;drv&quot;</span><span class="o">]</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="n">mpgShortDF</span><span class="p">.</span><span class="na">head</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table style="header-row">
+<tr>
+   <td><b>class</b></td>
+   <td><b>hwy</b></td>
+   <td><b>drv</b></td>
+</tr>
+<tr>
+   <td>compact</td>
+   <td>29</td>
+   <td>f</td>
+</tr>
+<tr>
+   <td>compact</td>
+   <td>29</td>
+   <td>f</td>
+</tr>
+<tr>
+   <td>compact</td>
+   <td>31</td>
+   <td>f</td>
+</tr>
+<tr>
+   <td>compact</td>
+   <td>30</td>
+   <td>f</td>
+</tr>
+<tr>
+   <td>compact</td>
+   <td>26</td>
+   <td>f</td>
+</tr>
+</table>
+
+<!---FUN guideBoxplotGroupedDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="c1">// group it by &quot;drv&quot;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">groupedDF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mpgShortDF</span><span class="p">.</span><span class="na">groupBy</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">drv</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a><span class="n">groupedDF</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<thead>
+<tr>
+<th>drv</th>
+<th>group</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>f</td>
+<td>{drv: "f", hwy: 29, class:...}</td>
+</tr>
+<tr>
+<td>4</td>
+<td>{drv: "4", hwy: 26, class:...}</td>
+</tr>
+<tr>
+<td>r</td>
+<td>{drv: "r", hwy: 20, class:...}</td>
+</tr>
+</tbody>
+</table>
+<p>Now we have a <code>GroupBy</code> with a signature</p>
+<table>
+  <thead>
+    <tr>
+      <th>key: [drv]</th>
+      <th>group: DataFrame[class|hwy|drv]</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"f"</td>
+      <td>"f"-Group</td>
+    </tr>
+    <tr>
+      <td>"4"</td>
+      <td>"4"-Group</td>
+    </tr>
+    <tr>
+      <td>"r"</td>
+      <td>"r"-Group</td>
+    </tr>
+  </tbody>
+</table>
+
+<!---FUN guideBoxplotGroupedStatBoxplot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">statBoxplot</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">x</span><span class="p">(</span><span class="n">`class`</span><span class="p">);</span><span class="w"> </span><span class="n">y</span><span class="p">(</span><span class="n">hwy</span><span class="p">)</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<tr><td>drv</td><td>group</td></tr>
+<tr><td>f</td><td>{Stat: {min: 23, middle: 29,...}</td></tr>
+<tr><td>4</td><td>{Stat: {min: 25, middle: 25,...}</td></tr>
+<tr><td>r</td><td>{Stat: {min: 16, middle: 17,...}</td></tr>
+</table>
+
+<p>After <code>statBoxplot</code> applying it's still a <code>GroupBy</code> but with different signature of <code>group</code> -
+all groups have the same signature as usual <code>DataFrame</code> after <code>statBoxplot</code> applying (i.e. <code>StatBoxplotFrame</code>):</p>
+<table>
+  <thead>
+    <tr>
+      <th>key: [drv]</th>
+      <th>group: StaBoxplotFrame</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>"f"</td>
+      <td>"f"-Group</td>
+    </tr>
+    <tr>
+      <td>"4"</td>
+      <td>"4"-Group</td>
+    </tr>
+    <tr>
+      <td>"r"</td>
+      <td>"r"-Group</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>As you can see, we did indeed do a <code>statBoxplot</code> transformation within groups, the grouping keys did not change.</p>
+<p>The plotting process doesn't change much — we do everything the same.</p>
+<!---FUN guideBoxplotGroupedStatBoxplotEBPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span>
+<span class="normal"><a href="#__codelineno-20-4">4</a></span>
+<span class="normal"><a href="#__codelineno-20-5">5</a></span>
+<span class="normal"><a href="#__codelineno-20-6">6</a></span>
+<span class="normal"><a href="#__codelineno-20-7">7</a></span>
+<span class="normal"><a href="#__codelineno-20-8">8</a></span>
+<span class="normal"><a href="#__codelineno-20-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a><span class="w">    </span><span class="n">statBoxplot</span><span class="p">(</span><span class="n">`class`</span><span class="p">,</span><span class="w"> </span><span class="n">hwy</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="w">        </span><span class="n">errorBars</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5"></a><span class="w">            </span><span class="n">yMin</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">min</span><span class="p">)</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6"></a><span class="w">            </span><span class="n">yMax</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">max</span><span class="p">)</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Grouped StatBoxplot with ErrorBars" src="guideBoxplotGroupedStatBoxplotEBPlot.svg" /></p>
+<p>As you can see there are two or three error bars in some <code>x</code> categories because we have three groups of data.
+To distinguish them, we need to adjust position and add mapping to the color from the key.
+This is convenient — the key is available in the context</p>
+<!---FUN guideBoxplotGroupedBorderLines-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-21-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-21-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-21-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-21-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-21-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-21-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-21-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-21-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-21-10">10</a></span>
+<span class="normal"><a href="#__codelineno-21-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="w">    </span><span class="n">statBoxplot</span><span class="p">(</span><span class="n">`class`</span><span class="p">,</span><span class="w"> </span><span class="n">hwy</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">        </span><span class="n">errorBars</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a><span class="w">            </span><span class="n">yMin</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">min</span><span class="p">)</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">            </span><span class="n">yMax</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">max</span><span class="p">)</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">            </span><span class="n">borderLine</span><span class="p">.</span><span class="na">color</span><span class="p">(</span><span class="n">drv</span><span class="p">)</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="w">            </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Position</span><span class="p">.</span><span class="na">dodge</span><span class="p">()</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-21-10" name="__codelineno-21-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Grouped StatBoxplot Dodge" src="guideBoxplotGroupedBorderLines.svg" /></p>
+<p>The statistical <code>boxplot</code> layer also works.
+Moreover, if we have exactly one grouping key, a mapping from it to <code>fillColor</code> will be created by default.</p>
+<!---FUN guideBoxplotSimpleGroupedBoxplotInDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="n">boxplot</span><span class="p">(</span><span class="n">`class`</span><span class="p">,</span><span class="w"> </span><span class="n">hwy</span><span class="p">)</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Simple Grouped Boxplot" src="guideBoxplotSimpleGroupedBoxplotInDf.svg" /></p>
+<p>We can customize it like we used to.
+From the differences -
+access to <code>key</code> columns, and we can customize the <code>position</code> of boxes (within a single x-coordinate),
+for example - overlap them:</p>
+<!---FUN guideBoxplotCustomizeGroupedBoxplot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-23-10">10</a></span>
+<span class="normal"><a href="#__codelineno-23-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="w">    </span><span class="n">boxplot</span><span class="p">(</span><span class="n">`class`</span><span class="p">,</span><span class="w"> </span><span class="n">hwy</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">        </span><span class="n">boxes</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="w">            </span><span class="n">borderLine</span><span class="p">.</span><span class="na">color</span><span class="p">(</span><span class="n">drv</span><span class="p">)</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">            </span><span class="c1">// `identity` position, i.e boxes are overlapping</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">            </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Position</span><span class="p">.</span><span class="na">identity</span><span class="p">()</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">            </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.5</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9"></a><span class="w">        </span><span class="n">outliers</span><span class="p">.</span><span class="na">show</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Customized Grouped Boxplot" src="guideBoxplotCustomizeGroupedBoxplot.svg" /></p>
+<p><code>boxplot</code> plot for <code>GroupBy</code> (i.e. <code>GroupBy.boxplot(statBoxplotArgs)</code> extensions) works as well:</p>
+<!---FUN guideBoxplotSimpleGrBoxplotOnDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">boxplot</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hwy&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Simple Boxplot" src="guideBoxplotSimpleGrBoxplotOnDf.svg" /></p>
+<p>... and can be configured the same way:</p>
+<!---FUN guideBoxplotConfigureGroupedBoxplot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-25-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-25-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-25-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-25-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-25-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-25-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-25-10">10</a></span>
+<span class="normal"><a href="#__codelineno-25-11">11</a></span>
+<span class="normal"><a href="#__codelineno-25-12">12</a></span>
+<span class="normal"><a href="#__codelineno-25-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="n">groupedDF</span><span class="p">.</span><span class="na">boxplot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="w">    </span><span class="n">x</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">    </span><span class="n">y</span><span class="p">(</span><span class="n">hwy</span><span class="p">)</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="p">}.</span><span class="na">configure</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">    </span><span class="n">boxes</span><span class="p">.</span><span class="na">borderLine</span><span class="p">.</span><span class="na">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">hex</span><span class="p">(</span><span class="s">&quot;#000080&quot;</span><span class="p">)</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">    </span><span class="n">outliers</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="w">        </span><span class="n">color</span><span class="p">(</span><span class="n">drv</span><span class="p">)</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="w">        </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">750</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">450</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">        </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Configured grouped boxplot&quot;</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Configured Boxplot" src="guideBoxplotConfigureGroupedBoxplot.svg" /></p>
+<h3 id="inside-groupby-plot-context">Inside <code>groupBy{}</code> plot context</h3>
+<p>We can apply <code>groupBy</code> modification to the initial dataset and build a boxplot with grouped data the same way:</p>
+<!---FUN guideBoxplotGroupByBoxplot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span>
+<span class="normal"><a href="#__codelineno-26-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">mpgShortDF</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="w">    </span><span class="n">groupBy</span><span class="p">(</span><span class="n">drv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">        </span><span class="n">boxplot</span><span class="p">(</span><span class="n">`class`</span><span class="p">,</span><span class="w"> </span><span class="n">hwy</span><span class="p">)</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Image" src="guideBoxplotGroupByBoxplot.svg" /></p>
+<p><seealso style="cards">
+       <category ref="example-ktnb">
+           <a href="https://github.com/Kotlin/kandy/blob/main/examples/notebooks/lets-plot/guides/boxplot.ipynb" summary="View the notebook on our GitHub repository">GitHub Notebook</a>
+           <a href="https://datalore.jetbrains.com/report/static/KQKedA4jDrKu63O53gEN0z/LqqkzoO6iMxIpActrtStpw" summary="Experiment with this example on Datalore">Datalore Notebook</a>
+       </category>
+</seealso></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../../../../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1792 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Heatmap - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="Heatmap - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/kandy/docs/topics/guides/Heatmap-Guide.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="Heatmap - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/kandy/docs/topics/guides/Heatmap-Guide.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#heatmap" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Heatmap
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kotlindl/" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kaliningraph/" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlin-spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlindl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kmath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../multik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kaliningraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kravis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../plotly-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../visionforge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arguments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arguments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Arguments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generalized-signature" class="md-nav__link">
+    <span class="md-ellipsis">
+      Generalized signature
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output statistics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#statcount-plots" class="md-nav__link">
+    <span class="md-ellipsis">
+      StatCount plots
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="StatCount plots">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#statcount2d-plot-transform" class="md-nav__link">
+    <span class="md-ellipsis">
+      statCount2D plot transform
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heatmap-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heatmap layer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heatmap-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      heatmap plot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="heatmap">Heatmap</h1>
+<p><web-summary>
+Explore the 'Heatmap' guide in Kandy,
+a powerful tool for visualizing complex data matrices and uncovering hidden patterns and correlations.
+With the aid of this guide,
+you'll be able to manipulate large data sets and unlock insights to drive your decision-making process.
+</web-summary></p>
+<p><card-summary>
+Kandy's 'Heatmap' guide simplifies visual analysis of data matrices, making it easier to spot trends and relationships.
+</card-summary></p>
+<p><link-summary>
+Explore Kandy's Heatmap guide to become proficient in depicting data matrices. 
+Effortlessly discover patterns and insights within your data visualizations. 
+</link-summary></p>
+<!---IMPORT org.jetbrains.kotlinx.kandy.letsplot.samples.guides.Heatmap-->
+
+<p>Statistics "count2d" are calculated on the sample of two categorical variables
+(usually provided as two samples of single variable — <code>x</code> and <code>y</code>).
+It counts the number of observations in each pair of x-category and y-category.
+It's weighted, it means the weighted count for each pair is calculated
+(each element within a pair is counted along with its weight).</p>
+<p>This notebook uses definitions from <a href="https://kotlin.github.io/dataframe/overview.html">DataFrame</a>.</p>
+<h2 id="usage">Usage</h2>
+<p>"Count2D" plots give a visual representation of the two-variable discrete sample distribution.</p>
+<h2 id="arguments">Arguments</h2>
+<ul>
+<li>Input (mandatory):<ul>
+<li><code>x</code> — <code>x</code>-part of input sample</li>
+<li><code>y</code> — <code>y</code>-part of input sample</li>
+</ul>
+</li>
+<li>Weights (optional):<ul>
+<li><code>weights</code> — set of weights of the same size as the input samples.
+  <code>null</code> (by default) means all weights are equal to <code>1.0</code> and the weighted count is equal to the normal one</li>
+</ul>
+</li>
+</ul>
+<h3 id="generalized-signature">Generalized signature</h3>
+<p>The specific signature depends on the function,
+but all functions related to "count2d"
+statistic (which will be discussed further below — different variations of <code>statCount2D()</code>, <code>heatmap()</code>)
+have approximately the same signature with the arguments above:</p>
+<div class="language-text highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>statCount2DArgs := 
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>   x,
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>   y, 
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>   weights = null
+</code></pre></div></td></tr></table></div>
+<p>The possible types of <code>x</code>, <code>y</code> and <code>weights</code> depend on where a certain function is used.
+They can be simply <code>Iterable</code> (<code>List</code>, <code>Set</code>, etc.) or a reference to a column in a <code>DataFrame</code>
+(<code>String</code>, <code>ColumnAccessor</code>) or the <code>DataColumn</code> itself.
+<code>x</code> elements are type of <code>X</code> — generic type parameter, <code>y</code> elements are type of <code>Y</code> — generic type parameter.</p>
+<h2 id="output-statistics">Output statistics</h2>
+<table>
+<thead>
+<tr>
+<th>name</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stat.x</td>
+<td>X</td>
+<td><code>x</code>-category</td>
+</tr>
+<tr>
+<td>Stat.y</td>
+<td>Y</td>
+<td><code>y</code>-category</td>
+</tr>
+<tr>
+<td>Stat.count</td>
+<td>Int</td>
+<td>Number of observations in this category</td>
+</tr>
+<tr>
+<td>Stat.countWeighted</td>
+<td>Double</td>
+<td>Weighted count (sum of observations weights in this category)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="statcount-plots">StatCount plots</h2>
+<!---FUN guideHeatmapReadAutoDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="c1">// Use &quot;mpg&quot; dataset</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">mpgDF</span><span class="w"> </span><span class="o">=</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">DataFrame</span><span class="p">.</span><span class="na">readCSV</span><span class="p">(</span><span class="s">&quot;https://raw.githubusercontent.com/JetBrains/lets-plot-kotlin/master/docs/examples/data/mpg.csv&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">mpgDF</span><span class="p">.</span><span class="na">head</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table style="header-row">
+<tr>
+   <td><b>untitled</b></td>
+   <td><b>manufacturer</b></td>
+   <td><b>model</b></td>
+   <td><b>displ</b></td>
+   <td><b>year</b></td>
+   <td><b>cyl</b></td>
+   <td><b>trans</b></td>
+   <td><b>drv</b></td>
+   <td><b>cty</b></td>
+   <td><b>hwy</b></td>
+   <td><b>fl</b></td>
+   <td><b>class</b></td>
+</tr>
+<tr>
+   <td>1</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>18,0</td>
+   <td>1999</td>
+   <td>4</td>
+   <td>auto(l5)</td>
+   <td>f</td>
+   <td>18</td>
+   <td>29</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>2</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>18,0</td>
+   <td>1999</td>
+   <td>4</td>
+   <td>manual(m5)</td>
+   <td>f</td>
+   <td>21</td>
+   <td>29</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>3</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>2,0</td>
+   <td>2008</td>
+   <td>4</td>
+   <td>manual(m6)</td>
+   <td>f</td>
+   <td>20</td>
+   <td>31</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>4</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>2,0</td>
+   <td>2008</td>
+   <td>4</td>
+   <td>auto(av)</td>
+   <td>f</td>
+   <td>21</td>
+   <td>30</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+<tr>
+   <td>5</td>
+   <td>audi</td>
+   <td>a4</td>
+   <td>28,0</td>
+   <td>1999</td>
+   <td>6</td>
+   <td>auto(l5)</td>
+   <td>f</td>
+   <td>16</td>
+   <td>26</td>
+   <td>p</td>
+   <td>compact</td>
+</tr>
+</table>
+
+<!---FUN guideHeatmapTakeThreeCols-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// We need only three columns</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">df</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mpgDF</span><span class="o">[</span><span class="s">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;drv&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hwy&quot;</span><span class="o">]</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="n">df</span><span class="p">.</span><span class="na">head</span><span class="p">(</span><span class="m">5</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<thead>
+<tr>
+<th>class</th>
+<th>drv</th>
+<th>hwy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>compact</td>
+<td>f</td>
+<td>29</td>
+</tr>
+<tr>
+<td>compact</td>
+<td>f</td>
+<td>29</td>
+</tr>
+<tr>
+<td>compact</td>
+<td>f</td>
+<td>31</td>
+</tr>
+<tr>
+<td>compact</td>
+<td>f</td>
+<td>30</td>
+</tr>
+<tr>
+<td>compact</td>
+<td>f</td>
+<td>26</td>
+</tr>
+</tbody>
+</table>
+<p>It has a signature</p>
+<table>
+<thead>
+<tr>
+<th>class</th>
+<th>drv</th>
+<th>hwy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Let's take a look at <code>StatCount2D</code> output DataFrame:</p>
+<!---FUN guideHeatmapStatCount2D-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">df</span><span class="p">.</span><span class="na">statCount2D</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;drv&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;hwy&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<table>
+<tr><td><b>Stat</b></td></tr>
+<tr><td>
+<table>
+<tr><td>x</td><td>y</td><td>count</td><td>countWeighted</td></tr>
+<tr><td>compact</td><td>f</td><td>35</td><td>1020</td></tr>
+<tr><td>compact</td><td>4</td><td>12</td><td>310</td></tr>
+<tr><td>midsize</td><td>4</td><td>3</td><td>72</td></tr>
+<tr><td>suv</td><td>r</td><td>11</td><td>192</td></tr>
+<tr><td>2seater</td><td>r</td><td>5</td><td>124</td></tr>
+</table>
+</td></tr>
+</table>
+
+<p>It has the following signature:</p>
+<table>
+  <thead>
+    <tr>
+      <th alignt="left" colspan="4">Stat</th>
+    </tr>
+  </thead>
+  <thead>
+    <tr>
+      <th>x</th>
+      <th>y</th>
+      <th>count</th>
+      <th>countWeighted</th>
+    </tr>
+  </thead>
+</table>
+
+<p>As you can see, we got a <code>DataFrame</code> with one <code>ColumnGroup</code> called <code>Stat</code> which contains several columns with statics.
+For <code>statCount2D</code>, each row corresponds to one pair of categories.
+<code>Stat.x</code> is the column with its <code>x</code>-category.
+<code>Stat.y</code> is the column with its <code>y</code>-category.
+<code>Stat.count</code> contains the number of observations in the pair.
+<code>Stat.countWeighted</code> — weighted version of <code>count</code>.
+<code>DataFrame</code> with "count2D" statistics is called <code>StatCount2DFrame</code></p>
+<h3 id="statcount2d-plot-transform"><code>statCount2D</code> plot transform</h3>
+<p><code>statCount2D(statCount2DArgs) { /*new plotting context*/ }</code> modifies a plotting context — instead of original data
+(no matter was it empty or not) new <code>statCount2D</code> dataset (calculated on given arguments;
+inputs and weights can be provided as <code>Iterable</code> or as dataset column reference - by name as a <code>String</code>,
+as a <code>ColumnReference</code> or as a <code>DataColumn</code>) is used inside a new context
+(original dataset and primary context are not affected —
+you can add layers using initial dataset outside the <code>statCount2D</code> context).
+Since the old dataset is irrelevant, we cannot use references for its columns.
+But we can refer to the new ones.
+They are all contained in the <code>Stat</code> group and can be called inside the new context:</p>
+<!---FUN guideHeatmapStatCount2DPlot-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="n">statCount2D</span><span class="p">(</span><span class="n">`class`</span><span class="p">,</span><span class="w"> </span><span class="n">drv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">        </span><span class="c1">// New `StatCount` dataset here</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">        </span><span class="n">points</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">            </span><span class="c1">// Use `Stat.*` columns for mappings</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">                </span><span class="n">axis</span><span class="p">.</span><span class="na">expand</span><span class="p">(</span><span class="m">0.0</span><span class="p">,</span><span class="w"> </span><span class="m">0.5</span><span class="p">)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">            </span><span class="n">y</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">y</span><span class="p">)</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">            </span><span class="n">size</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">                </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">continuous</span><span class="p">(</span><span class="m">10.0</span><span class="p">..</span><span class="m">30.0</span><span class="p">)</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">            </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Color</span><span class="p">.</span><span class="na">RED</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="StatCount2D with Points" src="guideHeatmapStatCount2DPlot.svg" /></p>
+<h3 id="heatmap-layer">Heatmap layer</h3>
+<p>Heatmap is a statistical plot used for visualizing the distribution of two categorical variables sample.
+It's a tile plot where each tile is representing one of a pair of categories:
+its <code>x</code> coordinate is corresponding to <code>x</code> category, <code>y</code> to <code>y</code> category, and its color is to count of this pair.
+So basically, we can build a heatmap with <code>statCount2D</code> as follows:</p>
+<!---FUN guideHeatmapStatCount2DTile-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">statCount2DAndTilePlot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="n">statCount2D</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;drv&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">        </span><span class="n">tiles</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">            </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">            </span><span class="n">y</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">y</span><span class="p">)</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">            </span><span class="n">fillColor</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">count</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="n">layout</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;`statCount2D()` + `tile()` layer&quot;</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="p">}</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="n">statCount2DAndTilePlot</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="StatCount Tile Plot" src="guideHeatmapStatCount2DTile.svg" /></p>
+<p>But we can do it even faster with <code>heatmap(statCount2DArgs)</code> method:</p>
+<!---FUN guideHeatmapHeatmapInDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">val</span><span class="w"> </span><span class="nv">heatmapLayerPlot</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="n">heatmap</span><span class="p">(</span><span class="n">`class`</span><span class="p">,</span><span class="w"> </span><span class="n">drv</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">layout</span><span class="p">.</span><span class="na">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;`heatmap()` layer&quot;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="p">}</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="n">heatmapLayerPlot</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Heatmap Plot" src="guideHeatmapHeatmapInDf.svg" /></p>
+<p>Let's compare them:</p>
+<!---FUN guideHeatmapTileVsHeatMap-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="n">plotGrid</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="n">statCount2DAndTilePlot</span><span class="p">,</span><span class="w"> </span><span class="n">heatmapLayerPlot</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Compare StatCount Tile and Heatmap" src="guideHeatmapTileVsHeatMap.svg" /></p>
+<p>These two plots are identical.
+Indeed, <code>heatmap</code> just uses <code>statCount2D</code> and <code>tile</code> and performs coordinates and <code>fillColor</code> mappings under the hood.
+And we can customize heatmap layer: <code>heatmap()</code> optionally opens a new context,
+where we can configure tiles (as in the usual context opened by <code>tile { ... }</code>) — even change default mappings.
+<code>StatCount2D</code> dataset of heatmap also can be accessed here.</p>
+<!---FUN guideHeatmapWithFillColor-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-8-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-8-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-8-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-8-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-8-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-8-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-8-10">10</a></span>
+<span class="normal"><a href="#__codelineno-8-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="w">    </span><span class="n">heatmap</span><span class="p">(</span><span class="n">`class`</span><span class="p">,</span><span class="w"> </span><span class="n">drv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">        </span><span class="c1">// Swap coordinate mappings:</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">        </span><span class="n">x</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">y</span><span class="p">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">        </span><span class="n">y</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">x</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">        </span><span class="c1">// Default mapping but with custom scale</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">        </span><span class="n">fillColor</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">            </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">continuousColorBrewer</span><span class="p">(</span><span class="n">BrewerPalette</span><span class="p">.</span><span class="na">Sequential</span><span class="p">.</span><span class="na">Reds</span><span class="p">)</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Heatmap with Continuous Color Brewer" src="guideHeatmapWithFillColor.svg" /></p>
+<p>If we specify weights, <code>Stat.countWeighted</code> is mapped to <code>fillColor</code> by default:</p>
+<!---FUN guideHeatmapSimpleHeatmapInDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span>
+<span class="normal"><a href="#__codelineno-9-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="n">df</span><span class="p">.</span><span class="na">plot</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="w">    </span><span class="n">heatmap</span><span class="p">(</span><span class="n">`class`</span><span class="p">,</span><span class="w"> </span><span class="n">drv</span><span class="p">,</span><span class="w"> </span><span class="n">hwy</span><span class="p">)</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Default color Mapping for Heatmap" src="guideHeatmapSimpleHeatmapInDf.svg" /></p>
+<h3 id="heatmap-plot"><code>heatmap</code> plot</h3>
+<p><code>heatmap(statCount2DArgs)</code> and <code>DataFrame.heatmap(statCount2DArgs)</code> are a family of functions for fast plotting a
+heatmap.</p>
+<!---FUN guideHeatmapWithIterable-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="n">heatmap</span><span class="p">(</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;A&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;B&quot;</span><span class="p">),</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">    </span><span class="n">listOf</span><span class="p">(</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Heatmap on Iterable" src="guideHeatmapWithIterable.svg" /></p>
+<!---FUN guideHeatmapHeatmapOnDf-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="n">df</span><span class="p">.</span><span class="na">heatmap</span><span class="p">(</span><span class="s">&quot;class&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;drv&quot;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Simple Heatmap" src="guideHeatmapHeatmapOnDf.svg" /></p>
+<p>In case you want to provide inputs and weights using column selection DSL, it's a bit different from the usual one —
+you should assign <code>x</code> and <code>y</code> inputs and (optionally) <code>weight</code> throw invocation eponymous functions:</p>
+<!---FUN guideHeatmapWithWeight-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span>
+<span class="normal"><a href="#__codelineno-12-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="n">df</span><span class="p">.</span><span class="na">heatmap</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="w">    </span><span class="n">x</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="w">    </span><span class="n">y</span><span class="p">(</span><span class="n">drv</span><span class="p">)</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="w">    </span><span class="n">weight</span><span class="p">(</span><span class="n">hwy</span><span class="p">)</span>
+<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Heatmap with Weight" src="guideHeatmapWithWeight.svg" /></p>
+<p>Heatmap plot can be configured with <code>.configure {}</code> extension — it opens context that combines tile,
+<code>StatCount2D</code> and plot context.
+That means you can configure tile settings, mappings using <code>StatCount2D</code> dataset and any plot adjustments:</p>
+<!---FUN guideHeatmapConfigureHeatmap-->
+
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span>
+<span class="normal"><a href="#__codelineno-13-16">16</a></span>
+<span class="normal"><a href="#__codelineno-13-17">17</a></span>
+<span class="normal"><a href="#__codelineno-13-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="n">df</span><span class="p">.</span><span class="na">heatmap</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">    </span><span class="n">x</span><span class="p">(</span><span class="n">`class`</span><span class="p">)</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">    </span><span class="n">y</span><span class="p">(</span><span class="n">drv</span><span class="p">)</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">    </span><span class="n">weight</span><span class="p">(</span><span class="n">hwy</span><span class="p">)</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="p">}.</span><span class="na">configure</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="c1">// Tile + StatCount2D + PlotContext</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">    </span><span class="c1">// Can&#39;t add new layer</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">    </span><span class="c1">// Can add tile mapping, including for `Stat.*` columns</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">    </span><span class="n">fillColor</span><span class="p">(</span><span class="n">Stat</span><span class="p">.</span><span class="na">count</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">        </span><span class="n">scale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">continuous</span><span class="p">(</span><span class="n">Color</span><span class="p">.</span><span class="na">GREEN</span><span class="p">..</span><span class="na">Color</span><span class="p">.</span><span class="na">RED</span><span class="p">)</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">    </span><span class="n">alpha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.6</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">    </span><span class="c1">// Can configure general plot adjustments</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">        </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Configured `heatmap` plot&quot;</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">        </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">600</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="m">350</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<!---END-->
+
+<p><img alt="Configured Heatmap" src="guideHeatmapConfigureHeatmap.svg" /></p>
+<p><seealso style="cards">
+       <category ref="example-ktnb">
+           <a href="https://github.com/Kotlin/kandy/blob/main/examples/notebooks/lets-plot/guides/heatmap.ipynb" summary="View the notebook on our GitHub repository">GitHub Notebook</a>
+           <a href="https://datalore.jetbrains.com/report/static/KQKedA4jDrKu63O53gEN0z/2W0Os6XQiMJLuoctHDLos4" summary="Experiment with this example on Datalore">Datalore Notebook</a>
+       </category>
+</seealso></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../../../../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>

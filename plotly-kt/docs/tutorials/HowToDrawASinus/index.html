@@ -1,0 +1,1552 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>HowToDrawASinus - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="HowToDrawASinus - My Docs" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/plotly-kt/docs/tutorials/HowToDrawASinus.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="HowToDrawASinus - My Docs" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/plotly-kt/docs/tutorials/HowToDrawASinus.png" >
+      
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-draw-a-sinus" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HowToDrawASinus
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../dataforge-core/" class="md-tabs__link">
+          
+  
+  Data Wrangling
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../kotlindl/" class="md-tabs__link">
+          
+  
+  ML
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../kotlingrad/" class="md-tabs__link">
+          
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../kaliningraph/" class="md-tabs__link">
+          
+  
+  Plots
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../kalasim/" class="md-tabs__link">
+          
+  
+  Other
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Data Wrangling
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Data Wrangling
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../dataforge-core/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    dataforge-core
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../controls-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Controls.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlin-spark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin for Apache® Spark™
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../dataframe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin DataFrame
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../tables-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tables.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    ML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlindl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kotlindl
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../londogard-nlp-toolkit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    londogard-nlp-toolkit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../summarize-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    summarize-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../text-gen-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    text-gen-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../smile-nlp-kt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    smile-nlp-kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Math
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Math
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kmath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kmath
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../multik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    multik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Plots
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Plots
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kaliningraph/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kaliningraph
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kandy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kandy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlingrad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin∇
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kravis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kravis
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../lets-plot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lets-Plot Kotlin API
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    plotly.kt
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../visionforge/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    DataForge Visualization Platform
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kalasim/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    kalasim
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../kotlin-jupyter/docs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Kotlin Kernel for IPython/Jupyter
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../snark/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    snark
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-draw-a-sinus" class="md-nav__link">
+    <span class="md-ellipsis">
+      How To Draw A Sinus?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>HowToDrawASinus</h1>
+
+<h3 id="how-to-draw-a-sinus">How To Draw A Sinus?</h3>
+<p>In data visualization tasks, quite often there is a need to depict mathematical 
+functions - for example, to compare the convergence rate of a model
+with ideal one or to find an approximation for a given time series. Such charts 
+have a number of features that are not inherent in most other charts: for example,
+visualizing the perpendicular axes (OX, OY) from (0, 0) and a large number of
+additional information. This can be the expected value of the function, its extremum
+points, deviation at various points, etc.</p>
+<p>This article will tell you how to depict an ordinary sinus using the library <code>Plotly.kt</code>
+so that in the end you will get a visual and informative plot.</p>
+<ol>
+<li>
+<p>Let's start with drawing perpendicular OX and OY axes. This requires to do a few things:
+   hide default axes lines, hide zero lines (it's impossible to draw an arrow on the end of it),
+   add perpendicular arrows using annotations (<code>Text</code>) with visible arrows on the end, but without
+   text. After that, let's sign the axes themselves. It is also important to specify the required 
+   chart sizes (<code>width</code>,<code>height</code>) so that after saving the graph will look the same as in the browser.</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="n">Plotly</span><span class="p">.</span><span class="na">page</span><span class="w"> </span><span class="p">{</span><span class="w">                                </span><span class="c1">// making new html page with plot</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">        </span><span class="n">width</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">900</span><span class="w">                          </span><span class="c1">// width of the plot (in px.)</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">        </span><span class="n">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">500</span><span class="w">                         </span><span class="c1">// height of the plot (in px.)</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">        </span><span class="n">text</span><span class="w"> </span><span class="p">{</span><span class="w">                               </span><span class="c1">// vertical axis</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="w">                  </span><span class="c1">// position of the top end of the arrow = (0, 1+eps)</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">            </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eps</span><span class="p">)</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">            </span><span class="n">ax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="w">                 </span><span class="c1">// ax, ay means the offset of the bottom edge relative to the top</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">            </span><span class="n">ay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">430</span><span class="p">)</span><span class="w">               </span><span class="c1">// positive (negative) value is the arrow length</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">                                             </span><span class="c1">// upwards (top down) and from right to left (from left to right)</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">        </span><span class="n">text</span><span class="w"> </span><span class="p">{</span><span class="w">                               </span><span class="c1">// horizontal axis</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">            </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">0</span><span class="p">)</span><span class="w">                  </span><span class="c1">// arrow left position = (2PI + eps, 0)</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">eps</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">            </span><span class="n">ax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="o">-</span><span class="m">800</span><span class="p">)</span><span class="w">              </span><span class="c1">// position of the left end of the arrow</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">            </span><span class="n">ay</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="n">xaxis</span><span class="w"> </span><span class="p">{</span><span class="w">                              </span><span class="c1">// OX parameters</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">            </span><span class="n">showline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w">                 </span><span class="c1">// hide OX line</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">            </span><span class="n">zeroline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w">                 </span><span class="c1">// hide zero line</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">        </span><span class="n">yaxis</span><span class="w"> </span><span class="p">{</span><span class="w">                              </span><span class="c1">// OY parameters</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="w">            </span><span class="n">showline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w">                 </span><span class="c1">// hide OY line</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">            </span><span class="n">zeroline</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w">                 </span><span class="c1">// hide zero line</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="p">}.</span><span class="na">makeFile</span><span class="p">()</span><span class="w">                                 </span><span class="c1">// making temporary file and visualing plot in the browser</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Now we will draw the sinus function itself - for its visualization let's choose a bright blue color,
+   contrasting with both the white background and the black ticks on the axes. After that using 
+   the variation of the <code>mode</code> parameter (<code>ScatterMode: lines, markers</code>) the intersection points with the OY axis
+   will be marked with a slightly darker shade of the same color.</p>
+<p><div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span>
+<span class="normal"><a href="#__codelineno-1-13">13</a></span>
+<span class="normal"><a href="#__codelineno-1-14">14</a></span>
+<span class="normal"><a href="#__codelineno-1-15">15</a></span>
+<span class="normal"><a href="#__codelineno-1-16">16</a></span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span>
+<span class="normal"><a href="#__codelineno-1-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="o">-</span><span class="m">410.</span><span class="p">.</span><span class="m">410</span><span class="p">).</span><span class="na">map</span><span class="p">{</span><span class="w"> </span><span class="nb">it</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">200</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="p">}</span><span class="w">        </span><span class="c1">// function domain (-2PI - eps, 2PI + eps)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span><span class="w">                                 </span><span class="c1">// function values</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="n">Plotly</span><span class="p">.</span><span class="na">page</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">scatter</span><span class="w"> </span><span class="p">{</span><span class="w">                                </span><span class="c1">// making Scatter plot (sinus)</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">        </span><span class="n">x</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">x1</span><span class="p">)</span><span class="w">                            </span><span class="c1">// assigning OX values</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">        </span><span class="n">y</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">y1</span><span class="p">)</span><span class="w">                            </span><span class="c1">// assigning OY values</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">        </span><span class="n">line</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="n">XKCD</span><span class="p">.</span><span class="na">CERULEAN</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w">        </span><span class="c1">// color of the line is cerulean</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="n">scatter</span><span class="w"> </span><span class="p">{</span><span class="w">                                </span><span class="c1">// making Scatter plot (OX axis dots)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScatterMode</span><span class="p">.</span><span class="na">markers</span><span class="w">           </span><span class="c1">// visualizing only dots</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="n">x</span><span class="p">(</span><span class="o">-</span><span class="m">2</span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">PI</span><span class="p">,</span><span class="w"> </span><span class="n">PI</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="p">)</span><span class="w">            </span><span class="c1">// points of intersection of sinus with OX (values ​​along the X axis)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">        </span><span class="n">y</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="p">)</span><span class="w">                        </span><span class="c1">// points of intersection of sinus with OX (values ​​along the Y axis)</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">        </span><span class="n">line</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="n">XKCD</span><span class="p">.</span><span class="na">CERULEAN_BLUE</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// color of the dots is darker cerulean</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="n">marker</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="p">}</span><span class="w">                  </span><span class="c1">// dot&#39;s diameter is 8 px.</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="p">}.</span><span class="na">makeFile</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+3. Let's draw horizontal dashed lines on the chart, corresponding to values ​​equal to -1, 1 (extremum lines) and &frac12;.
+   This requires changing <code>line.dash</code> parameter to <code>Dash.dash</code> value. The specified values ​​will be plotted after that 
+   on the OY axis using the <code>tickvals</code> and<code>ticklabels</code> parameters.</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span>
+<span class="normal"><a href="#__codelineno-2-14">14</a></span>
+<span class="normal"><a href="#__codelineno-2-15">15</a></span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span>
+<span class="normal"><a href="#__codelineno-2-32">32</a></span>
+<span class="normal"><a href="#__codelineno-2-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="p">...</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="n">Plotly</span><span class="p">.</span><span class="na">page</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">        </span><span class="n">shape</span><span class="w"> </span><span class="p">{</span><span class="w">                               </span><span class="c1">// adding new figure (line y = 1)</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">            </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="o">-</span><span class="m">2</span><span class="o">*</span><span class="n">PI</span><span class="p">)</span><span class="w">              </span><span class="c1">// (-2PI, 1) and (2PI, 1) coordinates  </span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">            </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">2</span><span class="o">*</span><span class="n">PI</span><span class="p">)</span><span class="w">               </span><span class="c1">// will be connected by a line</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">            </span><span class="n">y0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">            </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">1</span><span class="p">)</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">            </span><span class="n">line</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">dash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dash</span><span class="p">.</span><span class="na">dash</span><span class="w"> </span><span class="p">}</span><span class="w">         </span><span class="c1">// dashed type of the line</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="n">shape</span><span class="w"> </span><span class="p">{</span><span class="w">                               </span><span class="c1">// adding new figure (line y = 1/2)</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">            </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="o">-</span><span class="m">2</span><span class="o">*</span><span class="n">PI</span><span class="p">)</span><span class="w">              </span><span class="c1">// coordinates (-2PI, 1/2) and (2PI, 1/2) </span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">            </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">2</span><span class="o">*</span><span class="n">PI</span><span class="p">)</span><span class="w">               </span><span class="c1">// will be connected by a line</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">            </span><span class="n">y0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">0.5</span><span class="p">)</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">            </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">0.5</span><span class="p">)</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">            </span><span class="n">line</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">                </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w">                  </span><span class="c1">// red color of the line</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">                </span><span class="n">dash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dash</span><span class="p">.</span><span class="na">dash</span><span class="w">              </span><span class="c1">// dashed type of the line</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">        </span><span class="n">shape</span><span class="w"> </span><span class="p">{</span><span class="w">                               </span><span class="c1">// adding new figure (line y = -1)</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">            </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="o">-</span><span class="m">2</span><span class="o">*</span><span class="n">PI</span><span class="p">)</span><span class="w">              </span><span class="c1">// coordinates (-2PI, -1) and (2PI, -1) </span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">            </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">2</span><span class="o">*</span><span class="n">PI</span><span class="p">)</span><span class="w">               </span><span class="c1">// will be connected by a line</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">            </span><span class="n">y0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">)</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">            </span><span class="n">y1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="o">-</span><span class="m">1</span><span class="p">)</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">            </span><span class="n">line</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">dash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dash</span><span class="p">.</span><span class="na">dash</span><span class="w"> </span><span class="p">}</span><span class="w">         </span><span class="c1">// dashed type of the line</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="p">}.</span><span class="na">makeFile</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>After that, it is worth adding vertical lines connecting points on OX, the values in
+   which equals &frac12;, and the value itself in LaTeX format. Shapes are used again for this - an array
+   values ​​of type <code>Shape.line</code>. To use LaTeX format you need to include the <code>MathJax</code> header.</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span>
+<span class="normal"><a href="#__codelineno-3-17">17</a></span>
+<span class="normal"><a href="#__codelineno-3-18">18</a></span>
+<span class="normal"><a href="#__codelineno-3-19">19</a></span>
+<span class="normal"><a href="#__codelineno-3-20">20</a></span>
+<span class="normal"><a href="#__codelineno-3-21">21</a></span>
+<span class="normal"><a href="#__codelineno-3-22">22</a></span>
+<span class="normal"><a href="#__codelineno-3-23">23</a></span>
+<span class="normal"><a href="#__codelineno-3-24">24</a></span>
+<span class="normal"><a href="#__codelineno-3-25">25</a></span>
+<span class="normal"><a href="#__codelineno-3-26">26</a></span>
+<span class="normal"><a href="#__codelineno-3-27">27</a></span>
+<span class="normal"><a href="#__codelineno-3-28">28</a></span>
+<span class="normal"><a href="#__codelineno-3-29">29</a></span>
+<span class="normal"><a href="#__codelineno-3-30">30</a></span>
+<span class="normal"><a href="#__codelineno-3-31">31</a></span>
+<span class="normal"><a href="#__codelineno-3-32">32</a></span>
+<span class="normal"><a href="#__codelineno-3-33">33</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="p">...</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kd">val</span><span class="w"> </span><span class="nv">sub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">6</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kd">val</span><span class="w"> </span><span class="nv">xElems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="o">-</span><span class="m">2</span><span class="n">PI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sub</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">PI</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sub</span><span class="p">,</span><span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sub</span><span class="p">,</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">sub</span><span class="p">)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">// points, where sinus equals 1/2</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="kd">val</span><span class="w"> </span><span class="nv">shapesList</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mutableListOf</span><span class="o">&lt;</span><span class="n">Shape</span><span class="o">&gt;</span><span class="p">()</span><span class="w">        </span><span class="c1">// making list of lines</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">:</span><span class="w"> </span><span class="n">xElems</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="kd">val</span><span class="w"> </span><span class="nv">shape</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Shape</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">        </span><span class="n">x0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w">                       </span><span class="c1">// (x, 0) and (x, 0.5) will be connected</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">        </span><span class="n">y0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">0</span><span class="p">)</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">        </span><span class="n">x1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="n">y0</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Value</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="m">1</span><span class="o">/</span><span class="m">2</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="n">line</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w">                  </span><span class="c1">// red color of the line</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">    </span><span class="n">shapesList</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">shape</span><span class="p">)</span><span class="w">                      </span><span class="c1">// adding new figure to the list</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="p">}</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="n">Plotly</span><span class="p">.</span><span class="na">page</span><span class="p">(</span><span class="n">mathJaxHeader</span><span class="p">,</span><span class="w"> </span><span class="n">cdnPlotlyHeader</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">    </span><span class="n">scatter</span><span class="w"> </span><span class="p">{</span><span class="w">                                  </span><span class="c1">// add string &quot;1/2&quot;</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">        </span><span class="n">mode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ScatterMode</span><span class="p">.</span><span class="na">text</span><span class="w">                </span><span class="c1">// visualing only text</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">        </span><span class="n">x</span><span class="p">(</span><span class="o">-</span><span class="m">0.35</span><span class="p">)</span><span class="w">                               </span><span class="c1">// text position on the OX axis</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">        </span><span class="n">y</span><span class="p">(</span><span class="m">0.56</span><span class="p">)</span><span class="w">                                </span><span class="c1">// text position on the OX axis</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><span class="w">        </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;</span><span class="err">$</span><span class="s">\Large{1/2}</span><span class="err">$</span><span class="s">&quot;</span><span class="p">)</span><span class="w">         </span><span class="c1">// increasing font size with ТеХ</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">        </span><span class="n">textfont</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="s">&quot;red&quot;</span><span class="p">)</span><span class="w"> </span><span class="p">}</span><span class="w">              </span><span class="c1">// red color of the font</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">        </span><span class="n">showlegend</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="w">                     </span><span class="c1">// do not show this trace in the legend</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">        </span><span class="n">hoverinfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;none&quot;</span><span class="w">                     </span><span class="c1">// do not show anything on hover</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span><span class="w">                                   </span><span class="c1">// adding figure list to the plot</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="w">        </span><span class="n">shapes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shapesList</span><span class="w">                      </span>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><span class="p">}.</span><span class="na">makeFile</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>It remains to add labels on OX corresponding to the intersections of the sinus with the axis. It
+   is done in a similar way, using axis labels (<code>tickvals</code>,<code>ticktext</code>) and writing text in LaTeX format.</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span>
+<span class="normal"><a href="#__codelineno-4-15">15</a></span>
+<span class="normal"><a href="#__codelineno-4-16">16</a></span>
+<span class="normal"><a href="#__codelineno-4-17">17</a></span>
+<span class="normal"><a href="#__codelineno-4-18">18</a></span>
+<span class="normal"><a href="#__codelineno-4-19">19</a></span>
+<span class="normal"><a href="#__codelineno-4-20">20</a></span>
+<span class="normal"><a href="#__codelineno-4-21">21</a></span>
+<span class="normal"><a href="#__codelineno-4-22">22</a></span>
+<span class="normal"><a href="#__codelineno-4-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="p">...</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="n">Plolty</span><span class="p">.</span><span class="na">page</span><span class="p">(</span><span class="n">mathJaxHeader</span><span class="p">,</span><span class="w"> </span><span class="n">cdnPlotlyHeader</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="p">...</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">        </span><span class="n">xaxis</span><span class="w"> </span><span class="p">{</span><span class="w">                                </span><span class="c1">// OX axis parameters</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">            </span><span class="p">...</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">            </span><span class="n">anchor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;free&quot;</span><span class="w">                    </span><span class="c1">// axis position is set manually</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">            </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.43</span><span class="w">                    </span><span class="c1">// assigning axis position</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">            </span><span class="n">tickvals</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="o">-</span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="o">-</span><span class="m">0.05</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">PI</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">0.15</span><span class="p">,</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m">0.05</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m">0.1</span><span class="p">))</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">            </span><span class="n">ticktext</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;\</span><span class="err">$</span><span class="s">\\huge{-2\\pi}\</span><span class="err">$</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\</span><span class="err">$</span><span class="s">\\huge{-\\pi}\</span><span class="err">$</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\</span><span class="err">$</span><span class="s">\\huge{\\pi}\</span><span class="err">$</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\</span><span class="err">$</span><span class="s">\\huge{2\\pi}\</span><span class="err">$</span><span class="s">&quot;</span><span class="p">))</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">            </span><span class="c1">// ticks positions and text</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">        </span><span class="n">yaxis</span><span class="w"> </span><span class="p">{</span><span class="w">                                </span><span class="c1">// OY axis parameters</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="w">            </span><span class="p">...</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><span class="w">            </span><span class="n">anchor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;free&quot;</span><span class="w">                    </span><span class="c1">// axis position is set manually</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><span class="w">            </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.485</span><span class="w">                   </span><span class="c1">// assigning axis position</span>
+<a id="__codelineno-4-17" name="__codelineno-4-17"></a><span class="w">            </span><span class="n">tickvals</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="o">-</span><span class="m">0.91</span><span class="p">,</span><span class="w"> </span><span class="m">0.09</span><span class="p">,</span><span class="w"> </span><span class="m">1.09</span><span class="p">))</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18"></a><span class="w">            </span><span class="n">ticktext</span><span class="p">(</span><span class="n">listOf</span><span class="p">(</span><span class="s">&quot;\</span><span class="err">$</span><span class="s">\\Large{-1}\</span><span class="err">$</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\</span><span class="err">$</span><span class="s">\\Large{0}\</span><span class="err">$</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;\</span><span class="err">$</span><span class="s">\\Large{1}\</span><span class="err">$</span><span class="s">&quot;</span><span class="p">))</span>
+<a id="__codelineno-4-19" name="__codelineno-4-19"></a><span class="w">            </span><span class="c1">// ticks positions and text</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-23" name="__codelineno-4-23"></a><span class="p">}.</span><span class="na">makeFile</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>As a final improvement, let's add a legend to the plot, which will be placed in upper right corner of the graph.
+   First you need to set the name of the corresponding line, after which with using the parameters <code>xanchor = right</code> 
+   and<code>yanchor = top</code> set the position of the legend so that the coordinates specified by the parameters 
+   <code>x = 1</code>,<code>y = 1</code> correspond to the position in the upper right corner of the image.</p>
+<div class="language-kotlin highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span>
+<span class="normal"><a href="#__codelineno-5-16">16</a></span>
+<span class="normal"><a href="#__codelineno-5-17">17</a></span>
+<span class="normal"><a href="#__codelineno-5-18">18</a></span>
+<span class="normal"><a href="#__codelineno-5-19">19</a></span>
+<span class="normal"><a href="#__codelineno-5-20">20</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="p">...</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="n">Plotly</span><span class="p">.</span><span class="na">page</span><span class="p">(</span><span class="n">mathJaxHeader</span><span class="p">,</span><span class="w"> </span><span class="n">cdnPlotlyHeader</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">scatter</span><span class="w"> </span><span class="p">{</span><span class="w">                                   </span><span class="c1">// sinus Scatter trace</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">        </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;\</span><span class="err">$</span><span class="s">\\Large{y = \\mathrm{sin}\\,x}\</span><span class="err">$</span><span class="s">&quot;</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="w">        </span><span class="c1">// the name of the plot displayed in the legend</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="w">    </span><span class="n">layout</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="w">        </span><span class="n">legend</span><span class="w"> </span><span class="p">{</span><span class="w">                                </span><span class="c1">// legend parameters</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">            </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0.97</span><span class="w">                            </span><span class="c1">// horizontal position of the legend</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">            </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w">                               </span><span class="c1">// vertical position of the legend</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="w">            </span><span class="n">borderwidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="w">                     </span><span class="c1">// width of the legend border</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><span class="w">            </span><span class="n">font</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">32</span><span class="w"> </span><span class="p">}</span><span class="w">                  </span><span class="c1">// size of the legend font</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><span class="w">            </span><span class="n">xanchor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">XAnchor</span><span class="p">.</span><span class="na">right</span><span class="w">             </span><span class="c1">// &quot;anchoring&quot; the position of the legend to the right corner</span>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><span class="w">            </span><span class="n">yanchor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">YAnchor</span><span class="p">.</span><span class="na">top</span><span class="w">               </span><span class="c1">// &quot;anchoring&quot; the position of the legend to the bottom of the graph</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><span class="w">        </span><span class="p">...</span>
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><span class="p">}.</span><span class="na">makeFile</span><span class="p">()</span>
+</code></pre></div></td></tr></table></div>
+</li>
+<li>
+<p>Final picture:</p>
+</li>
+</ol>
+<p><img alt="Картинка" src="https://i.ibb.co/wKTCp4H/newplot-17.png" /></p>
+<p>Source code is available at: https://github.com/mipt-npm/plotly.kt/tree/dev/examples/src/main/kotlin/tutorials/SinusPicture.kt</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tracking", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../../../javascript/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+        <script src="../../../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
